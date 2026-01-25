@@ -23,9 +23,8 @@ const Hero = () => {
         <img 
           src={heroBackground} 
           alt="Background" 
-          className="absolute right-0 top-0 h-full w-auto max-w-[70%] object-cover object-left"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/90 to-transparent z-10" />
       </div>
 
       <div className="container mx-auto px-4 relative z-20">

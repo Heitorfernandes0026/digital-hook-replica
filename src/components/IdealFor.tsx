@@ -5,7 +5,7 @@ const IdealFor = () => {
   const idealFor = [
     "Precisa gerar leads qualificados rapidamente",
     "Trabalha com tráfego pago e quer maximizar ROI",
-    "Está lançando produto, serviço ou infoproduto",
+    "Está lançando um produto, serviço ou infoproduto",
     "Quer um site ou landing page focado em conversão",
     "Busca profissionalismo para fechar mais clientes",
   ];
@@ -84,7 +84,7 @@ const IdealFor = () => {
             Se você se identificou, estamos prontos para ajudar.
           </p>
           <Button variant="hero" size="lg">
-            Quero uma landing page que converte
+            Quero uma landing page que converta
           </Button>
         </div>
 

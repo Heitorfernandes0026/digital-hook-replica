@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 const Pricing = () => {
   const plans = [
     {
-      name: "Essencial",
+      name: "ESSENCIAL",
       price: "R$ 59,90",
       period: "/mês",
       highlight: false,
-      cta: "Escolher este plano",
+      cta: "Contratar Agora",
       features: {
         hosting: true,
         copyAI: true,
@@ -26,12 +26,12 @@ const Pricing = () => {
       },
     },
     {
-      name: "Profissional",
+      name: "PROFISSIONAL",
       price: "R$ 99,90",
       period: "/mês",
       highlight: true,
       badge: "Mais contratado — Melhor custo-benefício",
-      cta: "Quero o melhor custo-benefício",
+      cta: "Contratar Agora",
       features: {
         hosting: true,
         copyAI: true,
@@ -49,11 +49,11 @@ const Pricing = () => {
       },
     },
     {
-      name: "Premium",
+      name: "PREMIUM",
       price: "R$ 129,90",
       period: "/mês",
       highlight: false,
-      cta: "Quero a solução completa",
+      cta: "Contratar Agora",
       features: {
         hosting: true,
         copyAI: true,
@@ -78,7 +78,7 @@ const Pricing = () => {
     { key: "design", label: "Design moderno (Mobile First)" },
     { key: "pages", label: "Landing pages / sites" },
     { key: "emails", label: "E-mails profissionais" },
-    { key: "emailSignature", label: "Assinatura de e-mail (personalizada)" },
+    { key: "emailSignature", label: "Assinatura de E-mail Personalizada" },
     { key: "domain", label: "Domínio" },
     { key: "ssl", label: "SSL (HTTPS)" },
     { key: "backups", label: "Backups" },
@@ -122,7 +122,7 @@ const Pricing = () => {
           {/* Header Row */}
           <div className="grid grid-cols-4 border-b border-border">
             <div className="p-6 bg-card/50">
-              <span className="text-lg font-semibold text-foreground">Recursos</span>
+              <span className="text-lg font-semibold text-foreground uppercase tracking-wide">Recursos</span>
             </div>
             {plans.map((plan, index) => (
               <div

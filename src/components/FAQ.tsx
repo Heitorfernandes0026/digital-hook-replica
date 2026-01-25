@@ -13,7 +13,7 @@ const FAQ = () => {
     },
     {
       question: "Qual o investimento para uma landing page?",
-      answer: "O investimento varia de acordo com a complexidade do projeto. Landing pages simples começam em R$ 2.500, enquanto projetos mais robustos podem chegar a R$ 10.000 ou mais. Fazemos orçamentos personalizados após entender suas necessidades.",
+      answer: "O investimento varia de acordo com a complexidade do projeto. Landing pages simples começam em R$ 2.500, enquanto projetos mais robustos podem chegar a R$ 10.000 ou mais. Elaboramos orçamentos personalizados após entender suas necessidades.",
     },
     {
       question: "Vocês fazem manutenção e atualizações?",

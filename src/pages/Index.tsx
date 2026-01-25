@@ -10,24 +10,28 @@ import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <WhyChooseUs />
-        <IdealFor />
-        <AboutUs />
-        <HookMethod />
-        <Pricing />
-        <Portfolio />
-        <Testimonials />
-        <FAQ />
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-background relative">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <Services />
+          <WhyChooseUs />
+          <IdealFor />
+          <AboutUs />
+          <HookMethod />
+          <Pricing />
+          <Portfolio />
+          <Testimonials />
+          <FAQ />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };

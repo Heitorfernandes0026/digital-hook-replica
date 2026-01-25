@@ -11,23 +11,32 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(270_70%_60%/0.15)_0%,transparent_50%)]" />
-      <div className="absolute top-1/4 -right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -left-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0">
+        {/* Main radial glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_80%_60%/0.15)_0%,hsl(217_91%_60%/0.1)_30%,transparent_60%)]" />
+        
+        {/* Flowing light curves simulation */}
+        <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 via-secondary/20 to-transparent rounded-full blur-[100px] animate-flow-1" />
+        <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] bg-gradient-to-l from-secondary/30 via-accent/20 to-transparent rounded-full blur-[80px] animate-flow-2" />
+        <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-gradient-to-t from-accent/20 to-transparent rounded-full blur-[60px] animate-flow-3" />
+        
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm mb-8 animate-fade-up">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+          {/* Badge with glow effect */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-card/30 backdrop-blur-xl mb-8 animate-fade-up glass animate-glow-pulse">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_hsl(142_71%_45%)]" />
             <span className="text-sm text-muted-foreground">
               Metodologia validada em +50 projetos
             </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          {/* Headline with enhanced gradient */}
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Landing pages e sites que{" "}
             <span className="gradient-text">geram leads</span> em até 7 dias
           </h1>
@@ -37,42 +46,44 @@ const Hero = () => {
             Cada seção tem um motivo. Cada botão tem um objetivo. Estratégia, copy e design pensados para conversão desde o primeiro scroll.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with enhanced glow */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl">
-              Solicitar orçamento
-              <ArrowRight className="ml-2" size={20} />
+            <Button variant="hero" size="xl" className="group relative overflow-hidden">
+              <span className="relative z-10 flex items-center">
+                Solicitar orçamento
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              </span>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              <Play className="mr-2" size={20} />
+            <Button variant="heroOutline" size="xl" className="group backdrop-blur-xl">
+              <Play className="mr-2 group-hover:scale-110 transition-transform" size={20} />
               Ver cases de sucesso
             </Button>
           </div>
 
-          {/* Quick Info */}
+          {/* Quick Info with neon accents */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mb-16 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <div className="flex items-center gap-2">
-              <span className="text-green-500">✓</span>
+              <span className="text-green-500 drop-shadow-[0_0_6px_hsl(142_71%_45%)]">✓</span>
               Entrega em até 7 dias
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-500">✓</span>
+              <span className="text-green-500 drop-shadow-[0_0_6px_hsl(142_71%_45%)]">✓</span>
               100% personalizada
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-500">✓</span>
+              <span className="text-green-500 drop-shadow-[0_0_6px_hsl(142_71%_45%)]">✓</span>
               +50 projetos entregues
             </div>
           </div>
 
-          {/* Stats Grid */}
+          {/* Stats Grid with glass morphism and glow */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-up" style={{ animationDelay: "0.5s" }}>
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl bg-card/50 border border-border backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group"
+                className="group p-6 rounded-2xl glass border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)]"
               >
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">
+                <div className="text-3xl md:text-4xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -83,6 +94,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

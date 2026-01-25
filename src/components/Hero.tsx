@@ -13,17 +13,17 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Lion Image - Right Side - Full Background with smooth blend */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[55%] lg:w-[50%]">
+      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] lg:w-[55%]">
         <img 
           src={heroLion} 
           alt="Lion" 
           className="h-full w-full object-cover object-top"
         />
-        {/* Minimal gradient overlay - just enough to blend text area */}
+        {/* Smooth gradient overlay to blend with background */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.4) 5%, transparent 25%)'
+            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.8) 15%, hsl(230 25% 5% / 0.4) 35%, transparent 60%)'
           }}
         />
       </div>
@@ -50,8 +50,8 @@ const Hero = () => {
 
           {/* Headline with enhanced gradient */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Domine o seu mercado com{" "}
-            <span className="gradient-text">landing pages</span> de alta conversão
+            Landing pages e sites que{" "}
+            <span className="gradient-text">geram leads</span> em até 7 dias
           </h1>
 
           {/* Subheadline */}

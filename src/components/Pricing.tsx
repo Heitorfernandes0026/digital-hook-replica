@@ -152,7 +152,9 @@ const Pricing = () => {
                     {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                   </h3>
                   {plan.highlight && (
-                    <span className="text-xs font-semibold text-secondary mb-3 block">Mais Popular</span>
+                    <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-bold uppercase tracking-wider mb-3">
+                      Mais Popular
+                    </span>
                   )}
                   <div className="flex items-baseline justify-center gap-0.5">
                     <span className={`text-2xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
@@ -234,7 +236,9 @@ const Pricing = () => {
                   {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                 </h3>
                 {plan.highlight && (
-                  <span className="text-xs font-semibold text-secondary mb-2 block">Mais Popular</span>
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-bold uppercase tracking-wider mb-2">
+                    Mais Popular
+                  </span>
                 )}
                 <div className="flex items-baseline justify-center gap-0.5">
                   <span className={`text-3xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>

@@ -12,19 +12,23 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Lion Image - Right Side - Full Background */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 lg:w-[50%]">
+      {/* Lion Image - Right Side - Full Background with smooth blend */}
+      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] lg:w-[55%]">
         <img 
           src={heroLion} 
           alt="Lion" 
           className="h-full w-full object-cover object-top"
         />
+        {/* Smooth gradient overlay to blend with background */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.8) 15%, hsl(230 25% 5% / 0.4) 35%, transparent 60%)'
+          }}
+        />
       </div>
 
-      {/* Background for left side content area */}
-      <div className="absolute left-0 top-0 bottom-0 w-full md:w-[55%] bg-background" />
-
-      {/* Enhanced Background Effects - Left side only */}
+      {/* Enhanced Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Main radial glow */}
         <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_80%_60%/0.15)_0%,hsl(217_91%_60%/0.1)_30%,transparent_60%)]" />

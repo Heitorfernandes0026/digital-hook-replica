@@ -145,17 +145,9 @@ const Pricing = () => {
                   }`}
                 >
                   {plan.highlight && (
-                    <>
-                      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
-                      <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <div className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-bold whitespace-nowrap shadow-lg">
-                          <Sparkles className="w-3.5 h-3.5" />
-                          Mais Popular
-                        </div>
-                      </div>
-                    </>
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
                   )}
-                  <h3 className={`text-lg font-bold tracking-wide mb-3 ${plan.highlight ? "text-primary mt-4" : "text-foreground"}`}>
+                  <h3 className={`text-lg font-bold tracking-wide mb-3 ${plan.highlight ? "text-primary" : "text-foreground"}`}>
                     {plan.name}
                     {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                   </h3>
@@ -234,14 +226,6 @@ const Pricing = () => {
             >
               {/* Card Header */}
               <div className={`p-6 text-center relative ${plan.highlight ? "bg-primary/10" : "bg-card/50"}`}>
-                {plan.highlight && (
-                  <div className="flex items-center justify-center gap-1.5 mb-4">
-                    <div className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-bold">
-                      <Sparkles className="w-3.5 h-3.5" />
-                      Mais Popular
-                    </div>
-                  </div>
-                )}
                 <h3 className={`text-xl font-bold tracking-wide mb-2 ${plan.highlight ? "text-primary" : "text-foreground"}`}>
                   {plan.name}
                   {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}

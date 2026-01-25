@@ -40,8 +40,8 @@ const Hero = () => {
 
           {/* Headline with enhanced gradient */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Domine o seu mercado com{" "}
-            <span className="gradient-text">landing pages</span> de alta conversão
+            Landing pages e sites que{" "}
+            <span className="gradient-text">geram leads</span> em até 7 dias
           </h1>
 
           {/* Subheadline */}

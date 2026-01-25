@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   const stats = [
@@ -11,15 +12,20 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Main radial glow */}
-        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_80%_60%/0.15)_0%,hsl(217_91%_60%/0.1)_30%,transparent_60%)]" />
-        
-        {/* Flowing light curves simulation */}
-        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-gradient-to-r from-primary/20 via-secondary/15 to-transparent rounded-full blur-[100px] animate-flow-1" />
-        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-gradient-to-t from-accent/15 to-transparent rounded-full blur-[60px] animate-flow-3" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBackground} 
+          alt="Background" 
+          className="w-full h-full object-cover object-right"
+        />
+        {/* Overlay for better text readability on left side */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, hsl(280 30% 8% / 0.95) 0%, hsl(280 30% 8% / 0.8) 30%, hsl(280 30% 8% / 0.4) 50%, transparent 70%)'
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

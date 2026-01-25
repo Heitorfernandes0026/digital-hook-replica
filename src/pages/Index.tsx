@@ -5,6 +5,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import IdealFor from "@/components/IdealFor";
 import AboutUs from "@/components/AboutUs";
 import HookMethod from "@/components/HookMethod";
+import Pricing from "@/components/Pricing";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -22,6 +23,7 @@ const Index = () => {
         <IdealFor />
         <AboutUs />
         <HookMethod />
+        <Pricing />
         <Portfolio />
         <Testimonials />
         <FAQ />

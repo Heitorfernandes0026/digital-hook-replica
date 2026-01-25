@@ -39,10 +39,9 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="gradient" size="default">
-              Solicitar orçamento
+            <Button variant="gradient" size="default" asChild>
+              <a href="#planos">Contratar Agora</a>
             </Button>
           </div>
 
@@ -69,8 +68,8 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="gradient" size="default" className="mt-4">
-                Solicitar orçamento
+              <Button variant="gradient" size="default" className="mt-4" asChild>
+                <a href="#planos" onClick={() => setIsMenuOpen(false)}>Contratar Agora</a>
               </Button>
             </nav>
           </div>

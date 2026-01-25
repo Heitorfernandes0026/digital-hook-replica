@@ -13,24 +13,34 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Lion Image - Right Side - Full Background with smooth blend */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] lg:w-[55%]">
+      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[70%] lg:w-[65%]">
         <img 
           src={heroLion} 
           alt="Lion" 
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-center"
         />
-        {/* Subtle gradient overlay - only on the far left edge */}
+        {/* Ultra-smooth gradient overlay matching exact background color */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.6) 8%, hsl(230 25% 5% / 0.2) 20%, transparent 40%)'
+            background: `linear-gradient(to right, 
+              hsl(230 25% 5% / 1) 0%, 
+              hsl(230 25% 5% / 0.95) 5%, 
+              hsl(230 25% 5% / 0.85) 10%, 
+              hsl(230 25% 5% / 0.7) 15%, 
+              hsl(230 25% 5% / 0.5) 20%, 
+              hsl(230 25% 5% / 0.3) 25%, 
+              hsl(230 25% 5% / 0.15) 30%, 
+              hsl(230 25% 5% / 0.05) 35%, 
+              transparent 45%
+            )`
           }}
         />
-        {/* Technology effect overlay - allows background effects to show through */}
+        {/* Technology effect overlay */}
         <div 
-          className="absolute inset-0 pointer-events-none mix-blend-screen opacity-30"
+          className="absolute inset-0 pointer-events-none mix-blend-soft-light opacity-40"
           style={{
-            background: 'radial-gradient(ellipse at 70% 30%, hsl(280 80% 60% / 0.3) 0%, transparent 50%), radial-gradient(ellipse at 50% 70%, hsl(217 91% 60% / 0.2) 0%, transparent 40%)'
+            background: 'radial-gradient(ellipse at 70% 30%, hsl(280 80% 60% / 0.4) 0%, transparent 50%), radial-gradient(ellipse at 50% 70%, hsl(217 91% 60% / 0.3) 0%, transparent 40%)'
           }}
         />
       </div>

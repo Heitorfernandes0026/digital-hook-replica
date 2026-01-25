@@ -25,6 +25,10 @@ const Hero = () => {
           src={heroBackground} 
           alt="Background" 
           className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none object-contain"
+          style={{
+            filter: 'contrast(1.1) saturate(1.1)',
+            imageRendering: 'crisp-edges'
+          }}
         />
       </div>
 

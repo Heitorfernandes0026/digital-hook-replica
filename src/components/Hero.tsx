@@ -17,13 +17,16 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0a0a12]">
-      {/* Background with lion image */}
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0a0a12] contain-layout contain-paint">
+      {/* Background with lion image - optimized loading */}
       <div className="absolute inset-0">
         <img 
           src={heroBackground} 
-          alt="Background" 
+          alt="" 
           className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
       </div>
 

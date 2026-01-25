@@ -1,16 +1,26 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import IdealFor from "@/components/IdealFor";
-import AboutUs from "@/components/AboutUs";
-import HookMethod from "@/components/HookMethod";
-import Pricing from "@/components/Pricing";
-import Portfolio from "@/components/Portfolio";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
+
+// Lazy load components below the fold for faster initial load
+const Services = lazy(() => import("@/components/Services"));
+const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs"));
+const IdealFor = lazy(() => import("@/components/IdealFor"));
+const AboutUs = lazy(() => import("@/components/AboutUs"));
+const HookMethod = lazy(() => import("@/components/HookMethod"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const Portfolio = lazy(() => import("@/components/Portfolio"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Footer = lazy(() => import("@/components/Footer"));
+
+// Minimal loading placeholder
+const SectionLoader = () => (
+  <div className="py-24 flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
+  </div>
+);
 
 const Index = () => {
   return (
@@ -20,17 +30,37 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
-          <Services />
-          <WhyChooseUs />
-          <IdealFor />
-          <AboutUs />
-          <HookMethod />
-          <Pricing />
-          <Portfolio />
-          <Testimonials />
-          <FAQ />
+          <Suspense fallback={<SectionLoader />}>
+            <Services />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <WhyChooseUs />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <IdealFor />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <AboutUs />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <HookMethod />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Pricing />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Portfolio />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Testimonials />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <FAQ />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={<SectionLoader />}>
+          <Footer />
+        </Suspense>
       </div>
     </div>
   );

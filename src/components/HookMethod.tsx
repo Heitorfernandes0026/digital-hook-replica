@@ -4,25 +4,21 @@ const HookMethod = () => {
       letter: "H",
       title: "Diagnóstico de Conversão",
       description: "Analisamos seu negócio, concorrentes e público para identificar os gatilhos que vão converter.",
-      gradient: "from-primary to-secondary",
     },
     {
       letter: "O",
       title: "Estrutura Estratégica",
       description: "Arquitetura de página pensada para guiar o visitante naturalmente até o botão de ação.",
-      gradient: "from-secondary to-accent",
     },
     {
       letter: "O",
       title: "Copy Persuasiva",
       description: "Textos estratégicos que falam com seu cliente ideal e quebram objeções antes que surjam.",
-      gradient: "from-accent to-primary",
     },
     {
       letter: "K",
       title: "Design + Mobile First",
       description: "Visual que conecta com seu público e funciona perfeitamente em qualquer dispositivo.",
-      gradient: "from-primary via-secondary to-accent",
     },
   ];
 
@@ -49,44 +45,64 @@ const HookMethod = () => {
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="group relative p-8 rounded-2xl glass border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_50px_hsl(var(--primary)/0.15)]"
-            >
-              {/* Animated gradient border on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden">
-                <div className={`absolute inset-[-2px] bg-gradient-to-r ${step.gradient} opacity-20`} />
-              </div>
-              
-              {/* Letter */}
-              <div className={`relative w-16 h-16 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300`}>
-                <span className="text-3xl font-bold text-primary-foreground">
-                  {step.letter}
-                </span>
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors relative">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed relative">
-                {step.description}
-              </p>
+        {/* Horizontal Timeline with Neon Nodes */}
+        <div className="relative">
+          {/* Connection line for desktop */}
+          <div className="hidden lg:block absolute top-16 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5">
+            <div className="w-full h-full bg-gradient-to-r from-primary via-secondary to-accent opacity-40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent blur-sm opacity-60" />
+          </div>
 
-              {/* Step number */}
-              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-muted/30 flex items-center justify-center">
-                <span className="text-xs font-bold text-muted-foreground">{index + 1}</span>
-              </div>
+          {/* Steps Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="group flex flex-col items-center text-center"
+              >
+                {/* Neon Node Circle */}
+                <div className="relative mb-8">
+                  {/* Energy glow behind node */}
+                  <div className="absolute inset-0 w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary opacity-30 blur-xl group-hover:opacity-60 group-hover:blur-2xl transition-all duration-500" />
+                  
+                  {/* Node circle with neon border */}
+                  <div className="relative w-20 h-20 rounded-full neon-node flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <span 
+                      className="text-3xl font-bold"
+                      style={{
+                        background: 'linear-gradient(135deg, hsl(217 91% 60%), hsl(280 80% 60%))',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        filter: 'drop-shadow(0 0 8px hsl(217 91% 60%))'
+                      }}
+                    >
+                      {step.letter}
+                    </span>
+                  </div>
 
-              {/* Connector Line (hidden on last item) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-primary/60 to-transparent z-20" />
-              )}
-            </div>
-          ))}
+                  {/* Step number badge */}
+                  <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_12px_hsl(var(--primary)/0.6)]">
+                    <span className="text-xs font-bold text-primary-foreground">{index + 1}</span>
+                  </div>
+
+                  {/* Neon connector to next node (desktop only) */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 left-full -translate-y-1/2 w-[calc(100%-2rem)] h-0.5 ml-4">
+                      <div className="neon-connector w-full" />
+                    </div>
+                  )}
+                </div>
+                
+                {/* Content */}
+                <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

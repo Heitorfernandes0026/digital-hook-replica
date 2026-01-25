@@ -9,7 +9,6 @@ const Portfolio = () => {
       result: "+280%",
       metric: "em agendamentos",
       description: "Landing page focada em conversão para clínica odontológica premium.",
-      gradient: "from-primary to-secondary",
     },
     {
       title: "Academia FitLife",
@@ -17,7 +16,6 @@ const Portfolio = () => {
       result: "+450%",
       metric: "novos alunos/mês",
       description: "Site institucional com sistema de matrícula integrado.",
-      gradient: "from-secondary to-accent",
     },
     {
       title: "Consultoria Empresarial",
@@ -25,7 +23,6 @@ const Portfolio = () => {
       result: "+320%",
       metric: "leads qualificados",
       description: "Landing page para captação de leads de alto ticket.",
-      gradient: "from-accent to-primary",
     },
     {
       title: "Curso de Marketing Digital",
@@ -33,7 +30,6 @@ const Portfolio = () => {
       result: "+180%",
       metric: "em vendas",
       description: "Página de vendas para infoproduto de marketing.",
-      gradient: "from-primary via-secondary to-accent",
     },
   ];
 
@@ -60,51 +56,65 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Cases Grid */}
+        {/* Cases Grid with Neon Border Cards */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {cases.map((item, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl glass border border-border/50 hover:border-primary/50 transition-all duration-500 cursor-pointer hover:shadow-[0_0_50px_hsl(var(--primary)/0.15)]"
+              className="group relative p-8 rounded-2xl neon-card cursor-pointer transition-all duration-500"
             >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              <div className="flex items-start justify-between mb-6 relative">
-                <div>
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-medium text-primary uppercase tracking-wider mb-3">
-                    {item.category}
-                  </span>
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
+              {/* Card content */}
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-medium text-primary uppercase tracking-wider mb-3">
+                      {item.category}
+                    </span>
+                    <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_16px_hsl(var(--primary)/0.4)] group-hover:shadow-[0_0_24px_hsl(var(--primary)/0.6)] transition-shadow duration-300">
+                    <ArrowUpRight className="text-primary-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
+                  </div>
                 </div>
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-secondary/30 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)] transition-all duration-300">
-                  <ArrowUpRight className="text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
-                </div>
-              </div>
-              
-              <p className="text-muted-foreground text-sm mb-6 relative">
-                {item.description}
-              </p>
-              
-              <div className="pt-6 border-t border-border/50 relative">
-                <div className="text-4xl font-bold gradient-text group-hover:scale-105 transition-transform origin-left">
-                  {item.result}
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {item.metric}
+                
+                <p className="text-muted-foreground text-sm mb-6">
+                  {item.description}
+                </p>
+                
+                <div className="pt-6 border-t border-border/30">
+                  <div 
+                    className="text-4xl font-bold group-hover:scale-105 transition-transform origin-left"
+                    style={{
+                      background: 'linear-gradient(90deg, hsl(217 91% 60%), hsl(280 80% 60%), hsl(320 80% 55%))',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      filter: 'drop-shadow(0 0 8px hsl(217 91% 60% / 0.4))'
+                    }}
+                  >
+                    {item.result}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {item.metric}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA with neon glow */}
         <div className="text-center">
-          <Button variant="heroOutline" size="lg" className="group">
-            Ver todos os cases
-            <ArrowUpRight className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
+          <Button 
+            variant="heroOutline" 
+            size="lg" 
+            className="group relative overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center">
+              Ver todos os cases
+              <ArrowUpRight className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
+            </span>
           </Button>
         </div>
       </div>

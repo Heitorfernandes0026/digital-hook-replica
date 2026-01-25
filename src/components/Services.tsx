@@ -41,11 +41,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-24 relative overflow-hidden">
+    <section id="servicos" className="py-24 relative overflow-hidden cosmic-section">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.08)_0%,transparent_50%)]" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-secondary/10 to-transparent rounded-full blur-[80px] animate-flow-2" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.15)_0%,transparent_50%)]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-purple-600/20 to-transparent rounded-full blur-[80px] animate-flow-2" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-pink-600/15 to-transparent rounded-full blur-[100px] animate-flow-1" />
+        {/* Lightning effect at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-600/10 to-transparent" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

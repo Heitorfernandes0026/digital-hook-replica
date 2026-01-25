@@ -108,12 +108,14 @@ const Pricing = () => {
   };
 
   return (
-    <section id="planos" className="py-24 relative overflow-hidden">
+    <section id="planos" className="py-24 relative overflow-hidden cosmic-section">
       {/* Enhanced background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.1)_0%,hsl(280_80%_60%/0.05)_30%,transparent_60%)]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-secondary/15 to-transparent rounded-full blur-[120px] animate-flow-2" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-primary/15 to-transparent rounded-full blur-[100px] animate-flow-3" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.2)_0%,hsl(260_50%_30%/0.1)_30%,transparent_60%)]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-purple-600/25 to-transparent rounded-full blur-[120px] animate-flow-2" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-pink-600/20 to-transparent rounded-full blur-[100px] animate-flow-3" />
+        {/* Lightning effects */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-purple-600/15 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

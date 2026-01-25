@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden cosmic-section">
       {/* SVG Gradient Definition for icons */}
       <svg className="absolute w-0 h-0">
         <defs>
@@ -47,10 +47,11 @@ const WhyChooseUs = () => {
       </svg>
 
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
-        <div className="absolute -left-1/4 top-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-[100px] animate-flow-1" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+        <div className="absolute -left-1/4 top-1/2 w-[600px] h-[600px] bg-gradient-to-r from-purple-600/20 to-transparent rounded-full blur-[100px] animate-flow-1" />
+        <div className="absolute right-0 top-1/3 w-[500px] h-[500px] bg-gradient-to-l from-pink-600/15 to-transparent rounded-full blur-[80px] animate-flow-3" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

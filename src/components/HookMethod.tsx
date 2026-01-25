@@ -23,12 +23,14 @@ const HookMethod = () => {
   ];
 
   return (
-    <section id="metodo" className="py-24 relative overflow-hidden">
+    <section id="metodo" className="py-24 relative overflow-hidden cosmic-section">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_80%_60%/0.1)_0%,hsl(217_91%_60%/0.05)_40%,transparent_70%)]" />
-        <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-gradient-to-l from-primary/15 to-transparent rounded-full blur-[100px] animate-flow-2" />
-        <div className="absolute left-0 bottom-1/4 w-[400px] h-[400px] bg-gradient-to-r from-secondary/15 to-transparent rounded-full blur-[80px] animate-flow-3" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.2)_0%,hsl(260_50%_30%/0.1)_40%,transparent_70%)]" />
+        <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-gradient-to-l from-purple-600/25 to-transparent rounded-full blur-[100px] animate-flow-2" />
+        <div className="absolute left-0 bottom-1/4 w-[400px] h-[400px] bg-gradient-to-r from-pink-600/20 to-transparent rounded-full blur-[80px] animate-flow-3" />
+        {/* Lightning effect */}
+        <div className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

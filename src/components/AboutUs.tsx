@@ -1,11 +1,12 @@
 const AboutUs = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden cosmic-section">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.06)_0%,transparent_60%)]" />
-        <div className="absolute -left-1/4 top-1/3 w-[500px] h-[500px] bg-gradient-to-r from-secondary/10 to-transparent rounded-full blur-[100px] animate-flow-1" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.15)_0%,transparent_60%)]" />
+        <div className="absolute -left-1/4 top-1/3 w-[500px] h-[500px] bg-gradient-to-r from-purple-600/20 to-transparent rounded-full blur-[100px] animate-flow-1" />
+        <div className="absolute right-0 bottom-1/4 w-[400px] h-[400px] bg-gradient-to-l from-pink-600/15 to-transparent rounded-full blur-[80px] animate-flow-2" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

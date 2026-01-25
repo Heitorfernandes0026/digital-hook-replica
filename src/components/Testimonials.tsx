@@ -29,12 +29,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-24 relative overflow-hidden">
+    <section id="depoimentos" className="py-24 relative overflow-hidden cosmic-section">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/40 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.06)_0%,transparent_60%)]" />
-        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-[80px] animate-flow-1" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.15)_0%,transparent_60%)]" />
+        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-gradient-to-r from-purple-600/20 to-transparent rounded-full blur-[80px] animate-flow-1" />
+        <div className="absolute top-1/4 right-0 w-[350px] h-[350px] bg-gradient-to-l from-pink-600/15 to-transparent rounded-full blur-[60px] animate-flow-3" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

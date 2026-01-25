@@ -36,6 +36,16 @@ const WhyChooseUs = () => {
 
   return (
     <section className="py-24 relative overflow-hidden">
+      {/* SVG Gradient Definition for icons */}
+      <svg className="absolute w-0 h-0">
+        <defs>
+          <linearGradient id="neon-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(217 91% 60%)" />
+            <stop offset="100%" stopColor="hsl(280 80% 60%)" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -70,24 +80,39 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Features Grid - 3 columns with neon outline icons */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group flex items-start gap-4 p-6 rounded-xl glass border border-border/50 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)]"
+              className="group flex flex-col items-center text-center p-8 rounded-xl glass border border-border/30 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)]"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0 group-hover:from-primary/30 group-hover:to-secondary/30 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)] transition-all duration-300">
-                <feature.icon className="text-primary" size={24} />
+              {/* Large neon outline icon */}
+              <div className="relative mb-6">
+                <div className="w-20 h-20 rounded-2xl flex items-center justify-center relative">
+                  {/* Outer glow */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Icon with neon outline effect */}
+                  <feature.icon 
+                    className="relative z-10 w-12 h-12 stroke-[1.5]"
+                    style={{
+                      stroke: 'url(#neon-icon-gradient)',
+                      fill: 'none',
+                      filter: 'drop-shadow(0 0 8px hsl(217 91% 60%)) drop-shadow(0 0 16px hsl(280 80% 60% / 0.6))'
+                    }}
+                  />
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {feature.description}
-                </p>
-              </div>
+              
+              {/* Title */}
+              <h3 className="font-semibold text-lg mb-3 text-foreground group-hover:text-primary transition-colors">
+                {feature.title}
+              </h3>
+              
+              {/* Description */}
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

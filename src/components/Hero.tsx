@@ -61,7 +61,7 @@ const Hero = () => {
             </Button>
             <Button 
               variant="outline"
-              className="border-white/20 bg-transparent hover:bg-white/5 text-white font-semibold px-8 py-6 text-base rounded-lg"
+              className="border-white/30 bg-white/5 hover:bg-orange-500 hover:border-orange-500 hover:text-white text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300"
             >
               <Play className="mr-2" size={20} />
               Ver cases de sucesso
@@ -83,12 +83,12 @@ const Hero = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-5 rounded-xl bg-white/5 border border-white/10"
+                className="p-5 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm hover:border-white/40 hover:from-white/15 hover:to-white/10 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
               >
-                <div className={`text-3xl md:text-4xl font-bold mb-2 ${stat.color}`}>
+                <div className={`text-3xl md:text-4xl font-bold mb-2 ${stat.color} drop-shadow-[0_0_10px_currentColor]`}>
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 whitespace-pre-line">
+                <div className="text-sm text-gray-300 whitespace-pre-line font-medium">
                   {stat.label}
                 </div>
               </div>

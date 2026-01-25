@@ -150,7 +150,7 @@ const Pricing = () => {
                       <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                         <div className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-bold whitespace-nowrap shadow-lg">
                           <Sparkles className="w-3.5 h-3.5" />
-                          Mais contratado — Melhor custo-benefício
+                          Mais Popular
                         </div>
                       </div>
                     </>
@@ -159,8 +159,8 @@ const Pricing = () => {
                     {plan.name}
                     {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                   </h3>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className={`text-4xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
+                  <div className="flex items-baseline justify-center gap-0.5">
+                    <span className={`text-2xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
                       {plan.price}
                     </span>
                     <span className="text-muted-foreground text-sm font-medium">{plan.period}</span>
@@ -238,7 +238,7 @@ const Pricing = () => {
                   <div className="flex items-center justify-center gap-1.5 mb-4">
                     <div className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-bold">
                       <Sparkles className="w-3.5 h-3.5" />
-                      Mais contratado — Melhor custo-benefício
+                      Mais Popular
                     </div>
                   </div>
                 )}
@@ -246,8 +246,8 @@ const Pricing = () => {
                   {plan.name}
                   {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                 </h3>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className={`text-4xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className={`text-3xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
                     {plan.price}
                   </span>
                   <span className="text-muted-foreground font-medium">{plan.period}</span>

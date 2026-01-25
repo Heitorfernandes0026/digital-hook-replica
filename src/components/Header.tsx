@@ -8,6 +8,7 @@ const Header = () => {
   const navLinks = [
     { href: "#servicos", label: "Serviços" },
     { href: "#metodo", label: "Método HOOK™" },
+    { href: "#planos", label: "Planos" },
     { href: "#portfolio", label: "Portfólio" },
     { href: "#depoimentos", label: "Depoimentos" },
     { href: "#faq", label: "FAQ" },

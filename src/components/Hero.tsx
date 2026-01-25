@@ -17,7 +17,7 @@ const Hero = () => {
         <img 
           src={heroBackground} 
           alt="Background" 
-          className="w-full h-full object-cover object-[85%_center] scale-125"
+          className="w-full h-full object-cover object-center"
         />
         {/* Overlay for better text readability on left side */}
         <div 

@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Lion Image - Right Side - Full Background with smooth blend */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] lg:w-[55%]">
+      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[70%] lg:w-[65%]">
         <img 
           src={heroLion} 
           alt="Lion" 

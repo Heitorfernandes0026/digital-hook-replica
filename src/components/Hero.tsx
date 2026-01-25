@@ -19,11 +19,18 @@ const Hero = () => {
           alt="Lion" 
           className="h-full w-full object-cover object-top"
         />
-        {/* Smooth gradient overlay to blend with background */}
+        {/* Subtle gradient overlay - only on the far left edge */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.8) 15%, hsl(230 25% 5% / 0.4) 35%, transparent 60%)'
+            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.6) 8%, hsl(230 25% 5% / 0.2) 20%, transparent 40%)'
+          }}
+        />
+        {/* Technology effect overlay - allows background effects to show through */}
+        <div 
+          className="absolute inset-0 pointer-events-none mix-blend-screen opacity-30"
+          style={{
+            background: 'radial-gradient(ellipse at 70% 30%, hsl(280 80% 60% / 0.3) 0%, transparent 50%), radial-gradient(ellipse at 50% 70%, hsl(217 91% 60% / 0.2) 0%, transparent 40%)'
           }}
         />
       </div>

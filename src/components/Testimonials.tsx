@@ -29,7 +29,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-24 relative overflow-hidden cosmic-section">
+    <section id="depoimentos" className="py-24 relative overflow-hidden cosmic-section cosmic-section-2">
       {/* Background effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />

@@ -108,7 +108,7 @@ const Pricing = () => {
   };
 
   return (
-    <section id="planos" className="py-24 relative overflow-hidden cosmic-section">
+    <section id="planos" className="py-24 relative overflow-hidden cosmic-section cosmic-section-2">
       {/* Enhanced background effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.2)_0%,hsl(260_50%_30%/0.1)_30%,transparent_60%)]" />

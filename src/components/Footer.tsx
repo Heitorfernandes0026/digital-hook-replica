@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 border-t border-purple-500/20 overflow-hidden cosmic-section">
+    <footer className="relative py-16 border-t border-purple-500/20 overflow-hidden cosmic-section cosmic-section-2">
       {/* Background effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[400px] bg-[radial-gradient(ellipse_at_bottom,hsl(280_60%_40%/0.2)_0%,transparent_70%)]" />

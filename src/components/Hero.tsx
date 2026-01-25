@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroLion from "@/assets/hero-lion.png";
 
 const Hero = () => {
   const stats = [
@@ -12,21 +11,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Lion Image - Right Side - Full Background with smooth blend */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[45%] lg:w-[40%] flex items-center justify-end">
-        <img 
-          src={heroLion} 
-          alt="Lion" 
-          className="h-full w-full object-contain object-right"
-        />
-        {/* Smooth gradient overlay to blend with background */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(to right, hsl(230 25% 5%) 0%, hsl(230 25% 5% / 0.8) 15%, hsl(230 25% 5% / 0.4) 35%, transparent 60%)'
-          }}
-        />
-      </div>
 
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 pointer-events-none">

@@ -20,16 +20,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0a0a12]">
       {/* Background with lion image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/80 to-transparent z-10" />
         <img 
           src={heroBackground} 
           alt="Background" 
-          className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none object-contain"
-          style={{
-            filter: 'contrast(1.1) saturate(1.1)',
-            imageRendering: 'crisp-edges'
-          }}
+          className="absolute right-0 top-0 h-full w-auto max-w-[70%] object-cover object-left"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/90 to-transparent z-10" />
       </div>
 
       <div className="container mx-auto px-4 relative z-20">

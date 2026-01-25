@@ -39,8 +39,8 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
-            Domine o seu mercado com{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">Domine</span> o seu mercado com{" "}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-fuchsia-400 bg-clip-text text-transparent">
               landing pages
             </span>{" "}
             de alta conversão

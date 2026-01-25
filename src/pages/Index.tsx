@@ -11,10 +11,14 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import cosmicBackground from "@/assets/cosmic-background.jpeg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div 
+      className="min-h-screen bg-background relative"
+      style={{ '--cosmic-bg-image': `url(${cosmicBackground})` } as React.CSSProperties}
+    >
       <AnimatedBackground />
       <div className="relative z-10">
         <Header />

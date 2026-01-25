@@ -311,14 +311,17 @@
   /* Cosmic section background */
   .cosmic-section {
     position: relative;
-    background: linear-gradient(180deg, hsl(240 20% 4%) 0%, hsl(260 25% 8%) 50%, hsl(240 20% 4%) 100%);
+    background: hsl(240 20% 4%);
   }
 
   .cosmic-section::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gradient-cosmic);
+    background-image: var(--cosmic-bg-image);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
     pointer-events: none;
   }
 
@@ -326,7 +329,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gradient-cosmic-alt);
+    background: linear-gradient(180deg, hsl(240 20% 4% / 0.7) 0%, hsl(240 20% 4% / 0.5) 50%, hsl(240 20% 4% / 0.7) 100%);
     pointer-events: none;
   }
 

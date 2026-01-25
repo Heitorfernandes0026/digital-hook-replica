@@ -147,10 +147,13 @@ const Pricing = () => {
                   {plan.highlight && (
                     <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
                   )}
-                  <h3 className={`text-lg font-bold tracking-wide mb-3 ${plan.highlight ? "text-primary" : "text-foreground"}`}>
+                  <h3 className={`text-lg font-bold tracking-wide ${plan.highlight ? "text-primary mb-1" : "text-foreground mb-3"}`}>
                     {plan.name}
                     {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                   </h3>
+                  {plan.highlight && (
+                    <span className="text-xs font-semibold text-secondary mb-3 block">Mais Popular</span>
+                  )}
                   <div className="flex items-baseline justify-center gap-0.5">
                     <span className={`text-2xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
                       {plan.price}
@@ -226,10 +229,13 @@ const Pricing = () => {
             >
               {/* Card Header */}
               <div className={`p-6 text-center relative ${plan.highlight ? "bg-primary/10" : "bg-card/50"}`}>
-                <h3 className={`text-xl font-bold tracking-wide mb-2 ${plan.highlight ? "text-primary" : "text-foreground"}`}>
+                <h3 className={`text-xl font-bold tracking-wide ${plan.highlight ? "text-primary mb-1" : "text-foreground mb-2"}`}>
                   {plan.name}
                   {plan.highlight && <Star className="w-4 h-4 inline-block ml-2 text-primary fill-primary" />}
                 </h3>
+                {plan.highlight && (
+                  <span className="text-xs font-semibold text-secondary mb-2 block">Mais Popular</span>
+                )}
                 <div className="flex items-baseline justify-center gap-0.5">
                   <span className={`text-3xl font-extrabold ${plan.highlight ? "gradient-text" : "text-foreground"}`}>
                     {plan.price}

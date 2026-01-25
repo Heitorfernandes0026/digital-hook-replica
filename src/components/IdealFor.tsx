@@ -23,12 +23,13 @@ const IdealFor = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden cosmic-section">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/40 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-[radial-gradient(ellipse_at_bottom,hsl(280_80%_60%/0.1)_0%,transparent_70%)]" />
-        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-gradient-to-l from-accent/15 to-transparent rounded-full blur-[80px] animate-flow-2" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-[radial-gradient(ellipse_at_bottom,hsl(280_60%_40%/0.2)_0%,transparent_70%)]" />
+        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-gradient-to-l from-pink-600/20 to-transparent rounded-full blur-[80px] animate-flow-2" />
+        <div className="absolute top-1/4 left-0 w-[300px] h-[300px] bg-gradient-to-r from-purple-600/15 to-transparent rounded-full blur-[60px] animate-flow-1" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

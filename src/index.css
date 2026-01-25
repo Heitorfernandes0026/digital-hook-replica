@@ -43,12 +43,20 @@
     --neon-orange: 30 90% 50%;
     --neon-cyan: 190 90% 50%;
 
+    /* Cosmic theme colors */
+    --cosmic-dark: 240 20% 4%;
+    --cosmic-purple: 280 60% 20%;
+    --cosmic-blue: 220 50% 15%;
+    --cosmic-pink: 300 40% 15%;
+
     /* Enhanced gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(280 80% 60%) 50%, hsl(320 80% 55%) 100%);
     --gradient-text: linear-gradient(90deg, hsl(217 91% 60%) 0%, hsl(280 80% 60%) 40%, hsl(320 80% 55%) 70%, hsl(30 90% 50%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(230 25% 10% / 0.9) 0%, hsl(230 25% 6% / 0.95) 100%);
     --gradient-glow: radial-gradient(ellipse at center, hsl(280 80% 60% / 0.2) 0%, transparent 70%);
     --gradient-flow: linear-gradient(135deg, hsl(217 91% 60% / 0.3) 0%, hsl(280 80% 60% / 0.2) 50%, hsl(320 80% 55% / 0.1) 100%);
+    --gradient-cosmic: radial-gradient(ellipse at 70% 30%, hsl(280 60% 25% / 0.4) 0%, hsl(220 50% 15% / 0.3) 40%, transparent 70%);
+    --gradient-cosmic-alt: radial-gradient(ellipse at 30% 70%, hsl(300 40% 20% / 0.3) 0%, hsl(240 30% 10% / 0.2) 50%, transparent 80%);
     
     /* Enhanced shadows */
     --shadow-glow: 0 0 60px hsl(280 80% 60% / 0.4), 0 0 100px hsl(320 80% 55% / 0.2);
@@ -298,6 +306,33 @@
   .neon-accordion:hover .neon-chevron,
   .neon-accordion[data-state="open"] .neon-chevron {
     filter: drop-shadow(0 0 6px hsl(var(--primary))) drop-shadow(0 0 12px hsl(var(--secondary)));
+  }
+
+  /* Cosmic section background */
+  .cosmic-section {
+    position: relative;
+    background: linear-gradient(180deg, hsl(240 20% 4%) 0%, hsl(260 25% 8%) 50%, hsl(240 20% 4%) 100%);
+  }
+
+  .cosmic-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-cosmic);
+    pointer-events: none;
+  }
+
+  .cosmic-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-cosmic-alt);
+    pointer-events: none;
+  }
+
+  /* Lightning effect */
+  .lightning-glow {
+    box-shadow: 0 0 30px hsl(280 80% 60% / 0.5), 0 0 60px hsl(280 80% 60% / 0.3), 0 0 100px hsl(280 80% 60% / 0.1);
   }
 }
 

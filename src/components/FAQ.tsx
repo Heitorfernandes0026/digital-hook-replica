@@ -35,12 +35,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden">
+    <section id="faq" className="py-24 relative overflow-hidden cosmic-section">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        <div className="absolute bottom-1/4 left-1/4 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.08)_0%,transparent_50%)]" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-secondary/10 to-transparent rounded-full blur-[80px] animate-flow-3" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+        <div className="absolute bottom-1/4 left-1/4 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.15)_0%,transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-purple-600/20 to-transparent rounded-full blur-[80px] animate-flow-3" />
+        <div className="absolute top-1/3 left-0 w-[300px] h-[300px] bg-gradient-to-r from-pink-600/15 to-transparent rounded-full blur-[60px] animate-flow-1" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

@@ -13,7 +13,12 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at 70% 50%, hsl(270 40% 15%) 0%, hsl(280 30% 8%) 50%, hsl(260 35% 5%) 100%)'
+        }}
+      >
         <img 
           src={heroBackground} 
           alt="Background" 

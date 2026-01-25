@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import heroLion from "@/assets/hero-lion.png";
 
 const Hero = () => {
   const stats = [
@@ -11,6 +12,20 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Lion Image - Left Side */}
+      <div className="absolute left-0 top-0 bottom-0 w-1/2 lg:w-[45%] hidden md:block">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background z-10" />
+        <img 
+          src={heroLion} 
+          alt="Lion" 
+          className="h-full w-full object-cover object-top opacity-60"
+          style={{ 
+            maskImage: 'linear-gradient(to right, black 40%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, black 40%, transparent 100%)'
+          }}
+        />
+      </div>
+
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Main radial glow */}
@@ -26,7 +41,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto md:ml-auto md:mr-0 text-center md:text-right">
           {/* Badge with glow effect */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-card/30 backdrop-blur-xl mb-8 animate-fade-up glass animate-glow-pulse">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_hsl(142_71%_45%)]" />
@@ -42,12 +57,12 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl md:ml-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Cada seção tem um motivo. Cada botão tem um objetivo. Estratégia, copy e design pensados para conversão desde o primeiro scroll.
           </p>
 
           {/* CTA Buttons with enhanced glow */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-end gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Button variant="hero" size="xl" className="group relative overflow-hidden">
               <span className="relative z-10 flex items-center">
                 Solicitar orçamento
@@ -61,7 +76,7 @@ const Hero = () => {
           </div>
 
           {/* Quick Info with neon accents */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mb-16 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm text-muted-foreground mb-16 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <div className="flex items-center gap-2">
               <span className="text-green-500 drop-shadow-[0_0_6px_hsl(142_71%_45%)]">✓</span>
               Entrega em até 7 dias

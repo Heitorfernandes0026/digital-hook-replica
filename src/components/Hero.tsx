@@ -13,11 +13,11 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Lion Image - Right Side - Full Background with smooth blend */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[55%] lg:w-[50%]">
+      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[45%] lg:w-[40%] flex items-center justify-end">
         <img 
           src={heroLion} 
           alt="Lion" 
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-contain object-right"
         />
         {/* Smooth gradient overlay to blend with background */}
         <div 

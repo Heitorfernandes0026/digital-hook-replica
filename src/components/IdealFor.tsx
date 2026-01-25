@@ -23,7 +23,7 @@ const IdealFor = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden cosmic-section">
+    <section className="py-24 relative overflow-hidden cosmic-section cosmic-section-1">
       {/* Background effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />

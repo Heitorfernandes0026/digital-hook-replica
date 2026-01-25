@@ -308,28 +308,47 @@
     filter: drop-shadow(0 0 6px hsl(var(--primary))) drop-shadow(0 0 12px hsl(var(--secondary)));
   }
 
-  /* Cosmic section background */
+  /* Cosmic section background - Base */
   .cosmic-section {
     position: relative;
     background: hsl(240 20% 4%);
   }
 
-  .cosmic-section::before {
+  /* Cosmic section with image 1 (pink/teal nebula) */
+  .cosmic-section-1::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: var(--cosmic-bg-image);
+    background-image: var(--cosmic-bg-1);
     background-size: cover;
     background-position: center;
-    opacity: 0.45;
+    opacity: 0.4;
     pointer-events: none;
   }
 
+  /* Cosmic section with image 2 (galaxy spirals) */
+  .cosmic-section-2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--cosmic-bg-2);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  /* Transition overlay for smooth blending */
   .cosmic-section::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, hsl(240 20% 4% / 0.5) 0%, hsl(240 20% 4% / 0.3) 50%, hsl(240 20% 4% / 0.5) 100%);
+    background: linear-gradient(180deg, 
+      hsl(240 20% 4% / 0.8) 0%, 
+      hsl(240 20% 4% / 0.2) 15%, 
+      hsl(240 20% 4% / 0.2) 85%, 
+      hsl(240 20% 4% / 0.8) 100%
+    );
     pointer-events: none;
   }
 

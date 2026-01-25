@@ -41,7 +41,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-24 relative overflow-hidden cosmic-section">
+    <section id="servicos" className="py-24 relative overflow-hidden cosmic-section cosmic-section-1">
       {/* Background effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.15)_0%,transparent_50%)]" />

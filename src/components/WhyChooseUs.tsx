@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden cosmic-section">
+    <section className="py-24 relative overflow-hidden cosmic-section cosmic-section-2">
       {/* SVG Gradient Definition for icons */}
       <svg className="absolute w-0 h-0">
         <defs>

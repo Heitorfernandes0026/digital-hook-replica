@@ -36,7 +36,7 @@ const HookMethod = () => {
             Método <span className="gradient-text">HOOK™</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Nossa metodologia exclusiva para criar páginas que capturam atenção e convertem visitantes em clientes.
+            Nossa metodologia exclusiva para criar páginas que capturam a atenção e convertem visitantes em clientes.
           </p>
         </div>
 

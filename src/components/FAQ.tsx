@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -56,17 +57,23 @@ const FAQ = () => {
           </p>
         </div>
 
-        {/* Accordion */}
+        {/* Accordion with Neon Effects */}
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="px-6 rounded-xl glass border border-border/50 data-[state=open]:border-primary/50 data-[state=open]:shadow-[0_0_30px_hsl(var(--primary)/0.1)] transition-all duration-300"
+                className="px-6 rounded-xl neon-accordion overflow-hidden"
               >
-                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg">
-                  {faq.question}
+                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg group">
+                  <span className="flex-1">{faq.question}</span>
+                  <ChevronDown 
+                    className="h-5 w-5 shrink-0 text-primary neon-chevron transition-transform duration-200 group-data-[state=open]:rotate-180" 
+                    style={{
+                      filter: 'drop-shadow(0 0 4px hsl(217 91% 60% / 0.6))'
+                    }}
+                  />
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
                   {faq.answer}

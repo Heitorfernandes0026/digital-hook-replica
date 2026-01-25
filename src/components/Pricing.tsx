@@ -109,16 +109,21 @@ const Pricing = () => {
 
   return (
     <section id="planos" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
+      {/* Enhanced background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1000px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.1)_0%,hsl(280_80%_60%/0.05)_30%,transparent_60%)]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-secondary/15 to-transparent rounded-full blur-[120px] animate-flow-2" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-primary/15 to-transparent rounded-full blur-[100px] animate-flow-3" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold tracking-wider uppercase mb-4">
             Nossos Planos
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Compare os planos e escolha a <span className="gradient-text">melhor solução digital</span> para sua empresa
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
+            Compare os planos e escolha a <span className="gradient-text">melhor solução digital</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             Todos os planos incluem hospedagem, site profissional, design moderno e suporte técnico para que você não precise se preocupar com tecnologia.
@@ -127,7 +132,7 @@ const Pricing = () => {
 
         {/* Pricing Table - Desktop */}
         <div className="hidden lg:block max-w-5xl mx-auto">
-          <div className="rounded-3xl border border-border/50 bg-gradient-to-b from-card/80 to-card/40 backdrop-blur-xl shadow-2xl overflow-hidden">
+          <div className="rounded-3xl border border-border/50 glass shadow-2xl overflow-hidden animate-glow-pulse">
             {/* Header Row */}
             <div className="grid grid-cols-4">
               <div className="p-8 flex items-end">

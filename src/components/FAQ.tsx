@@ -34,19 +34,24 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(217_91%_60%/0.08)_0%,transparent_50%)]" />
+    <section id="faq" className="py-24 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute bottom-1/4 left-1/4 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(217_91%_60%/0.08)_0%,transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-secondary/10 to-transparent rounded-full blur-[80px] animate-flow-3" />
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold tracking-wider uppercase mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
             Perguntas <span className="gradient-text">frequentes</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Tire suas dúvidas sobre nossos serviços e processo de trabalho.
           </p>
         </div>
@@ -58,12 +63,12 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="px-6 rounded-xl bg-card/50 border border-border backdrop-blur-sm data-[state=open]:border-primary/50 transition-all"
+                className="px-6 rounded-xl glass border border-border/50 data-[state=open]:border-primary/50 data-[state=open]:shadow-[0_0_30px_hsl(var(--primary)/0.1)] transition-all duration-300"
               >
-                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6">
+                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
+                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

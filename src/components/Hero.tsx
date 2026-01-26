@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   const stats = [
-    { value: "+50", label: "Projetos entregues", icon: Briefcase, color: "text-white group-hover:text-purple-300" },
+    { value: "+50", label: "Projetos entregues", icon: Briefcase, color: "text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,1)] drop-shadow-[0_0_20px_rgba(249,115,22,0.8)] drop-shadow-[0_0_40px_rgba(249,115,22,0.5)] group-hover:text-orange-300" },
     { value: "2 dias", label: "Tempo médio de entrega", icon: Clock, color: "text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,1)] drop-shadow-[0_0_20px_rgba(249,115,22,0.8)] drop-shadow-[0_0_40px_rgba(249,115,22,0.5)] group-hover:text-orange-300" },
     { value: "+300%", label: "Aumento em conversões", icon: TrendingUp, color: "text-white group-hover:text-purple-300" },
     { value: "100%", label: "Clientes satisfeitos", icon: Users, color: "text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,1)] drop-shadow-[0_0_20px_rgba(249,115,22,0.8)] drop-shadow-[0_0_40px_rgba(249,115,22,0.5)] group-hover:text-orange-300" },

@@ -28,20 +28,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl">
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-20 tracking-tight">
-            <span className="block mb-2">
-              <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.8)] animate-pulse" style={{ animationDuration: '3s' }}>Domine</span>
-              <span className="text-white/90 drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]"> o seu mercado</span>
-            </span>
-            <span className="block mb-2 text-white/90 drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">
-              com{" "}
-              <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(249,115,22,0.6)] drop-shadow-[0_0_60px_rgba(236,72,153,0.4)]">
-                sites e landing pages
-              </span>
-            </span>
-            <span className="block text-white drop-shadow-[0_2px_15px_rgba(255,255,255,0.4)]">
-              de <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">alta conversão</span>
-            </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-20 text-white">
+            <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Domine</span> o seu mercado com{" "}
+            <span className="bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+              sites e landing pages
+            </span>{" "}
+            de alta conversão
           </h1>
 
           {/* CTA Buttons with neon hover effect */}

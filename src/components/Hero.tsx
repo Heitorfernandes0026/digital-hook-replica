@@ -8,169 +8,195 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
-      {/* Base gradient background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Deep black base */}
+      <div className="absolute inset-0 bg-[#050505]" />
+
+      {/* Primary ambient gradients */}
       <div 
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 50% 120%, hsl(20 80% 8%) 0%, transparent 50%),
-            radial-gradient(ellipse 60% 40% at 100% 0%, hsl(25 70% 12%) 0%, transparent 40%),
-            radial-gradient(ellipse 50% 50% at 0% 100%, hsl(280 50% 8%) 0%, transparent 45%),
-            linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 50%, #080808 100%)
+            radial-gradient(ellipse 120% 60% at 50% 140%, hsl(25 70% 12%) 0%, transparent 50%),
+            radial-gradient(ellipse 80% 80% at 110% -20%, hsl(28 80% 15%) 0%, transparent 45%),
+            radial-gradient(ellipse 60% 60% at -10% 110%, hsl(280 40% 10%) 0%, transparent 50%)
           `,
         }}
       />
 
-      {/* Animated flowing waves - Layer 1 (back) */}
-      <svg 
-        className="absolute inset-0 w-full h-full opacity-60"
-        viewBox="0 0 1920 1080" 
-        preserveAspectRatio="xMidYMid slice"
-        style={{ filter: 'blur(1px)' }}
-      >
-        <defs>
-          <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(25 90% 45%)" stopOpacity="0.4" />
-            <stop offset="50%" stopColor="hsl(30 85% 50%)" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="hsl(35 80% 40%)" stopOpacity="0.3" />
-          </linearGradient>
-          <linearGradient id="waveGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="hsl(30 90% 55%)" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="hsl(20 85% 35%)" stopOpacity="0.2" />
-          </linearGradient>
-          <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="hsl(175 80% 50%)" stopOpacity="0.3" />
-            <stop offset="50%" stopColor="hsl(280 70% 55%)" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="hsl(320 75% 50%)" stopOpacity="0.1" />
-          </linearGradient>
-        </defs>
-        
-        {/* Main flowing wave - top left */}
-        <path
-          d="M-100,200 Q200,100 400,180 T800,120 T1200,200 T1600,100 T2000,180 L2000,-100 L-100,-100 Z"
-          fill="url(#waveGradient1)"
-          className="animate-flow-1"
-          style={{ transformOrigin: 'center' }}
-        />
-        
-        {/* Secondary wave - flows from top */}
-        <path
-          d="M-100,350 Q300,250 600,320 T1100,280 T1500,350 T1900,280 L2000,0 L-100,0 Z"
-          fill="url(#waveGradient2)"
-          className="animate-flow-2"
-          style={{ transformOrigin: 'center', opacity: 0.5 }}
-        />
-      </svg>
-
-      {/* Flowing accent wave - right side */}
-      <svg 
-        className="absolute inset-0 w-full h-full opacity-70"
-        viewBox="0 0 1920 1080" 
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <defs>
-          <linearGradient id="rightWaveGrad" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="transparent" />
-            <stop offset="40%" stopColor="hsl(30 90% 50%)" stopOpacity="0.15" />
-            <stop offset="100%" stopColor="hsl(25 85% 45%)" stopOpacity="0.5" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M1920,200 Q1700,400 1800,600 T1700,900 T1920,1100 L1920,0 Z"
-          fill="url(#rightWaveGrad)"
-          className="animate-flow-3"
-        />
-        {/* Orange glow accent */}
-        <ellipse
-          cx="1850"
-          cy="150"
-          rx="200"
-          ry="150"
-          fill="hsl(30 90% 50%)"
-          opacity="0.15"
-          style={{ filter: 'blur(60px)' }}
-        />
-      </svg>
-
-      {/* Geometric diamond shapes - subtle tech feel */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Bottom left geometric */}
-        <div 
-          className="absolute -bottom-20 -left-20 w-[500px] h-[500px] opacity-20"
-          style={{
-            background: 'linear-gradient(45deg, transparent 40%, hsl(220 30% 15%) 50%, transparent 60%)',
-            transform: 'rotate(45deg)',
-          }}
-        />
-        {/* Center bottom geometric accent */}
-        <div 
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-15"
-          style={{
-            background: 'linear-gradient(0deg, hsl(280 40% 12%) 0%, transparent 80%)',
-            clipPath: 'polygon(50% 100%, 0% 0%, 100% 0%)',
-          }}
-        />
+      {/* Smooth flowing wave - Main Orange Wave */}
+      <div className="absolute inset-0 overflow-hidden">
+        <svg 
+          className="absolute w-[200%] h-full -left-1/4"
+          viewBox="0 0 1920 1080" 
+          preserveAspectRatio="none"
+          style={{ opacity: 0.85 }}
+        >
+          <defs>
+            <linearGradient id="mainWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(30 85% 45%)" stopOpacity="0" />
+              <stop offset="20%" stopColor="hsl(28 90% 48%)" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="hsl(25 95% 50%)" stopOpacity="0.8" />
+              <stop offset="80%" stopColor="hsl(30 90% 45%)" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="hsl(35 80% 40%)" stopOpacity="0" />
+            </linearGradient>
+            <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="20" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          
+          {/* Elegant curved wave */}
+          <path
+            d="M-200,250 
+               C200,180 400,320 700,200 
+               S1000,350 1300,180 
+               S1600,300 1920,220
+               L1920,-50 L-200,-50 Z"
+            fill="url(#mainWaveGrad)"
+            filter="url(#glow1)"
+            className="animate-flow-1"
+          />
+        </svg>
       </div>
 
-      {/* Subtle grid overlay for tech feel */}
+      {/* Secondary flowing ribbon */}
+      <div className="absolute inset-0 overflow-hidden">
+        <svg 
+          className="absolute w-full h-full"
+          viewBox="0 0 1920 1080" 
+          preserveAspectRatio="xMidYMid slice"
+          style={{ opacity: 0.6 }}
+        >
+          <defs>
+            <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+              <stop offset="0%" stopColor="hsl(32 90% 55%)" stopOpacity="0.1" />
+              <stop offset="30%" stopColor="hsl(28 85% 50%)" stopOpacity="0.5" />
+              <stop offset="70%" stopColor="hsl(25 90% 45%)" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="hsl(20 80% 40%)" stopOpacity="0.1" />
+            </linearGradient>
+          </defs>
+          
+          <path
+            d="M1920,400 
+               Q1700,200 1500,350 
+               T1100,250 
+               T700,400 
+               T300,280 
+               T-100,380
+               L-100,500 
+               Q200,350 500,480 
+               T900,380 
+               T1300,500 
+               T1700,380 
+               T1920,480 Z"
+            fill="url(#ribbonGrad)"
+            className="animate-flow-2"
+          />
+        </svg>
+      </div>
+
+      {/* Right side accent glow */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute top-0 right-0 w-1/2 h-full"
         style={{
-          backgroundImage: `
-            linear-gradient(hsl(0 0% 100%) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)
+          background: `
+            radial-gradient(ellipse 80% 120% at 100% 30%, hsl(28 90% 50% / 0.25) 0%, transparent 50%),
+            radial-gradient(ellipse 60% 80% at 90% 70%, hsl(30 85% 45% / 0.15) 0%, transparent 40%)
           `,
-          backgroundSize: '100px 100px',
         }}
       />
 
-      {/* Ambient light glow spots */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Top center glow */}
+      {/* Cyan accent - top */}
+      <div 
+        className="absolute -top-20 left-1/4 w-[600px] h-[300px]"
+        style={{
+          background: 'radial-gradient(ellipse, hsl(175 70% 50% / 0.12) 0%, transparent 60%)',
+          filter: 'blur(60px)',
+        }}
+      />
+
+      {/* Purple accent - left side */}
+      <div 
+        className="absolute top-1/2 -left-20 w-[400px] h-[600px] -translate-y-1/2"
+        style={{
+          background: 'radial-gradient(ellipse, hsl(280 60% 45% / 0.08) 0%, transparent 60%)',
+          filter: 'blur(80px)',
+        }}
+      />
+
+      {/* Subtle light streaks */}
+      <div className="absolute inset-0 overflow-hidden opacity-30">
         <div 
-          className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] opacity-20"
+          className="absolute top-[15%] right-[5%] w-[2px] h-[300px]"
           style={{
-            background: 'radial-gradient(ellipse, hsl(175 70% 50%) 0%, transparent 70%)',
-            filter: 'blur(80px)',
+            background: 'linear-gradient(180deg, transparent 0%, hsl(30 90% 55% / 0.8) 30%, hsl(30 90% 55% / 0.8) 70%, transparent 100%)',
+            transform: 'rotate(25deg)',
+            filter: 'blur(1px)',
           }}
         />
-        {/* Right orange glow */}
         <div 
-          className="absolute top-1/4 -right-20 w-[400px] h-[600px] opacity-25"
+          className="absolute top-[10%] right-[12%] w-[1px] h-[200px]"
           style={{
-            background: 'radial-gradient(ellipse, hsl(30 90% 50%) 0%, transparent 60%)',
-            filter: 'blur(100px)',
-          }}
-        />
-        {/* Left purple subtle glow */}
-        <div 
-          className="absolute top-1/2 -left-40 w-[500px] h-[500px] opacity-10"
-          style={{
-            background: 'radial-gradient(ellipse, hsl(280 70% 50%) 0%, transparent 60%)',
-            filter: 'blur(80px)',
+            background: 'linear-gradient(180deg, transparent 0%, hsl(35 85% 50% / 0.6) 40%, hsl(35 85% 50% / 0.6) 60%, transparent 100%)',
+            transform: 'rotate(20deg)',
+            filter: 'blur(1px)',
           }}
         />
       </div>
 
-      {/* Floating particles effect */}
+      {/* Geometric shapes - premium feel */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {/* Diamond shape bottom left */}
+        <div 
+          className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px]"
+          style={{
+            background: 'linear-gradient(135deg, hsl(220 20% 8%) 0%, transparent 60%)',
+            transform: 'rotate(45deg)',
+            opacity: 0.6,
+          }}
+        />
+        {/* Triangle accent center-bottom */}
+        <div 
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px]"
+          style={{
+            background: 'linear-gradient(0deg, hsl(0 0% 3%) 0%, transparent 100%)',
+            clipPath: 'polygon(50% 100%, 0% 0%, 100% 0%)',
+            opacity: 0.8,
+          }}
+        />
+      </div>
+
+      {/* Noise texture overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.015] pointer-events-none mix-blend-overlay"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        }}
+      />
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full animate-float"
+            className="absolute rounded-full animate-float"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: i % 3 === 0 
+              width: `${2 + Math.random() * 3}px`,
+              height: `${2 + Math.random() * 3}px`,
+              left: `${10 + Math.random() * 80}%`,
+              top: `${10 + Math.random() * 80}%`,
+              background: i % 4 === 0 
                 ? 'hsl(30 90% 60%)' 
-                : i % 3 === 1 
-                  ? 'hsl(175 80% 60%)' 
-                  : 'hsl(280 70% 60%)',
-              opacity: 0.3 + Math.random() * 0.4,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${4 + Math.random() * 4}s`,
-              boxShadow: `0 0 ${6 + Math.random() * 6}px currentColor`,
+                : i % 4 === 1 
+                  ? 'hsl(175 80% 55%)' 
+                  : i % 4 === 2
+                    ? 'hsl(280 70% 60%)'
+                    : 'hsl(0 0% 100%)',
+              opacity: 0.4 + Math.random() * 0.3,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${5 + Math.random() * 5}s`,
+              boxShadow: `0 0 ${8 + Math.random() * 8}px currentColor`,
             }}
           />
         ))}
@@ -183,30 +209,33 @@ const Hero = () => {
           className={`text-sm md:text-base tracking-[0.4em] font-medium mb-6 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
-          style={{ color: 'hsl(175 80% 50%)' }}
+          style={{ 
+            color: 'hsl(175 80% 50%)',
+            textShadow: '0 0 20px hsl(175 80% 50% / 0.5)',
+          }}
         >
           AGÊNCIA
         </p>
 
         {/* Logo section */}
         <div 
-          className={`flex items-center justify-center gap-4 mb-6 transition-all duration-700 delay-200 ${
+          className={`flex items-center justify-center gap-3 md:gap-4 mb-6 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
         >
           {/* Play icon */}
           <div 
-            className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center"
+            className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-center"
             style={{
               color: 'hsl(30 90% 50%)',
-              filter: 'drop-shadow(0 0 10px hsl(30 90% 50% / 0.5))',
+              filter: 'drop-shadow(0 0 15px hsl(30 90% 50% / 0.6))',
             }}
           >
             <svg 
               viewBox="0 0 24 24" 
               fill="none" 
               stroke="currentColor" 
-              strokeWidth="2.5"
+              strokeWidth="2"
               className="w-full h-full"
             >
               <polygon points="5 3 19 12 5 21 5 3" fill="none" />
@@ -214,57 +243,67 @@ const Hero = () => {
           </div>
 
           {/* NEXT LEVEL text */}
-          <div className="flex items-center">
+          <div className="flex items-center shadow-2xl">
             {/* NEXT box */}
             <div 
-              className="px-4 py-2 md:px-6 md:py-3 rounded-l-md"
+              className="px-3 py-1.5 md:px-5 md:py-2.5 lg:px-6 lg:py-3"
               style={{ 
-                background: 'hsl(30 90% 50%)',
-                boxShadow: '0 0 30px hsl(30 90% 50% / 0.4), 0 4px 20px hsl(0 0% 0% / 0.3)',
+                background: 'linear-gradient(135deg, hsl(32 95% 52%) 0%, hsl(28 90% 48%) 100%)',
+                boxShadow: '0 0 40px hsl(30 90% 50% / 0.5), 0 8px 30px hsl(0 0% 0% / 0.4)',
+                borderRadius: '6px 0 0 6px',
               }}
             >
-              <span className="text-3xl md:text-5xl lg:text-6xl font-black text-black tracking-tight">
+              <span className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-black tracking-tight">
                 NEXT
               </span>
             </div>
             {/* LEVEL box */}
             <div 
-              className="px-4 py-2 md:px-6 md:py-3 rounded-r-md border-2"
+              className="px-3 py-1.5 md:px-5 md:py-2.5 lg:px-6 lg:py-3 border-2"
               style={{ 
-                background: 'rgba(0,0,0,0.8)',
-                borderColor: 'white',
-                boxShadow: '0 4px 20px hsl(0 0% 0% / 0.4)',
+                background: 'linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 2%) 100%)',
+                borderColor: 'hsl(0 0% 90%)',
+                boxShadow: '0 8px 30px hsl(0 0% 0% / 0.5)',
+                borderRadius: '0 6px 6px 0',
               }}
             >
-              <span className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
+              <span className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight">
                 LEVEL
               </span>
             </div>
           </div>
         </div>
 
-        {/* Gradient line */}
+        {/* Gradient line with glow */}
         <div 
-          className={`w-64 md:w-80 h-1 mx-auto mb-8 rounded-full transition-all duration-700 delay-300 ${
+          className={`relative w-56 md:w-72 lg:w-80 h-1 mx-auto mb-8 rounded-full transition-all duration-700 delay-300 ${
             isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{
-            background: 'linear-gradient(90deg, hsl(175 80% 50%) 0%, hsl(320 80% 55%) 50%, hsl(30 90% 50%) 100%)',
-            boxShadow: '0 0 20px hsl(320 80% 55% / 0.5)',
+            background: 'linear-gradient(90deg, hsl(175 80% 50%) 0%, hsl(280 70% 55%) 35%, hsl(320 80% 55%) 65%, hsl(30 90% 50%) 100%)',
           }}
-        />
+        >
+          <div 
+            className="absolute inset-0 rounded-full"
+            style={{
+              background: 'inherit',
+              filter: 'blur(8px)',
+              opacity: 0.7,
+            }}
+          />
+        </div>
 
         {/* Tagline */}
         <p 
-          className={`text-lg md:text-xl lg:text-2xl font-medium mb-10 transition-all duration-700 delay-400 ${
+          className={`text-base md:text-lg lg:text-xl xl:text-2xl font-medium mb-10 transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
         >
-          <span style={{ color: 'hsl(175 80% 50%)' }}>Sistemas</span>
-          <span className="text-white/80 mx-2">•</span>
-          <span style={{ color: 'hsl(320 80% 55%)' }}>Marketing</span>
-          <span className="text-white/80 mx-2">&</span>
-          <span className="text-white">Performance</span>
+          <span style={{ color: 'hsl(175 80% 50%)', textShadow: '0 0 15px hsl(175 80% 50% / 0.4)' }}>Sistemas</span>
+          <span className="text-white/60 mx-2 md:mx-3">•</span>
+          <span style={{ color: 'hsl(320 80% 55%)', textShadow: '0 0 15px hsl(320 80% 55% / 0.4)' }}>Marketing</span>
+          <span className="text-white/60 mx-2 md:mx-3">&</span>
+          <span className="text-white" style={{ textShadow: '0 0 10px hsl(0 0% 100% / 0.3)' }}>Performance</span>
         </p>
 
         {/* CTA Buttons */}
@@ -278,24 +317,31 @@ const Hero = () => {
             href="https://wa.me/5531975911116?text=Olá!%20Gostaria%20de%20contratar%20os%20serviços%20da%20NEXT%20LEVEL."
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-3 rounded-md font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            className="group relative px-8 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105 overflow-hidden"
             style={{
-              background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(35 85% 45%) 100%)',
+              background: 'linear-gradient(135deg, hsl(32 95% 52%) 0%, hsl(28 90% 45%) 100%)',
               color: 'black',
-              boxShadow: '0 0 30px hsl(30 90% 50% / 0.5), 0 4px 15px hsl(0 0% 0% / 0.3)',
+              boxShadow: '0 0 35px hsl(30 90% 50% / 0.5), 0 6px 20px hsl(0 0% 0% / 0.4)',
             }}
           >
-            Começar Agora
+            <span className="relative z-10">Começar Agora</span>
+            <div 
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{
+                background: 'linear-gradient(135deg, hsl(35 95% 55%) 0%, hsl(30 90% 50%) 100%)',
+              }}
+            />
           </a>
 
           {/* Secondary button */}
           <a
             href="#services"
-            className="group px-8 py-3 rounded-md font-bold text-sm uppercase tracking-wider border-2 transition-all duration-300 hover:scale-105 hover:bg-white/5"
+            className="group px-8 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wider border-2 transition-all duration-300 hover:scale-105"
             style={{
               borderColor: 'hsl(30 90% 50%)',
               color: 'hsl(30 90% 50%)',
-              background: 'transparent',
+              background: 'hsl(30 90% 50% / 0.05)',
+              boxShadow: '0 0 20px hsl(30 90% 50% / 0.15)',
             }}
           >
             Saiba Mais
@@ -306,19 +352,17 @@ const Hero = () => {
       {/* Scroll indicator */}
       <div 
         className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${
-          isVisible ? 'opacity-60' : 'opacity-0'
+          isVisible ? 'opacity-50 hover:opacity-80' : 'opacity-0'
         }`}
       >
-        <div className="flex flex-col items-center gap-2">
+        <div 
+          className="w-6 h-10 rounded-full border-2 flex items-start justify-center p-1.5 transition-colors duration-300"
+          style={{ borderColor: 'hsl(175 70% 50%)' }}
+        >
           <div 
-            className="w-6 h-10 rounded-full border-2 flex items-start justify-center p-1"
-            style={{ borderColor: 'hsl(175 80% 50%)' }}
-          >
-            <div 
-              className="w-1.5 h-2.5 rounded-full animate-bounce"
-              style={{ background: 'hsl(175 80% 50%)' }}
-            />
-          </div>
+            className="w-1 h-2 rounded-full animate-bounce"
+            style={{ background: 'hsl(175 70% 50%)' }}
+          />
         </div>
       </div>
     </section>

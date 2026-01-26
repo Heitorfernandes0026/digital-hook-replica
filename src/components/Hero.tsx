@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Check } from "lucide-react";
+import { ArrowRight, Play, Check, Briefcase, Clock, TrendingUp, Users } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   const stats = [
-    { value: "+50", label: "Projetos\nentregues", color: "text-purple-400" },
-    { value: "2 dias", label: "Tempo médio de\nentrega", color: "text-orange-400" },
-    { value: "+300%", label: "Aumento em\nconversões", color: "text-purple-400" },
-    { value: "100%", label: "Clientes\nsatisfeitos", color: "text-orange-400" },
+    { value: "+50", label: "Projetos entregues", icon: Briefcase },
+    { value: "2 dias", label: "Tempo médio de entrega", icon: Clock },
+    { value: "+300%", label: "Aumento em conversões", icon: TrendingUp },
+    { value: "100%", label: "Clientes satisfeitos", icon: Users },
   ];
 
   const features = [
@@ -71,33 +71,26 @@ const Hero = () => {
             ))}
           </div>
 
-          {/* Stats Grid - Neon filled cards like lion's mane */}
+          {/* Stats Grid - Professional cards with icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="relative p-5 rounded-xl overflow-hidden backdrop-blur-sm border border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.5),0_0_80px_rgba(236,72,153,0.3)]"
-                style={{
-                  background: index % 2 === 0 
-                    ? 'linear-gradient(135deg, rgba(168,85,247,0.4) 0%, rgba(236,72,153,0.3) 50%, rgba(139,92,246,0.35) 100%)'
-                    : 'linear-gradient(135deg, rgba(236,72,153,0.35) 0%, rgba(168,85,247,0.4) 50%, rgba(192,38,211,0.3) 100%)',
-                  boxShadow: '0 0 25px rgba(168,85,247,0.4), 0 0 50px rgba(236,72,153,0.25), inset 0 0 30px rgba(168,85,247,0.2)'
-                }}
+                className="group p-5 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-purple-500/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
               >
-                {/* Animated glow overlay */}
-                <div 
-                  className="absolute inset-0 opacity-50"
-                  style={{
-                    background: 'radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%)'
-                  }}
-                />
-                <div className="relative z-10">
-                  <div className="text-3xl md:text-4xl font-bold mb-2 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-white/90 whitespace-pre-line font-medium drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
-                    {stat.label}
-                  </div>
+                {/* Icon */}
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-300">
+                  <stat.icon className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                </div>
+                
+                {/* Value */}
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+                  {stat.value}
+                </div>
+                
+                {/* Label */}
+                <div className="text-sm text-gray-400 font-medium group-hover:text-gray-300 transition-colors">
+                  {stat.label}
                 </div>
               </div>
             ))}

@@ -22,13 +22,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 overflow-hidden">
-      {/* Subtle border glow at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+    <footer className="relative py-16 overflow-hidden bg-gradient-to-b from-[#0a0a12] via-[#0d0915] to-[#050208]">
+      {/* Top border glow to separate from content */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
       
-      {/* Subtle local overlay for depth variation */}
+      {/* Subtle diagonal gradient overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-pink-600/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-pink-900/5" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

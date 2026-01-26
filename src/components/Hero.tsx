@@ -228,15 +228,17 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         {/* AGÊNCIA label */}
         <p 
-          className={`text-xs md:text-sm tracking-[0.5em] font-medium mb-8 transition-all duration-700 ${
+          className={`text-sm md:text-base tracking-[0.6em] font-extralight mb-8 transition-all duration-700 uppercase ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
           style={{ 
-            color: 'hsl(175 75% 55%)',
-            textShadow: '0 0 30px hsl(175 75% 55% / 0.6)',
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 200,
+            color: 'hsl(175 80% 55%)',
+            textShadow: '0 0 40px hsl(175 80% 55% / 0.7), 0 0 80px hsl(175 80% 55% / 0.3)',
           }}
         >
-          AGÊNCIA
+          Agência
         </p>
 
         {/* Logo section */}
@@ -332,30 +334,37 @@ const Hero = () => {
           />
         </div>
 
-        {/* Tagline - Colored */}
+        {/* Tagline - Elegant Italic */}
         <p 
-          className={`text-sm md:text-base lg:text-lg font-medium mb-6 transition-all duration-700 delay-350 tracking-wide ${
+          className={`text-base md:text-lg lg:text-xl mb-6 transition-all duration-700 delay-350 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 300,
+            fontStyle: 'italic',
+            letterSpacing: '0.08em',
+          }}
         >
-          <span style={{ color: 'hsl(175 75% 55%)', textShadow: '0 0 25px hsl(175 75% 55% / 0.5)' }}>Sistemas</span>
-          <span className="text-white/40 mx-3">•</span>
-          <span style={{ color: 'hsl(320 75% 60%)', textShadow: '0 0 25px hsl(320 75% 60% / 0.5)' }}>Marketing</span>
-          <span className="text-white/40 mx-2">&</span>
-          <span className="text-white/90" style={{ textShadow: '0 0 15px hsl(0 0% 100% / 0.3)' }}>Performance</span>
+          <span style={{ color: 'hsl(175 80% 60%)', textShadow: '0 0 30px hsl(175 80% 60% / 0.6)' }}>Sistemas</span>
+          <span className="text-white/30 mx-2 md:mx-3" style={{ fontStyle: 'normal' }}>•</span>
+          <span style={{ color: 'hsl(320 80% 65%)', textShadow: '0 0 30px hsl(320 80% 65% / 0.6)' }}>Marketing</span>
+          <span className="text-white/30 mx-1 md:mx-2" style={{ fontStyle: 'normal' }}>&</span>
+          <span style={{ color: 'hsl(0 0% 95%)', textShadow: '0 0 20px hsl(0 0% 100% / 0.4)' }}>Performance</span>
         </p>
 
-        {/* Slogan - Luxury Italic Typography */}
+        {/* Slogan - Premium Typography */}
         <p 
-          className={`text-base md:text-lg lg:text-xl font-light mb-12 transition-all duration-700 delay-400 uppercase ${
+          className={`text-lg md:text-xl lg:text-2xl mb-12 transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
           style={{ 
-            fontFamily: "'Inter', 'Montserrat', sans-serif",
-            fontWeight: 300,
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 200,
             fontStyle: 'italic',
-            letterSpacing: '0.2em',
-            color: 'hsl(0 0% 55%)',
+            letterSpacing: '0.15em',
+            color: 'hsl(0 0% 50%)',
+            textTransform: 'uppercase',
           }}
         >
           O próximo passo para o seu sucesso.

@@ -15,15 +15,15 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: 'right center',
+          backgroundPosition: 'right 25%',
         }}
       />
       
       {/* Subtle overlay for text area */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
 
-      {/* Main content - positioned in left half */}
-      <div className="relative z-10 text-left pl-8 md:pl-16 lg:pl-24 w-full max-w-[55%] pt-24">
+      {/* Main content - centered in left area */}
+      <div className="relative z-10 text-left px-8 md:px-16 lg:px-24 w-full md:w-[50%] flex flex-col justify-center">
         {/* NEXT text */}
         <div 
           className={`transition-all duration-1000 ease-out ${

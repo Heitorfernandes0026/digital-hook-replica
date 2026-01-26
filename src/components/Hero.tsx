@@ -334,17 +334,17 @@ const Hero = () => {
 
         {/* Slogan - Luxury Tech Typography */}
         <p 
-          className={`text-sm md:text-base lg:text-lg font-light mb-14 transition-all duration-700 delay-400 ${
+          className={`text-sm md:text-base lg:text-lg font-light mb-14 transition-all duration-700 delay-400 uppercase ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
           style={{ 
             fontFamily: "'Inter', 'Montserrat', sans-serif",
             fontWeight: 300,
-            letterSpacing: '0.35em',
-            color: 'hsl(0 0% 65%)',
+            letterSpacing: '0.3em',
+            color: 'hsl(0 0% 60%)',
           }}
         >
-          Sistemas • Marketing & Performance
+          O próximo passo para o seu sucesso
         </p>
 
         {/* CTA Buttons */}

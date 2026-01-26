@@ -22,12 +22,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 border-t border-purple-500/20 overflow-hidden cosmic-section cosmic-section-2">
-      {/* Background effects */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[400px] bg-[radial-gradient(ellipse_at_bottom,hsl(280_60%_40%/0.2)_0%,transparent_70%)]" />
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-gradient-to-tl from-purple-600/20 to-transparent rounded-full blur-[60px]" />
-        <div className="absolute bottom-0 left-0 w-[250px] h-[250px] bg-gradient-to-tr from-pink-600/15 to-transparent rounded-full blur-[50px]" />
+    <footer className="relative py-16 overflow-hidden">
+      {/* Subtle border glow at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+      
+      {/* Subtle local overlay for depth variation */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-pink-600/5 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl">
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-14 text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-20 text-white">
             <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Domine</span> o seu mercado com{" "}
             <span className="bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
               sites e landing pages
@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
 
           {/* CTA Buttons with neon hover effect */}
-          <div className="flex flex-col sm:flex-row items-start gap-4 mb-20">
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-28">
             <Button 
               className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-purple-500 hover:to-pink-500 text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.6),0_0_60px_rgba(236,72,153,0.4)] hover:scale-105"
             >

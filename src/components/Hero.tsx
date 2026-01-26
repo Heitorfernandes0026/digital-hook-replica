@@ -4,10 +4,10 @@ import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   const stats = [
-    { value: "+50", label: "Projetos entregues", icon: Briefcase },
-    { value: "2 dias", label: "Tempo médio de entrega", icon: Clock },
-    { value: "+300%", label: "Aumento em conversões", icon: TrendingUp },
-    { value: "100%", label: "Clientes satisfeitos", icon: Users },
+    { value: "+50", label: "Projetos entregues", icon: Briefcase, color: "text-white group-hover:text-purple-300" },
+    { value: "2 dias", label: "Tempo médio de entrega", icon: Clock, color: "text-orange-400 group-hover:text-orange-300" },
+    { value: "+300%", label: "Aumento em conversões", icon: TrendingUp, color: "text-white group-hover:text-purple-300" },
+    { value: "100%", label: "Clientes satisfeitos", icon: Users, color: "text-orange-400 group-hover:text-orange-300" },
   ];
 
   const features = [
@@ -84,7 +84,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Value */}
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+                <div className={`text-2xl md:text-3xl font-bold mb-1 transition-colors ${stat.color}`}>
                   {stat.value}
                 </div>
                 

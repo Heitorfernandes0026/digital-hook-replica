@@ -28,9 +28,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl">
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-20 text-white">
-            <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Domine</span> o seu mercado com{" "}
-            <span className="bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-20 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] [text-shadow:0_0_30px_rgba(255,255,255,0.3),0_2px_4px_rgba(0,0,0,0.8)]">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.8)] [filter:drop-shadow(0_0_15px_rgba(236,72,153,0.6))]">Domine</span> o seu mercado com{" "}
+            <span className="bg-gradient-to-r from-fuchsia-400 via-pink-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(236,72,153,0.8)] [filter:drop-shadow(0_0_15px_rgba(168,85,247,0.6))]">
               sites e landing pages
             </span>{" "}
             de alta conversão

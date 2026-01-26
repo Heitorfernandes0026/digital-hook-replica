@@ -14,9 +14,11 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundPosition: 'right 35%',
-      }}
+          backgroundImage: `url(${heroBg})`,
+          backgroundPosition: 'right 35%',
+          imageRendering: 'crisp-edges',
+          filter: 'contrast(1.05) saturate(1.1)',
+        }}
       />
       
       {/* Subtle overlay for text area */}

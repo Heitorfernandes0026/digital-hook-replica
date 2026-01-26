@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import DynamicHero from "@/components/DynamicHero";
 import CosmicBackground from "@/components/CosmicBackground";
 
 // Lazy load components below the fold for faster initial load
@@ -30,7 +30,7 @@ const Index = () => {
       <div className="relative z-10">
         <Header />
         <main>
-          <Hero />
+          <DynamicHero />
           <Suspense fallback={<SectionLoader />}>
             <Services />
           </Suspense>

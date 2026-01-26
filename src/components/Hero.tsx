@@ -5,13 +5,13 @@ import heroBackground from "@/assets/hero-background.png";
 const Hero = () => {
   const stats = [
     { value: "+50", label: "Projetos\nentregues", color: "text-purple-400" },
-    { value: "7 dias", label: "Tempo médio de\nentrega", color: "text-orange-400" },
+    { value: "2 dias", label: "Tempo médio de\nentrega", color: "text-orange-400" },
     { value: "+300%", label: "Aumento em\nconversões", color: "text-purple-400" },
     { value: "100%", label: "Clientes\nsatisfeitos", color: "text-orange-400" },
   ];
 
   const features = [
-    "Entrega em até 7 dias",
+    "Entrega em até 2 dias",
     "100% personalizada",
     "+50 projetos entregues",
   ];
@@ -41,17 +41,17 @@ const Hero = () => {
             de alta conversão
           </h1>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with neon hover effect */}
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
             <Button 
-              className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white font-semibold px-8 py-6 text-base rounded-lg"
+              className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-purple-500 hover:to-pink-500 text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.6),0_0_60px_rgba(236,72,153,0.4)] hover:scale-105"
             >
               Solicitar orçamento
               <ArrowRight className="ml-2" size={20} />
             </Button>
             <Button 
               variant="outline"
-              className="border-white/30 bg-white/5 hover:bg-orange-500 hover:border-orange-500 hover:text-white text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300"
+              className="border-white/30 bg-white/5 text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300 hover:border-purple-400 hover:bg-purple-500/20 hover:text-white hover:shadow-[0_0_25px_rgba(168,85,247,0.5),0_0_50px_rgba(236,72,153,0.3)] hover:scale-105"
             >
               <Play className="mr-2" size={20} />
               Ver cases de sucesso

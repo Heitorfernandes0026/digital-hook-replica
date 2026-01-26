@@ -1,4 +1,5 @@
-import { Instagram, Linkedin, Facebook, Crown } from "lucide-react";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
+import lionLogo from "@/assets/lion-logo.png";
 
 const Footer = () => {
   const links = {
@@ -36,14 +37,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-4 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center group-hover:shadow-[0_0_20px_hsl(30_90%_50%/0.4)] transition-all duration-300">
-                <Crown className="text-white" size={22} />
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-bold text-xl text-foreground group-hover:text-orange-400 transition-colors">Agência Next Level</span>
-                <span className="text-[10px] text-orange-400 tracking-widest uppercase">Marketing Digital</span>
-              </div>
+            <a href="#" className="flex items-center gap-3 mb-4 group">
+              <img 
+                src={lionLogo} 
+                alt="Next Level Logo" 
+                className="w-12 h-12 object-contain drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(147,51,234,0.7)] transition-all duration-300"
+              />
+              <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">Next Level</span>
             </a>
             <p className="text-muted-foreground text-sm mb-6">
               Transformando negócios através de landing pages e sites que realmente convertem.
@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Agência Next Level. Todos os direitos reservados.
+            © {new Date().getFullYear()} Next Level. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">

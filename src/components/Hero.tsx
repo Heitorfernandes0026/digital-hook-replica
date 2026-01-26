@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-lion-bg.jpeg";
-import nextLevelLogo from "@/assets/nextlevel-logo.png";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,21 +24,57 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 text-left px-8 md:px-16 lg:px-24 w-full max-w-7xl">
-        {/* Logo image */}
+        {/* NEXT text */}
         <div 
           className={`transition-all duration-1000 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <img 
-            src={nextLevelLogo} 
-            alt="NEXT LEVEL - Company Systems, Marketing & Performance" 
-            className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl h-auto"
+          <h1 
+            className="text-[clamp(4rem,20vw,14rem)] font-black leading-[0.85] tracking-tighter select-none"
             style={{
-              filter: 'drop-shadow(0 0 30px hsl(280 80% 60% / 0.5)) drop-shadow(0 0 60px hsl(320 80% 55% / 0.3))',
+              background: 'linear-gradient(135deg, hsl(190 90% 55%) 0%, hsl(140 70% 50%) 25%, hsl(280 80% 60%) 50%, hsl(320 80% 55%) 75%, hsl(30 90% 55%) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 30px hsl(280 80% 60% / 0.6)) drop-shadow(0 0 60px hsl(320 80% 55% / 0.4))',
             }}
-          />
+          >
+            NEXT
+          </h1>
         </div>
+
+        {/* LEVEL text */}
+        <div 
+          className={`transition-all duration-1000 delay-200 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          <h1 
+            className="text-[clamp(4rem,20vw,14rem)] font-black leading-[0.85] tracking-tighter select-none -mt-2 md:-mt-4"
+            style={{
+              background: 'linear-gradient(135deg, hsl(30 90% 55%) 0%, hsl(320 80% 55%) 25%, hsl(280 80% 60%) 50%, hsl(140 70% 50%) 75%, hsl(190 90% 55%) 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 30px hsl(320 80% 55% / 0.6)) drop-shadow(0 0 60px hsl(280 80% 60% / 0.4))',
+            }}
+          >
+            LEVEL
+          </h1>
+        </div>
+
+        {/* Tagline */}
+        <p 
+          className={`mt-6 text-lg md:text-xl text-white/90 transition-all duration-1000 delay-500 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
+          style={{
+            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+          }}
+        >
+          Sistemas, Marketing e Desempenho.
+        </p>
 
         {/* CTA Button */}
         <div 

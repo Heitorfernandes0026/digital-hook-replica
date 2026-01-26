@@ -33,9 +33,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
-            <span className="w-2 h-2 rounded-full bg-green-500" />
-            <span className="text-sm text-gray-400">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 mb-8 backdrop-blur-sm shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+            <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
+            <span className="text-sm font-medium text-white/90">
               Metodologia validada em +50 projetos
             </span>
           </div>
@@ -44,15 +44,21 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
             <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Domine</span> o seu mercado com{" "}
             <span className="bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
-              landing pages
+              sites e landing pages
             </span>{" "}
             de alta conversão
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg text-gray-400 max-w-xl mb-8">
-            Cada seção tem um motivo. Cada botão tem um objetivo. Estratégia, copy e design pensados para conversão desde o primeiro scroll.
-          </p>
+          {/* Subheadline - Enhanced visibility */}
+          <div className="relative mb-8 p-6 rounded-xl bg-gradient-to-r from-white/10 to-white/5 border border-white/15 backdrop-blur-sm shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
+            <p className="text-lg md:text-xl text-white/90 max-w-xl leading-relaxed font-medium">
+              Cada seção tem um motivo. Cada botão tem um objetivo.{" "}
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
+                Estratégia, copy e design
+              </span>{" "}
+              pensados para conversão desde o primeiro scroll.
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
@@ -71,12 +77,15 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Features row */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 mb-16">
+          {/* Features row - Enhanced visibility */}
+          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="text-gray-400" size={16} />
-                {feature}
+              <div 
+                key={index} 
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm"
+              >
+                <Check className="text-green-400 drop-shadow-[0_0_4px_rgba(74,222,128,0.6)]" size={16} />
+                <span className="text-white/90 font-medium">{feature}</span>
               </div>
             ))}
           </div>

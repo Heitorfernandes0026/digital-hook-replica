@@ -5,9 +5,9 @@ import heroBackground from "@/assets/hero-background.png";
 const Hero = () => {
   const stats = [
     { value: "+50", label: "Projetos entregues", icon: Briefcase, color: "text-white group-hover:text-purple-300" },
-    { value: "2 dias", label: "Tempo médio de entrega", icon: Clock, color: "text-orange-400 group-hover:text-orange-300" },
+    { value: "2 dias", label: "Tempo médio de entrega", icon: Clock, color: "text-orange-500 drop-shadow-[0_0_10px_rgba(249,115,22,0.6)] group-hover:text-orange-400" },
     { value: "+300%", label: "Aumento em conversões", icon: TrendingUp, color: "text-white group-hover:text-purple-300" },
-    { value: "100%", label: "Clientes satisfeitos", icon: Users, color: "text-orange-400 group-hover:text-orange-300" },
+    { value: "100%", label: "Clientes satisfeitos", icon: Users, color: "text-orange-500 drop-shadow-[0_0_10px_rgba(249,115,22,0.6)] group-hover:text-orange-400" },
   ];
 
   const features = [

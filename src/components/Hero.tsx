@@ -29,8 +29,8 @@ const Hero = () => {
         <div className="max-w-2xl">
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-20 text-white">
-            <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Domine</span> o seu mercado com{" "}
-            <span className="bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            <span className="bg-gradient-to-r from-pink-500 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(236,72,153,0.7)]">Domine</span> o seu mercado com{" "}
+            <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(236,72,153,0.7)]">
               sites e landing pages
             </span>{" "}
             de alta conversão

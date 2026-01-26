@@ -73,19 +73,17 @@ const Hero = () => {
 
       {/* Full background image with fade-in */}
       <div 
-        className={`absolute inset-0 flex items-center justify-center transition-all duration-[1500ms] ease-out ${
+        className={`absolute inset-0 transition-all duration-[1500ms] ease-out ${
           isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
-      >
-        <img 
-          src={neonLogo} 
-          alt="Next Level - Marketing Digital" 
-          className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(147,51,234,0.4)]"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-        />
-      </div>
+        style={{
+          backgroundImage: `url(${neonLogo})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: 'drop-shadow(0 0 40px rgba(147,51,234,0.4))'
+        }}
+      />
 
       {/* Pulsing neon glow overlay */}
       <div 

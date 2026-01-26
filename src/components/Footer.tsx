@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Crown } from "lucide-react";
 
 const Footer = () => {
   const links = {
@@ -37,10 +37,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-4 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] transition-all duration-300">
-                <span className="text-primary-foreground font-bold text-xl">D</span>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center group-hover:shadow-[0_0_20px_hsl(30_90%_50%/0.4)] transition-all duration-300">
+                <Crown className="text-white" size={22} />
               </div>
-              <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors">DigitalPro</span>
+              <div className="flex flex-col leading-tight">
+                <span className="font-bold text-xl text-foreground group-hover:text-orange-400 transition-colors">Agência Legends</span>
+                <span className="text-[10px] text-orange-400 tracking-widest uppercase">Marketing Digital</span>
+              </div>
             </a>
             <p className="text-muted-foreground text-sm mb-6">
               Transformando negócios através de landing pages e sites que realmente convertem.
@@ -118,7 +121,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} DigitalPro. Todos os direitos reservados.
+            © {new Date().getFullYear()} Agência Legends. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">

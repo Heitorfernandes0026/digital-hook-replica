@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Crown } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -21,9 +21,12 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-[0_0_15px_hsl(30_90%_50%/0.4)]">
-              <span className="text-white font-bold text-lg">D</span>
+              <Crown className="text-white" size={18} />
             </div>
-            <span className="font-bold text-xl text-white tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>DigitalPro</span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-bold text-lg text-white tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>Agência Legends</span>
+              <span className="text-[10px] text-orange-400 tracking-widest uppercase">Marketing Digital</span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}

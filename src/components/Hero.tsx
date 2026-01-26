@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroBg from "@/assets/hero-lion-bg-new.jpeg";
+import heroBg from "@/assets/hero-lion-bg-bright.jpeg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);

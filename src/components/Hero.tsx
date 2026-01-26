@@ -17,102 +17,10 @@ const Hero = () => {
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
+          imageRendering: 'crisp-edges',
+          filter: 'contrast(1.1) saturate(1.15) brightness(1.05)',
         }}
       />
-      
-      {/* Subtle overlay for text area */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
-
-      {/* Main content - aligned with header logo */}
-      <div className="container mx-auto px-4">
-        <div className="relative z-10 text-left w-full md:w-[55%] flex flex-col justify-center">
-        {/* NEXT text */}
-        <div 
-          className={`transition-all duration-1000 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <h1 
-            className="text-[clamp(4rem,20vw,14rem)] font-black leading-[0.85] tracking-tighter select-none"
-            style={{
-              background: 'linear-gradient(135deg, hsl(190 90% 55%) 0%, hsl(140 70% 50%) 25%, hsl(280 80% 60%) 50%, hsl(320 80% 55%) 75%, hsl(30 90% 55%) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 30px hsl(280 80% 60% / 0.6)) drop-shadow(0 0 60px hsl(320 80% 55% / 0.4))',
-            }}
-          >
-            NEXT
-          </h1>
-        </div>
-
-        {/* LEVEL text */}
-        <div 
-          className={`transition-all duration-1000 delay-200 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <h1 
-            className="text-[clamp(4rem,20vw,14rem)] font-black leading-[0.85] tracking-tighter select-none -mt-2 md:-mt-4"
-            style={{
-              background: 'linear-gradient(135deg, hsl(30 90% 55%) 0%, hsl(320 80% 55%) 25%, hsl(280 80% 60%) 50%, hsl(140 70% 50%) 75%, hsl(190 90% 55%) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 30px hsl(320 80% 55% / 0.6)) drop-shadow(0 0 60px hsl(280 80% 60% / 0.4))',
-            }}
-          >
-            LEVEL
-          </h1>
-        </div>
-
-        {/* Tagline */}
-        <p 
-          className={`mt-6 text-lg md:text-xl text-white/90 transition-all duration-1000 delay-500 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}
-          style={{
-            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
-          }}
-        >
-          Sistemas, Marketing e Desempenho.
-        </p>
-
-        {/* CTA Button */}
-        <div 
-          className={`mt-10 transition-all duration-1000 delay-700 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}
-        >
-          <a
-            href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20contratar%20os%20serviços%20da%20NEXT%20LEVEL."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105"
-            style={{
-              background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(320 80% 55%) 50%, hsl(280 80% 60%) 100%)',
-              boxShadow: '0 0 30px hsl(30 90% 50% / 0.4), 0 0 60px hsl(320 80% 55% / 0.2)',
-            }}
-          >
-            <span className="relative z-10">Começar Agora</span>
-            <svg 
-              className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-            <div 
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                background: 'linear-gradient(135deg, hsl(280 80% 60%) 0%, hsl(320 80% 55%) 50%, hsl(30 90% 50%) 100%)',
-              }}
-            />
-          </a>
-        </div>
-        </div>
-      </div>
 
       {/* Scroll indicator */}
       <div 

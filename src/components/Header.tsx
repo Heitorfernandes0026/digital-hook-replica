@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import lionLogo from "@/assets/lion-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   const navLinks = [
     { href: "#servicos", label: "Serviços" },
@@ -15,6 +21,8 @@ const Header = () => {
     { href: "#faq", label: "FAQ" },
   ];
 
+  const brandName = "NEXT LEVEL";
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-white/5">
       <div className="container mx-auto px-4">
@@ -24,9 +32,31 @@ const Header = () => {
             <img 
               src={lionLogo} 
               alt="Next Level Logo" 
-              className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]"
+              className={`w-10 h-10 object-contain transition-all duration-700 ${
+                isLoaded 
+                  ? 'opacity-100 scale-100 drop-shadow-[0_0_15px_rgba(147,51,234,0.7)]' 
+                  : 'opacity-0 scale-75'
+              }`}
+              style={{
+                animation: isLoaded ? 'pulseGlow 2s ease-in-out infinite' : 'none'
+              }}
             />
-            <span className="font-bold text-xl tracking-wide bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)] uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>Next Level</span>
+            <span className="font-bold text-xl tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+              {brandName.split('').map((letter, index) => (
+                <span
+                  key={index}
+                  className={`inline-block bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent transition-all duration-500 ${
+                    isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                  }`}
+                  style={{
+                    transitionDelay: `${index * 50 + 400}ms`,
+                    textShadow: isLoaded ? '0 0 20px rgba(147,51,234,0.5)' : 'none'
+                  }}
+                >
+                  {letter === ' ' ? '\u00A0' : letter}
+                </span>
+              ))}
+            </span>
           </a>
 
           {/* Desktop Navigation */}

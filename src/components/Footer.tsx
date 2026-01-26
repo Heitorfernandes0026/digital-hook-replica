@@ -100,8 +100,17 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Contato</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="hover:text-primary transition-colors cursor-pointer">contato@digitalpro.com.br</li>
-              <li className="hover:text-primary transition-colors cursor-pointer">(11) 99999-9999</li>
-              <li>São Paulo, SP - Brasil</li>
+              <li>
+                <a 
+                  href="https://wa.me/5531975911116" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  (31) 9 7591-1116
+                </a>
+              </li>
+              <li>Belo Horizonte, MG - Brasil</li>
             </ul>
           </div>
         </div>

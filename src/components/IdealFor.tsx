@@ -87,8 +87,10 @@ const IdealFor = () => {
           <p className="text-lg text-muted-foreground mb-6">
             Se você se identificou, estamos prontos para ajudar.
           </p>
-          <Button variant="hero" size="lg" className="group">
-            Quero uma landing page que converta
+          <Button variant="hero" size="lg" className="group" asChild>
+            <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20ter%20uma%20langind%20page%20que%20converta" target="_blank" rel="noopener noreferrer">
+              Quero uma landing page que converta
+            </a>
           </Button>
         </div>
 

@@ -109,11 +109,14 @@ const Portfolio = () => {
             variant="heroOutline" 
             size="lg" 
             className="group relative overflow-hidden"
+            asChild
           >
-            <span className="relative z-10 flex items-center">
-              Ver todos os cases
-              <ArrowUpRight className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
-            </span>
+            <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20ver%20todos%20os%20cases" target="_blank" rel="noopener noreferrer">
+              <span className="relative z-10 flex items-center">
+                Ver todos os cases
+                <ArrowUpRight className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
+              </span>
+            </a>
           </Button>
         </div>
       </div>

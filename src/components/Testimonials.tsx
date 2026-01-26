@@ -3,9 +3,9 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Carlos Eduardo",
-      role: "CEO, FitLife Academia",
-      content: "A landing page da DigitalPro triplicou nossas matrículas em menos de 30 dias. O investimento se pagou na primeira semana.",
+      name: "Dr. Fernando Almeida",
+      role: "Advogado Trabalhista",
+      content: "A landing page da DigitalPro triplicou meus atendimentos em menos de 30 dias. O investimento se pagou na primeira semana.",
       rating: 5,
     },
     {
@@ -15,15 +15,15 @@ const Testimonials = () => {
       rating: 5,
     },
     {
-      name: "Ricardo Santos",
-      role: "Consultor Empresarial",
+      name: "Juliana Ferreira",
+      role: "Esteticista, Studio Beleza & Estética",
       content: "A metodologia HOOK fez toda diferença. Minha taxa de conversão saltou de 2% para 8% em poucas semanas.",
       rating: 5,
     },
     {
-      name: "Ana Paula Mendes",
-      role: "Produtora de Infoprodutos",
-      content: "Já tinha tentado outras agências, mas só a DigitalPro entregou resultados reais. Meu faturamento dobrou com a nova página de vendas.",
+      name: "Dra. Camila Rodrigues",
+      role: "Médica Dermatologista",
+      content: "Já tinha tentado outras agências, mas só a DigitalPro entregou resultados reais. Meu consultório dobrou o número de pacientes com a nova página.",
       rating: 5,
     },
   ];

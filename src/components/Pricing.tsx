@@ -9,6 +9,7 @@ const Pricing = () => {
       period: "/mês",
       highlight: false,
       cta: "Contratar Agora",
+      ctaLink: "https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20o%20plano%20Essencial",
       features: {
         hosting: true,
         copyAI: true,
@@ -32,6 +33,7 @@ const Pricing = () => {
       highlight: true,
       badge: "Mais contratado — Melhor custo-benefício",
       cta: "Contratar Agora",
+      ctaLink: "https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20o%20plano%20Profissional",
       features: {
         hosting: true,
         copyAI: true,
@@ -54,6 +56,7 @@ const Pricing = () => {
       period: "/mês",
       highlight: false,
       cta: "Contratar Agora",
+      ctaLink: "https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20o%20plano%20Premium",
       features: {
         hosting: true,
         copyAI: true,
@@ -213,8 +216,11 @@ const Pricing = () => {
                     variant={plan.highlight ? "hero" : "heroOutline"}
                     size="lg"
                     className="w-full"
+                    asChild
                   >
-                    {plan.cta}
+                    <a href={plan.ctaLink} target="_blank" rel="noopener noreferrer">
+                      {plan.cta}
+                    </a>
                   </Button>
                 </div>
               ))}
@@ -291,8 +297,11 @@ const Pricing = () => {
                   variant={plan.highlight ? "hero" : "heroOutline"}
                   size="lg"
                   className="w-full"
+                  asChild
                 >
-                  {plan.cta}
+                  <a href={plan.ctaLink} target="_blank" rel="noopener noreferrer">
+                    {plan.cta}
+                  </a>
                 </Button>
               </div>
             </div>

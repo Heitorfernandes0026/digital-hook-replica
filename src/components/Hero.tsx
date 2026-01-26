@@ -17,7 +17,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0a0a12] contain-layout contain-paint">
+    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-[#0a0a12] contain-layout contain-paint">
       {/* Background with lion image - optimized loading */}
       <div className="absolute inset-0">
         <img 
@@ -32,14 +32,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 mb-8 backdrop-blur-sm shadow-[0_0_20px_rgba(168,85,247,0.2)]">
-            <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
-            <span className="text-sm font-medium text-white/90">
-              Metodologia validada em +50 projetos
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
             <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">Domine</span> o seu mercado com{" "}

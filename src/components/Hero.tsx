@@ -3,22 +3,11 @@ import neonLogo from "@/assets/neon-logo.jpeg";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showText, setShowText] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
-    const textTimer = setTimeout(() => setShowText(true), 1500);
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(textTimer);
-    };
+    return () => clearTimeout(timer);
   }, []);
-
-  const lines = [
-    { text: "NEXT LEVEL", delay: 0, gradient: "from-cyan-400 via-purple-500 to-orange-400" },
-    { text: "Combapy Systems", delay: 400, gradient: "from-purple-400 via-pink-500 to-purple-400" },
-    { text: "Marketing & Performance", delay: 800, gradient: "from-orange-400 via-yellow-400 to-orange-400" },
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-black">
@@ -95,44 +84,6 @@ const Hero = () => {
           filter: 'drop-shadow(0 0 40px rgba(147,51,234,0.4))'
         }}
       />
-
-      {/* Animated text overlay */}
-      <div className="absolute bottom-20 left-0 right-0 flex flex-col items-center gap-3 z-10">
-        {lines.map((line, lineIndex) => (
-          <div
-            key={lineIndex}
-            className={`overflow-hidden transition-all duration-700 ${
-              showText ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{ transitionDelay: `${line.delay}ms` }}
-          >
-            <div
-              className={`flex justify-center transition-transform duration-700 ${
-                showText ? 'translate-y-0' : 'translate-y-full'
-              }`}
-              style={{ transitionDelay: `${line.delay}ms` }}
-            >
-              {line.text.split('').map((char, charIndex) => (
-                <span
-                  key={charIndex}
-                  className={`inline-block font-bold bg-gradient-to-r ${line.gradient} bg-clip-text text-transparent transition-all duration-500 ${
-                    lineIndex === 0 ? 'text-4xl md:text-6xl tracking-wider' : 
-                    lineIndex === 1 ? 'text-xl md:text-2xl tracking-wide' : 
-                    'text-lg md:text-xl tracking-wide'
-                  } ${showText ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'}`}
-                  style={{
-                    transitionDelay: `${line.delay + charIndex * 30}ms`,
-                    textShadow: showText ? '0 0 30px currentColor' : 'none',
-                    animation: showText ? `pulseGlow 3s ease-in-out infinite ${charIndex * 0.1}s` : 'none',
-                  }}
-                >
-                  {char === ' ' ? '\u00A0' : char}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
 
       {/* Pulsing neon glow overlay */}
       <div 

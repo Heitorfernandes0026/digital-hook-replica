@@ -66,14 +66,14 @@ const Hero = () => {
 
         {/* Tagline */}
         <p 
-          className={`mt-8 text-lg md:text-xl text-white/90 max-w-md mx-auto transition-all duration-1000 delay-500 ease-out ${
+          className={`mt-6 text-lg md:text-xl text-white/90 transition-all duration-1000 delay-500 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
           style={{
             textShadow: '0 2px 10px rgba(0,0,0,0.5)',
           }}
         >
-          Marketing Digital que Transforma Resultados
+          Sistemas, Marketing e Desempenho.
         </p>
 
         {/* CTA Button */}

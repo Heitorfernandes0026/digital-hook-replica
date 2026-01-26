@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import heroBg from "@/assets/hero-lion-bg.jpeg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,46 +9,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[hsl(240,20%,4%)]">
-      {/* Ambient glow effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Central glow */}
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-30"
-          style={{
-            background: 'radial-gradient(circle, hsl(280 80% 50% / 0.4) 0%, hsl(320 80% 50% / 0.2) 40%, transparent 70%)',
-            filter: 'blur(80px)',
-          }}
-        />
-        {/* Top cyan glow */}
-        <div 
-          className="absolute top-0 left-1/4 w-[600px] h-[400px] opacity-20"
-          style={{
-            background: 'radial-gradient(ellipse, hsl(190 90% 50% / 0.5) 0%, transparent 60%)',
-            filter: 'blur(60px)',
-          }}
-        />
-        {/* Bottom orange glow */}
-        <div 
-          className="absolute bottom-0 right-1/4 w-[500px] h-[300px] opacity-25"
-          style={{
-            background: 'radial-gradient(ellipse, hsl(30 90% 50% / 0.4) 0%, transparent 60%)',
-            filter: 'blur(50px)',
-          }}
-        />
-      </div>
-
-      {/* Subtle grid pattern */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `
-            linear-gradient(hsl(280 80% 60% / 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(280 80% 60% / 0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
+          backgroundImage: `url(${heroBg})`,
         }}
       />
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4">
@@ -60,11 +32,11 @@ const Hero = () => {
           <h1 
             className="text-[clamp(4rem,20vw,14rem)] font-black leading-[0.85] tracking-tighter select-none"
             style={{
-              background: 'linear-gradient(135deg, hsl(190 90% 55%) 0%, hsl(217 91% 60%) 25%, hsl(280 80% 60%) 50%, hsl(320 80% 55%) 75%, hsl(30 90% 55%) 100%)',
+              background: 'linear-gradient(135deg, hsl(190 90% 55%) 0%, hsl(140 70% 50%) 25%, hsl(280 80% 60%) 50%, hsl(320 80% 55%) 75%, hsl(30 90% 55%) 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 30px hsl(280 80% 60% / 0.5)) drop-shadow(0 0 60px hsl(320 80% 55% / 0.3))',
+              filter: 'drop-shadow(0 0 30px hsl(280 80% 60% / 0.6)) drop-shadow(0 0 60px hsl(320 80% 55% / 0.4))',
             }}
           >
             NEXT
@@ -80,11 +52,11 @@ const Hero = () => {
           <h1 
             className="text-[clamp(4rem,20vw,14rem)] font-black leading-[0.85] tracking-tighter select-none -mt-2 md:-mt-4"
             style={{
-              background: 'linear-gradient(135deg, hsl(30 90% 55%) 0%, hsl(320 80% 55%) 25%, hsl(280 80% 60%) 50%, hsl(217 91% 60%) 75%, hsl(190 90% 55%) 100%)',
+              background: 'linear-gradient(135deg, hsl(30 90% 55%) 0%, hsl(320 80% 55%) 25%, hsl(280 80% 60%) 50%, hsl(140 70% 50%) 75%, hsl(190 90% 55%) 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 30px hsl(320 80% 55% / 0.5)) drop-shadow(0 0 60px hsl(280 80% 60% / 0.3))',
+              filter: 'drop-shadow(0 0 30px hsl(320 80% 55% / 0.6)) drop-shadow(0 0 60px hsl(280 80% 60% / 0.4))',
             }}
           >
             LEVEL
@@ -93,9 +65,12 @@ const Hero = () => {
 
         {/* Tagline */}
         <p 
-          className={`mt-8 text-lg md:text-xl text-muted-foreground max-w-md mx-auto transition-all duration-1000 delay-500 ease-out ${
+          className={`mt-8 text-lg md:text-xl text-white/90 max-w-md mx-auto transition-all duration-1000 delay-500 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
+          style={{
+            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+          }}
         >
           Marketing Digital que Transforma Resultados
         </p>
@@ -110,7 +85,7 @@ const Hero = () => {
             href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20contratar%20os%20serviços%20da%20NEXT%20LEVEL."
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-background overflow-hidden transition-all duration-300 hover:scale-105"
+            className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105"
             style={{
               background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(320 80% 55%) 50%, hsl(280 80% 60%) 100%)',
               boxShadow: '0 0 30px hsl(30 90% 50% / 0.4), 0 0 60px hsl(320 80% 55% / 0.2)',
@@ -135,25 +110,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Animated particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: `hsl(${[190, 217, 280, 320, 30][i % 5]} ${80 + Math.random() * 20}% ${50 + Math.random() * 20}%)`,
-              boxShadow: `0 0 ${10 + Math.random() * 10}px currentColor`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-              opacity: 0.4 + Math.random() * 0.4,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Scroll indicator */}
       <div 
         className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${
@@ -161,9 +117,9 @@ const Hero = () => {
         }`}
       >
         <div className="flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
+          <span className="text-xs text-white/80 uppercase tracking-widest">Scroll</span>
           <svg 
-            className="w-5 h-5 text-muted-foreground" 
+            className="w-5 h-5 text-white/80" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"

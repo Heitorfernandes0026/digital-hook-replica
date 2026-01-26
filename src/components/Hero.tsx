@@ -73,11 +73,72 @@ const Hero = () => {
       {/* Main Content Container */}
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-3xl">
+          <div className="flex flex-col items-center text-center">
             
+            {/* Centered Brand Badge */}
+            <div 
+              className={`mb-12 transition-all duration-700 ease-out ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+              }`}
+            >
+              <div 
+                className="flex flex-col items-center gap-4"
+              >
+                <div 
+                  className="flex items-center gap-5 px-10 py-6 rounded-2xl"
+                  style={{
+                    background: 'hsl(0 0% 100% / 0.04)',
+                    backdropFilter: 'blur(16px)',
+                    border: '1px solid hsl(0 0% 100% / 0.08)',
+                    boxShadow: '0 8px 32px hsl(30 90% 50% / 0.15)',
+                  }}
+                >
+                  {/* Play icon */}
+                  <div 
+                    className="w-14 h-14 flex items-center justify-center"
+                    style={{
+                      color: 'hsl(30 95% 55%)',
+                      filter: 'drop-shadow(0 0 20px hsl(30 95% 55% / 0.6))',
+                    }}
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </div>
+                  
+                  {/* NEXT LEVEL */}
+                  <div className="flex items-center">
+                    <div 
+                      className="px-5 py-2.5 rounded-l-lg"
+                      style={{ 
+                        background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                        boxShadow: '0 4px 16px hsl(30 90% 50% / 0.4)',
+                      }}
+                    >
+                      <span className="text-2xl sm:text-3xl font-black text-black tracking-tight">NEXT</span>
+                    </div>
+                    <div 
+                      className="px-5 py-2.5 rounded-r-lg border-2"
+                      style={{ 
+                        background: 'hsl(0 0% 5%)',
+                        borderColor: 'hsl(0 0% 80%)',
+                      }}
+                    >
+                      <span className="text-2xl sm:text-3xl font-black text-white tracking-tight">LEVEL</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Tagline under badge */}
+                <p className="text-xs sm:text-sm tracking-[0.25em] uppercase text-white/40 font-medium">
+                  Digital Agency
+                </p>
+              </div>
+            </div>
+
             {/* Eyebrow / Label */}
             <div 
-              className={`mb-8 transition-all duration-700 ease-out ${
+              className={`mb-6 transition-all duration-700 delay-100 ease-out ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
@@ -96,7 +157,7 @@ const Hero = () => {
 
             {/* Main Headline */}
             <div 
-              className={`mb-6 transition-all duration-700 delay-100 ease-out ${
+              className={`mb-6 transition-all duration-700 delay-200 ease-out ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
@@ -119,7 +180,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p 
-              className={`text-lg md:text-xl text-white/60 max-w-xl mb-10 leading-relaxed transition-all duration-700 delay-200 ease-out ${
+              className={`text-lg md:text-xl text-white/60 max-w-2xl mb-10 leading-relaxed transition-all duration-700 delay-300 ease-out ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
               style={{ fontWeight: 400 }}
@@ -132,7 +193,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div 
-              className={`flex flex-wrap items-center gap-4 mb-16 transition-all duration-700 delay-300 ease-out ${
+              className={`flex flex-wrap justify-center items-center gap-4 mb-16 transition-all duration-700 delay-400 ease-out ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
@@ -166,7 +227,7 @@ const Hero = () => {
 
             {/* Trust Indicators */}
             <div 
-              className={`flex flex-wrap items-center gap-8 transition-all duration-700 delay-400 ease-out ${
+              className={`flex flex-wrap justify-center items-center gap-8 transition-all duration-700 delay-500 ease-out ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
@@ -185,13 +246,13 @@ const Hero = () => {
                     </div>
                   ))}
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="text-sm font-semibold text-white">+50 clientes</p>
                   <p className="text-xs text-white/50">atendidos</p>
                 </div>
               </div>
 
-              <div className="hidden sm:block w-px h-10 bg-white/10" />
+              <div className="w-px h-10 bg-white/10" />
 
               <div className="flex items-center gap-2">
                 <div className="flex">
@@ -201,108 +262,11 @@ const Hero = () => {
                     </svg>
                   ))}
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="text-sm font-semibold text-white">5.0</p>
                   <p className="text-xs text-white/50">avaliação</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating Brand Badge - Right Side */}
-      <div 
-        className={`hidden lg:flex absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 flex-col items-center gap-6 transition-all duration-1000 delay-500 ${
-          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-        }`}
-      >
-        <div 
-          className="flex items-center gap-5 px-10 py-8 rounded-3xl"
-          style={{
-            background: 'hsl(0 0% 100% / 0.04)',
-            backdropFilter: 'blur(16px)',
-            border: '1px solid hsl(0 0% 100% / 0.08)',
-            boxShadow: '0 8px 32px hsl(30 90% 50% / 0.1)',
-          }}
-        >
-          {/* Play icon */}
-          <div 
-            className="w-16 h-16 flex items-center justify-center"
-            style={{
-              color: 'hsl(30 95% 55%)',
-              filter: 'drop-shadow(0 0 20px hsl(30 95% 55% / 0.6))',
-            }}
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-          </div>
-          
-          {/* NEXT LEVEL */}
-          <div className="flex items-center">
-            <div 
-              className="px-5 py-3 rounded-l-lg"
-              style={{ 
-                background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
-                boxShadow: '0 4px 16px hsl(30 90% 50% / 0.4)',
-              }}
-            >
-              <span className="text-3xl font-black text-black tracking-tight">NEXT</span>
-            </div>
-            <div 
-              className="px-5 py-3 rounded-r-lg border-2"
-              style={{ 
-                background: 'hsl(0 0% 5%)',
-                borderColor: 'hsl(0 0% 80%)',
-              }}
-            >
-              <span className="text-3xl font-black text-white tracking-tight">LEVEL</span>
-            </div>
-          </div>
-        </div>
-        
-        {/* Tagline under badge */}
-        <p 
-          className="text-sm tracking-[0.25em] uppercase text-white/50 font-medium"
-        >
-          Digital Agency
-        </p>
-      </div>
-
-      {/* Mobile Brand Badge - Shows on smaller screens */}
-      <div 
-        className={`lg:hidden absolute top-24 left-1/2 -translate-x-1/2 transition-all duration-700 delay-500 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-        }`}
-      >
-        <div className="flex items-center gap-3">
-          <div 
-            className="w-10 h-10 flex items-center justify-center"
-            style={{
-              color: 'hsl(30 95% 55%)',
-              filter: 'drop-shadow(0 0 14px hsl(30 95% 55% / 0.6))',
-            }}
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-          </div>
-          <div className="flex items-center">
-            <div 
-              className="px-4 py-2 rounded-l-md"
-              style={{ 
-                background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
-                boxShadow: '0 2px 12px hsl(30 90% 50% / 0.3)',
-              }}
-            >
-              <span className="text-xl font-black text-black tracking-tight">NEXT</span>
-            </div>
-            <div 
-              className="px-4 py-2 rounded-r-md border-2"
-              style={{ background: 'hsl(0 0% 5%)', borderColor: 'hsl(0 0% 75%)' }}
-            >
-              <span className="text-xl font-black text-white tracking-tight">LEVEL</span>
             </div>
           </div>
         </div>

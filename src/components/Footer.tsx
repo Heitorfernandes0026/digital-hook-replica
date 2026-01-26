@@ -41,7 +41,7 @@ const Footer = () => {
                 <Crown className="text-white" size={22} />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-bold text-xl text-foreground group-hover:text-orange-400 transition-colors">Agência Legends</span>
+                <span className="font-bold text-xl text-foreground group-hover:text-orange-400 transition-colors">Agência Next Level</span>
                 <span className="text-[10px] text-orange-400 tracking-widest uppercase">Marketing Digital</span>
               </div>
             </a>
@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Agência Legends. Todos os direitos reservados.
+            © {new Date().getFullYear()} Agência Next Level. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">

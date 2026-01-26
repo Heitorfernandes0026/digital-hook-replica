@@ -24,7 +24,7 @@ const Header = () => {
               <Crown className="text-white" size={18} />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-bold text-lg text-white tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>Agência Legends</span>
+              <span className="font-bold text-lg text-white tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>Agência Next Level</span>
               <span className="text-[10px] text-orange-400 tracking-widest uppercase">Marketing Digital</span>
             </div>
           </a>

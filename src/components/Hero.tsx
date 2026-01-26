@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroBg from "@/assets/hero-lion-bg.jpeg";
+import heroBg from "@/assets/hero-lion-bg-new.jpeg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,21 +9,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: '70% 10%',
+          backgroundPosition: 'right center',
         }}
       />
       
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Subtle overlay for text area */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
 
-      {/* Main content */}
-      <div className="relative z-10 text-left px-8 md:px-16 lg:px-24 w-full max-w-7xl">
+      {/* Main content - positioned in left half */}
+      <div className="relative z-10 text-left pl-8 md:pl-16 lg:pl-24 w-full max-w-[55%] pt-24">
         {/* NEXT text */}
         <div 
           className={`transition-all duration-1000 ease-out ${

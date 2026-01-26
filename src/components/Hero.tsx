@@ -226,16 +226,18 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* AGÊNCIA label */}
+        {/* AGÊNCIA label - Refined serif style */}
         <p 
-          className={`text-sm md:text-base tracking-[0.6em] font-extralight mb-8 transition-all duration-700 uppercase ${
+          className={`text-base md:text-lg tracking-[0.5em] mb-10 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
           style={{ 
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 200,
-            color: 'hsl(175 80% 55%)',
-            textShadow: '0 0 40px hsl(175 80% 55% / 0.7), 0 0 80px hsl(175 80% 55% / 0.3)',
+            fontFamily: "'Georgia', 'Times New Roman', serif",
+            fontWeight: 400,
+            fontStyle: 'normal',
+            color: 'hsl(175 85% 60%)',
+            textShadow: '0 0 50px hsl(175 85% 60% / 0.8), 0 0 100px hsl(175 85% 60% / 0.4)',
+            textTransform: 'uppercase',
           }}
         >
           Agência
@@ -334,37 +336,47 @@ const Hero = () => {
           />
         </div>
 
-        {/* Tagline - Elegant Italic */}
+        {/* Tagline - Elegant Serif Italic */}
         <p 
-          className={`text-base md:text-lg lg:text-xl mb-6 transition-all duration-700 delay-350 ${
+          className={`text-lg md:text-xl lg:text-2xl mb-8 transition-all duration-700 delay-350 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
           style={{
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 300,
+            fontFamily: "'Georgia', 'Times New Roman', serif",
+            fontWeight: 400,
             fontStyle: 'italic',
-            letterSpacing: '0.08em',
+            letterSpacing: '0.05em',
           }}
         >
-          <span style={{ color: 'hsl(175 80% 60%)', textShadow: '0 0 30px hsl(175 80% 60% / 0.6)' }}>Sistemas</span>
-          <span className="text-white/30 mx-2 md:mx-3" style={{ fontStyle: 'normal' }}>•</span>
-          <span style={{ color: 'hsl(320 80% 65%)', textShadow: '0 0 30px hsl(320 80% 65% / 0.6)' }}>Marketing</span>
-          <span className="text-white/30 mx-1 md:mx-2" style={{ fontStyle: 'normal' }}>&</span>
-          <span style={{ color: 'hsl(0 0% 95%)', textShadow: '0 0 20px hsl(0 0% 100% / 0.4)' }}>Performance</span>
+          <span style={{ 
+            color: 'hsl(175 85% 65%)', 
+            textShadow: '0 0 35px hsl(175 85% 65% / 0.7), 0 0 70px hsl(175 85% 65% / 0.3)' 
+          }}>Sistemas</span>
+          <span className="text-white/25 mx-3 md:mx-4" style={{ fontStyle: 'normal' }}>•</span>
+          <span style={{ 
+            color: 'hsl(320 85% 68%)', 
+            textShadow: '0 0 35px hsl(320 85% 68% / 0.7), 0 0 70px hsl(320 85% 68% / 0.3)' 
+          }}>Marketing</span>
+          <span className="text-white/25 mx-2 md:mx-3" style={{ fontStyle: 'normal' }}>&</span>
+          <span style={{ 
+            color: 'hsl(0 0% 98%)', 
+            textShadow: '0 0 25px hsl(0 0% 100% / 0.5), 0 0 50px hsl(0 0% 100% / 0.2)' 
+          }}>Performance</span>
         </p>
 
-        {/* Slogan - Premium Typography */}
+        {/* Slogan - Luxury Serif Typography */}
         <p 
-          className={`text-lg md:text-xl lg:text-2xl mb-12 transition-all duration-700 delay-400 ${
+          className={`text-xl md:text-2xl lg:text-3xl mb-14 transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
           style={{ 
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 200,
+            fontFamily: "'Georgia', 'Times New Roman', serif",
+            fontWeight: 400,
             fontStyle: 'italic',
-            letterSpacing: '0.15em',
-            color: 'hsl(0 0% 50%)',
+            letterSpacing: '0.12em',
+            color: 'hsl(30 20% 55%)',
             textTransform: 'uppercase',
+            textShadow: '0 0 30px hsl(30 30% 50% / 0.3)',
           }}
         >
           O próximo passo para o seu sucesso.

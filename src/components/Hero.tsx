@@ -79,7 +79,7 @@ const Hero = () => {
         style={{
           backgroundImage: `url(${neonLogo})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 40%',
           backgroundRepeat: 'no-repeat',
           filter: 'drop-shadow(0 0 40px rgba(147,51,234,0.4))'
         }}

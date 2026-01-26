@@ -213,24 +213,25 @@ const Hero = () => {
 
       {/* Floating Brand Badge - Right Side */}
       <div 
-        className={`hidden lg:flex absolute right-12 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 transition-all duration-1000 delay-500 ${
+        className={`hidden lg:flex absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 flex-col items-center gap-6 transition-all duration-1000 delay-500 ${
           isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
         }`}
       >
         <div 
-          className="flex items-center gap-3 px-6 py-4 rounded-2xl"
+          className="flex items-center gap-5 px-10 py-8 rounded-3xl"
           style={{
-            background: 'hsl(0 0% 100% / 0.03)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid hsl(0 0% 100% / 0.06)',
+            background: 'hsl(0 0% 100% / 0.04)',
+            backdropFilter: 'blur(16px)',
+            border: '1px solid hsl(0 0% 100% / 0.08)',
+            boxShadow: '0 8px 32px hsl(30 90% 50% / 0.1)',
           }}
         >
           {/* Play icon */}
           <div 
-            className="w-10 h-10 flex items-center justify-center"
+            className="w-16 h-16 flex items-center justify-center"
             style={{
               color: 'hsl(30 95% 55%)',
-              filter: 'drop-shadow(0 0 12px hsl(30 95% 55% / 0.5))',
+              filter: 'drop-shadow(0 0 20px hsl(30 95% 55% / 0.6))',
             }}
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
@@ -241,28 +242,29 @@ const Hero = () => {
           {/* NEXT LEVEL */}
           <div className="flex items-center">
             <div 
-              className="px-3 py-1.5 rounded-l-md"
+              className="px-5 py-3 rounded-l-lg"
               style={{ 
                 background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                boxShadow: '0 4px 16px hsl(30 90% 50% / 0.4)',
               }}
             >
-              <span className="text-lg font-black text-black tracking-tight">NEXT</span>
+              <span className="text-3xl font-black text-black tracking-tight">NEXT</span>
             </div>
             <div 
-              className="px-3 py-1.5 rounded-r-md border-2"
+              className="px-5 py-3 rounded-r-lg border-2"
               style={{ 
                 background: 'hsl(0 0% 5%)',
-                borderColor: 'hsl(0 0% 75%)',
+                borderColor: 'hsl(0 0% 80%)',
               }}
             >
-              <span className="text-lg font-black text-white tracking-tight">LEVEL</span>
+              <span className="text-3xl font-black text-white tracking-tight">LEVEL</span>
             </div>
           </div>
         </div>
         
         {/* Tagline under badge */}
         <p 
-          className="text-xs tracking-[0.2em] uppercase text-white/40"
+          className="text-sm tracking-[0.25em] uppercase text-white/50 font-medium"
         >
           Digital Agency
         </p>
@@ -274,12 +276,12 @@ const Hero = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}
       >
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <div 
-            className="w-7 h-7 flex items-center justify-center"
+            className="w-10 h-10 flex items-center justify-center"
             style={{
               color: 'hsl(30 95% 55%)',
-              filter: 'drop-shadow(0 0 10px hsl(30 95% 55% / 0.5))',
+              filter: 'drop-shadow(0 0 14px hsl(30 95% 55% / 0.6))',
             }}
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
@@ -288,16 +290,19 @@ const Hero = () => {
           </div>
           <div className="flex items-center">
             <div 
-              className="px-2.5 py-1 rounded-l-md"
-              style={{ background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)' }}
+              className="px-4 py-2 rounded-l-md"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                boxShadow: '0 2px 12px hsl(30 90% 50% / 0.3)',
+              }}
             >
-              <span className="text-sm font-black text-black tracking-tight">NEXT</span>
+              <span className="text-xl font-black text-black tracking-tight">NEXT</span>
             </div>
             <div 
-              className="px-2.5 py-1 rounded-r-md border"
-              style={{ background: 'hsl(0 0% 5%)', borderColor: 'hsl(0 0% 70%)' }}
+              className="px-4 py-2 rounded-r-md border-2"
+              style={{ background: 'hsl(0 0% 5%)', borderColor: 'hsl(0 0% 75%)' }}
             >
-              <span className="text-sm font-black text-white tracking-tight">LEVEL</span>
+              <span className="text-xl font-black text-white tracking-tight">LEVEL</span>
             </div>
           </div>
         </div>

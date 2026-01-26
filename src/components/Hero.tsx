@@ -71,19 +71,6 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Full background image with fade-in */}
-      <div 
-        className={`absolute inset-0 transition-all duration-[1500ms] ease-out ${
-          isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-        }`}
-        style={{
-          backgroundImage: `url(${neonLogo})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 25%',
-          backgroundRepeat: 'no-repeat',
-          filter: 'drop-shadow(0 0 40px rgba(147,51,234,0.4))'
-        }}
-      />
 
       {/* Pulsing neon glow overlay */}
       <div 

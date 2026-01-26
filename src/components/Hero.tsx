@@ -312,7 +312,7 @@ const Hero = () => {
 
         {/* Gradient accent line */}
         <div 
-          className={`relative w-48 md:w-64 lg:w-72 h-0.5 mx-auto mb-10 transition-all duration-700 delay-300 ${
+          className={`relative w-48 md:w-64 lg:w-72 h-0.5 mx-auto mb-8 transition-all duration-700 delay-300 ${
             isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
         >
@@ -332,19 +332,33 @@ const Hero = () => {
           />
         </div>
 
-        {/* Slogan - Luxury Tech Typography */}
+        {/* Tagline - Colored */}
         <p 
-          className={`text-sm md:text-base lg:text-lg font-light mb-14 transition-all duration-700 delay-400 uppercase ${
+          className={`text-sm md:text-base lg:text-lg font-medium mb-6 transition-all duration-700 delay-350 tracking-wide ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
+        >
+          <span style={{ color: 'hsl(175 75% 55%)', textShadow: '0 0 25px hsl(175 75% 55% / 0.5)' }}>Sistemas</span>
+          <span className="text-white/40 mx-3">•</span>
+          <span style={{ color: 'hsl(320 75% 60%)', textShadow: '0 0 25px hsl(320 75% 60% / 0.5)' }}>Marketing</span>
+          <span className="text-white/40 mx-2">&</span>
+          <span className="text-white/90" style={{ textShadow: '0 0 15px hsl(0 0% 100% / 0.3)' }}>Performance</span>
+        </p>
+
+        {/* Slogan - Luxury Italic Typography */}
+        <p 
+          className={`text-base md:text-lg lg:text-xl font-light mb-12 transition-all duration-700 delay-400 uppercase ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
           style={{ 
             fontFamily: "'Inter', 'Montserrat', sans-serif",
             fontWeight: 300,
-            letterSpacing: '0.3em',
-            color: 'hsl(0 0% 60%)',
+            fontStyle: 'italic',
+            letterSpacing: '0.2em',
+            color: 'hsl(0 0% 55%)',
           }}
         >
-          O próximo passo para o seu sucesso
+          O próximo passo para o seu sucesso.
         </p>
 
         {/* CTA Buttons */}

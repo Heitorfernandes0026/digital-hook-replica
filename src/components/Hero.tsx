@@ -9,218 +9,146 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Deep rich black base */}
-      <div className="absolute inset-0 bg-[#030303]" />
+      {/* Deep black base */}
+      <div className="absolute inset-0 bg-[#0a0a0a]" />
 
-      {/* Cinematic ambient lighting */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(ellipse 100% 100% at 50% 150%, hsl(20 60% 8%) 0%, transparent 60%),
-            radial-gradient(ellipse 80% 60% at 120% 20%, hsl(25 70% 10%) 0%, transparent 50%),
-            radial-gradient(ellipse 70% 70% at -20% 80%, hsl(270 30% 6%) 0%, transparent 50%)
-          `,
-        }}
-      />
-
-      {/* Main flowing wave - elegant curve from top-left */}
-      <div className="absolute inset-0 overflow-hidden">
-        <svg 
-          className="absolute w-[250%] h-[120%] -left-[30%] -top-[10%]"
-          viewBox="0 0 2400 1200" 
-          preserveAspectRatio="none"
-        >
-          <defs>
-            {/* Rich orange gradient with depth */}
-            <linearGradient id="waveMain" x1="0%" y1="0%" x2="80%" y2="100%">
-              <stop offset="0%" stopColor="hsl(35 85% 55%)" stopOpacity="0.05" />
-              <stop offset="25%" stopColor="hsl(30 90% 50%)" stopOpacity="0.5" />
-              <stop offset="50%" stopColor="hsl(28 95% 48%)" stopOpacity="0.7" />
-              <stop offset="75%" stopColor="hsl(25 90% 45%)" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="hsl(20 80% 40%)" stopOpacity="0.1" />
-            </linearGradient>
-            
-            {/* Secondary wave gradient */}
-            <linearGradient id="waveSecondary" x1="0%" y1="50%" x2="100%" y2="50%">
-              <stop offset="0%" stopColor="hsl(32 90% 52%)" stopOpacity="0" />
-              <stop offset="30%" stopColor="hsl(30 92% 50%)" stopOpacity="0.35" />
-              <stop offset="60%" stopColor="hsl(28 88% 48%)" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="hsl(25 85% 45%)" stopOpacity="0.15" />
-            </linearGradient>
-
-            {/* Soft glow filter */}
-            <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
-              <feGaussianBlur stdDeviation="30" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
-            
-            <filter id="innerGlow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="15" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
-          </defs>
-          
-          {/* Primary elegant wave - smooth bezier curves */}
-          <path
-            d="M-100,300 
-               C300,150 500,400 900,200 
-               C1300,0 1500,350 1900,150 
-               C2200,0 2400,200 2500,100
-               L2500,-100 L-100,-100 Z"
-            fill="url(#waveMain)"
-            filter="url(#softGlow)"
-            className="animate-flow-1"
-          />
-          
-          {/* Secondary wave layer */}
-          <path
-            d="M-100,450 
-               C200,300 450,500 800,350 
-               C1150,200 1400,450 1750,280 
-               C2100,110 2300,350 2500,250
-               L2500,0 L-100,0 Z"
-            fill="url(#waveSecondary)"
-            filter="url(#innerGlow)"
-            className="animate-flow-2"
-            style={{ opacity: 0.6 }}
-          />
-        </svg>
-      </div>
-
-      {/* Right side dramatic accent */}
+      {/* Main elegant flowing waves from bottom-left */}
       <div className="absolute inset-0 overflow-hidden">
         <svg 
           className="absolute w-full h-full"
           viewBox="0 0 1920 1080" 
-          preserveAspectRatio="xMaxYMid slice"
+          preserveAspectRatio="xMidYMid slice"
         >
           <defs>
-            <linearGradient id="rightAccent" x1="50%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(30 95% 50%)" stopOpacity="0" />
-              <stop offset="60%" stopColor="hsl(28 90% 48%)" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="hsl(25 85% 45%)" stopOpacity="0.5" />
+            {/* Primary wave gradient - rich golden orange */}
+            <linearGradient id="waveGold1" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(25 90% 35%)" stopOpacity="0.9" />
+              <stop offset="30%" stopColor="hsl(28 95% 45%)" stopOpacity="0.7" />
+              <stop offset="60%" stopColor="hsl(30 90% 50%)" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="hsl(35 85% 55%)" stopOpacity="0" />
             </linearGradient>
-            <radialGradient id="cornerGlow" cx="100%" cy="0%" r="60%">
-              <stop offset="0%" stopColor="hsl(30 90% 50%)" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="hsl(30 90% 50%)" stopOpacity="0" />
-            </radialGradient>
+            
+            {/* Secondary wave - deeper amber */}
+            <linearGradient id="waveGold2" x1="0%" y1="100%" x2="80%" y2="20%">
+              <stop offset="0%" stopColor="hsl(20 85% 30%)" stopOpacity="0.8" />
+              <stop offset="40%" stopColor="hsl(25 90% 40%)" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="hsl(30 85% 45%)" stopOpacity="0" />
+            </linearGradient>
+            
+            {/* Third wave - subtle accent */}
+            <linearGradient id="waveGold3" x1="0%" y1="100%" x2="60%" y2="40%">
+              <stop offset="0%" stopColor="hsl(28 95% 50%)" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="hsl(32 90% 48%)" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="hsl(35 85% 50%)" stopOpacity="0" />
+            </linearGradient>
+
+            {/* Purple accent gradient */}
+            <linearGradient id="purpleAccent" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="hsl(280 60% 25%)" stopOpacity="0.5" />
+              <stop offset="50%" stopColor="hsl(300 50% 20%)" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+            </linearGradient>
+
+            {/* Soft glow filter */}
+            <filter id="waveBlur" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="20" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
           </defs>
           
-          {/* Curved accent from right */}
-          <path
-            d="M1920,0 
-               C1920,0 1800,150 1850,400 
-               C1900,650 1750,800 1920,1080
-               L1920,0 Z"
-            fill="url(#rightAccent)"
-            className="animate-flow-3"
+          {/* Background purple accent - right side */}
+          <ellipse 
+            cx="1800" 
+            cy="200" 
+            rx="600" 
+            ry="400" 
+            fill="url(#purpleAccent)"
+            style={{ opacity: 0.6 }}
           />
           
-          {/* Corner glow */}
-          <ellipse cx="1920" cy="0" rx="400" ry="300" fill="url(#cornerGlow)" />
+          {/* Primary wave - large flowing curve from bottom-left */}
+          <path
+            d="M-100,1200 
+               C100,1000 200,900 350,800
+               C600,650 800,700 1000,550
+               C1200,400 1400,500 1600,350
+               C1800,200 1900,250 2100,150
+               L2100,-100 L-100,-100 L-100,1200 Z"
+            fill="url(#waveGold1)"
+            filter="url(#waveBlur)"
+          />
+          
+          {/* Secondary wave - medium curve */}
+          <path
+            d="M-100,1200 
+               C50,1050 150,950 300,870
+               C500,750 650,800 850,680
+               C1050,560 1200,620 1400,500
+               C1600,380 1750,420 1950,320
+               L1950,1200 L-100,1200 Z"
+            fill="url(#waveGold2)"
+            style={{ opacity: 0.7 }}
+          />
+          
+          {/* Tertiary wave - inner accent */}
+          <path
+            d="M-100,1200 
+               C0,1100 100,1020 220,950
+               C400,850 550,890 720,790
+               C900,680 1020,730 1200,640
+               C1400,540 1550,580 1750,500
+               L1750,1200 L-100,1200 Z"
+            fill="url(#waveGold3)"
+            style={{ opacity: 0.5 }}
+          />
+
+          {/* Highlight line on wave edge */}
+          <path
+            d="M-50,1150 
+               C100,980 250,880 450,750
+               C700,580 900,650 1150,480
+               C1400,310 1600,380 1850,220"
+            fill="none"
+            stroke="hsl(32 95% 55%)"
+            strokeWidth="2"
+            strokeOpacity="0.4"
+            filter="url(#waveBlur)"
+          />
         </svg>
       </div>
 
-      {/* Atmospheric light beams */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Primary light beam */}
-        <div 
-          className="absolute origin-top-right"
-          style={{
-            top: '-5%',
-            right: '5%',
-            width: '3px',
-            height: '45%',
-            background: 'linear-gradient(180deg, hsl(30 90% 55% / 0.7) 0%, hsl(30 90% 50% / 0.3) 50%, transparent 100%)',
-            transform: 'rotate(20deg)',
-            filter: 'blur(2px)',
-          }}
-        />
-        {/* Secondary light beam */}
-        <div 
-          className="absolute origin-top-right"
-          style={{
-            top: '-3%',
-            right: '12%',
-            width: '2px',
-            height: '35%',
-            background: 'linear-gradient(180deg, hsl(32 88% 55% / 0.5) 0%, hsl(32 88% 50% / 0.2) 60%, transparent 100%)',
-            transform: 'rotate(15deg)',
-            filter: 'blur(1px)',
-          }}
-        />
-        {/* Subtle third beam */}
-        <div 
-          className="absolute origin-top-right"
-          style={{
-            top: '-2%',
-            right: '8%',
-            width: '1px',
-            height: '28%',
-            background: 'linear-gradient(180deg, hsl(35 85% 60% / 0.4) 0%, transparent 80%)',
-            transform: 'rotate(25deg)',
-          }}
-        />
-      </div>
-
-      {/* Accent color glows */}
+      {/* Ambient glow spots */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Cyan accent top-center */}
+        {/* Bottom-left warm glow */}
         <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[250px]"
+          className="absolute -bottom-20 -left-20 w-[600px] h-[600px]"
           style={{
-            background: 'radial-gradient(ellipse 100% 100% at 50% 0%, hsl(175 70% 45% / 0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 100% 100% at 30% 70%, hsl(25 80% 25% / 0.4) 0%, transparent 60%)',
           }}
         />
         
-        {/* Magenta accent left */}
+        {/* Right side purple tint */}
         <div 
-          className="absolute top-1/2 left-0 -translate-y-1/2 w-[300px] h-[500px]"
+          className="absolute top-0 right-0 w-[500px] h-[600px]"
           style={{
-            background: 'radial-gradient(ellipse 100% 80% at 0% 50%, hsl(320 60% 40% / 0.06) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse 100% 100% at 100% 0%, hsl(280 50% 15% / 0.3) 0%, transparent 70%)',
           }}
         />
         
-        {/* Warm glow bottom */}
+        {/* Center subtle glow */}
         <div 
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[400px]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px]"
           style={{
-            background: 'radial-gradient(ellipse 80% 100% at 50% 100%, hsl(25 50% 10% / 0.5) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse 100% 100% at 50% 50%, hsl(30 50% 10% / 0.2) 0%, transparent 50%)',
           }}
         />
       </div>
 
-      {/* Elegant particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full animate-float"
-            style={{
-              width: `${1.5 + Math.random() * 2.5}px`,
-              height: `${1.5 + Math.random() * 2.5}px`,
-              left: `${15 + Math.random() * 70}%`,
-              top: `${15 + Math.random() * 70}%`,
-              background: i % 3 === 0 
-                ? 'hsl(30 95% 60%)' 
-                : i % 3 === 1 
-                  ? 'hsl(175 75% 55%)'
-                  : 'hsl(0 0% 95%)',
-              opacity: 0.5 + Math.random() * 0.3,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
-              boxShadow: `0 0 ${10 + Math.random() * 10}px currentColor`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Vignette overlay */}
+      {/* Subtle vignette */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, hsl(0 0% 0% / 0.4) 100%)',
+          background: 'radial-gradient(ellipse 80% 70% at 50% 50%, transparent 0%, hsl(0 0% 0% / 0.5) 100%)',
         }}
       />
 

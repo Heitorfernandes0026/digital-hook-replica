@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import heroBg from "@/assets/hero-neon-lion.jpeg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,21 +8,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Dark gradient background */}
       <div 
-        className="absolute inset-0 bg-cover bg-no-repeat"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover',
-          imageRendering: 'crisp-edges',
-          filter: 'contrast(1.1) saturate(1.15) brightness(0.7)',
+          background: 'linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 3%) 100%)',
         }}
       />
-
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50" />
 
       {/* Decorative orange wave elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">

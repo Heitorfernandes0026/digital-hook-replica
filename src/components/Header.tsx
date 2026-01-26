@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Crown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import lionLogo from "@/assets/lion-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,14 +20,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-[0_0_15px_hsl(30_90%_50%/0.4)]">
-              <Crown className="text-white" size={18} />
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-bold text-lg text-white tracking-wide" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.05em' }}>Agência Next Level</span>
-              <span className="text-[10px] text-orange-400 tracking-widest uppercase">Marketing Digital</span>
-            </div>
+          <a href="#" className="flex items-center gap-3">
+            <img 
+              src={lionLogo} 
+              alt="Next Level Logo" 
+              className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]"
+            />
+            <span className="font-bold text-xl text-white tracking-wide bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" style={{ fontFamily: "'Inter', sans-serif" }}>Next Level</span>
           </a>
 
           {/* Desktop Navigation */}

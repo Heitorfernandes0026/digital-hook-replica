@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Main content */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-left px-8 md:px-16 lg:px-24 w-full max-w-7xl">
         {/* NEXT text */}
         <div 
           className={`transition-all duration-1000 ease-out ${

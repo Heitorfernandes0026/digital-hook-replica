@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import CosmicBackground from "@/components/CosmicBackground";
 
 // Lazy load components below the fold for faster initial load
 const Services = lazy(() => import("@/components/Services"));
@@ -24,9 +23,7 @@ const SectionLoader = () => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-x-hidden">
-      {/* Global continuous cosmic background */}
-      <CosmicBackground />
+    <div className="min-h-screen relative overflow-x-hidden bg-black">
       <div className="relative z-10">
         <Header />
         <main>

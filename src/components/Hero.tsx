@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import neonLogo from "@/assets/neon-logo.jpeg";
+import neonLogo from "@/assets/neon-logo-new.png";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);

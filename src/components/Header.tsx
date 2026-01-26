@@ -26,7 +26,7 @@ const Header = () => {
               alt="Next Level Logo" 
               className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]"
             />
-            <span className="font-bold text-xl tracking-wide bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]" style={{ fontFamily: "'Inter', sans-serif" }}>Next Level</span>
+            <span className="font-bold text-xl tracking-wide bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)] uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>Next Level</span>
           </a>
 
           {/* Desktop Navigation */}

@@ -40,15 +40,21 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-28">
             <Button 
               className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-purple-500 hover:to-pink-500 text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.6),0_0_60px_rgba(236,72,153,0.4)] hover:scale-105"
+              asChild
             >
-              Solicitar orçamento
-              <ArrowRight className="ml-2" size={20} />
+              <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20" target="_blank" rel="noopener noreferrer">
+                Solicitar orçamento
+                <ArrowRight className="ml-2" size={20} />
+              </a>
             </Button>
             <Button 
               className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-purple-500 hover:to-pink-500 text-white font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.6),0_0_60px_rgba(236,72,153,0.4)] hover:scale-105"
+              asChild
             >
-              <Play className="mr-2" size={20} />
-              Ver cases de sucesso
+              <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20ver%20os%20cases%20de%20sucesso" target="_blank" rel="noopener noreferrer">
+                <Play className="mr-2" size={20} />
+                Ver cases de sucesso
+              </a>
             </Button>
           </div>
 

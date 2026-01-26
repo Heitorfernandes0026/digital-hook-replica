@@ -42,7 +42,7 @@ const Header = () => {
 
           <div className="hidden md:block">
             <Button className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white font-semibold px-6 shadow-[0_0_20px_hsl(30_90%_50%/0.3)]" size="default" asChild>
-              <a href="#planos">Contratar Agora</a>
+              <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer">Contratar Agora</a>
             </Button>
           </div>
 
@@ -70,7 +70,7 @@ const Header = () => {
                 </a>
               ))}
               <Button className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white font-semibold mt-4" size="default" asChild>
-                <a href="#planos" onClick={() => setIsMenuOpen(false)}>Contratar Agora</a>
+                <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Contratar Agora</a>
               </Button>
             </nav>
           </div>

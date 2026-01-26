@@ -58,25 +58,25 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Features row - Enhanced visibility */}
+          {/* Features row - Neon border effect */}
           <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm mb-16">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm"
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.3),inset_0_0_10px_rgba(168,85,247,0.1)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(168,85,247,0.5),0_0_40px_rgba(236,72,153,0.3)]"
               >
-                <Check className="text-green-400 drop-shadow-[0_0_4px_rgba(74,222,128,0.6)]" size={16} />
+                <Check className="text-purple-400 drop-shadow-[0_0_6px_rgba(168,85,247,0.8)]" size={16} />
                 <span className="text-white/90 font-medium">{feature}</span>
               </div>
             ))}
           </div>
 
-          {/* Stats Grid */}
+          {/* Stats Grid - Neon border effect */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-5 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm hover:border-white/40 hover:from-white/15 hover:to-white/10 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+                className="p-5 rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-purple-500/40 shadow-[0_0_20px_rgba(168,85,247,0.25),0_0_40px_rgba(236,72,153,0.15),inset_0_0_15px_rgba(168,85,247,0.1)] transition-all duration-300 hover:border-purple-400/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.4),0_0_60px_rgba(236,72,153,0.25)]"
               >
                 <div className={`text-3xl md:text-4xl font-bold mb-2 ${stat.color} drop-shadow-[0_0_10px_currentColor]`}>
                   {stat.value}

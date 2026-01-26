@@ -332,17 +332,19 @@ const Hero = () => {
           />
         </div>
 
-        {/* Tagline */}
+        {/* Slogan - Luxury Tech Typography */}
         <p 
-          className={`text-sm md:text-base lg:text-lg xl:text-xl font-medium mb-12 transition-all duration-700 delay-400 tracking-wide ${
+          className={`text-sm md:text-base lg:text-lg font-light mb-14 transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
+          style={{ 
+            fontFamily: "'Inter', 'Montserrat', sans-serif",
+            fontWeight: 300,
+            letterSpacing: '0.35em',
+            color: 'hsl(0 0% 65%)',
+          }}
         >
-          <span style={{ color: 'hsl(175 75% 55%)', textShadow: '0 0 25px hsl(175 75% 55% / 0.5)' }}>Sistemas</span>
-          <span className="text-white/40 mx-3 md:mx-4">•</span>
-          <span style={{ color: 'hsl(320 75% 60%)', textShadow: '0 0 25px hsl(320 75% 60% / 0.5)' }}>Marketing</span>
-          <span className="text-white/40 mx-3 md:mx-4">&</span>
-          <span className="text-white/90" style={{ textShadow: '0 0 15px hsl(0 0% 100% / 0.3)' }}>Performance</span>
+          Sistemas • Marketing & Performance
         </p>
 
         {/* CTA Buttons */}

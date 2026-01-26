@@ -24,7 +24,7 @@ const Header = () => {
   const brandName = "NEXT LEVEL";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/5">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -41,16 +41,15 @@ const Header = () => {
                 animation: isLoaded ? 'pulseGlow 2s ease-in-out infinite' : 'none'
               }}
             />
-            <span className="font-bold text-xl tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <span className="font-semibold text-lg tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
               {brandName.split('').map((letter, index) => (
                 <span
                   key={index}
-                  className={`inline-block bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent transition-all duration-500 ${
+                  className={`inline-block bg-gradient-to-r from-cyan-400/80 via-purple-400/80 to-orange-400/80 bg-clip-text text-transparent transition-all duration-500 ${
                     isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                   }`}
                   style={{
                     transitionDelay: `${index * 50 + 400}ms`,
-                    textShadow: isLoaded ? '0 0 20px rgba(147,51,234,0.5)' : 'none'
                   }}
                 >
                   {letter === ' ' ? '\u00A0' : letter}
@@ -65,7 +64,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/70 hover:text-orange-400 transition-colors text-sm font-medium tracking-wide"
+                className="text-white/50 hover:text-orange-400 transition-colors text-sm font-light tracking-wider"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {link.label}
@@ -90,13 +89,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 bg-[#0a0a12]/95 backdrop-blur-lg">
+          <div className="md:hidden py-4 border-t border-white/5 bg-black/80 backdrop-blur-xl">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/70 hover:text-orange-400 transition-colors text-sm font-medium tracking-wide"
+                  className="text-white/50 hover:text-orange-400 transition-colors text-sm font-light tracking-wider"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

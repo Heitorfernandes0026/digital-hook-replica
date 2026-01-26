@@ -43,7 +43,7 @@ const Footer = () => {
                 alt="Next Level Logo" 
                 className="w-12 h-12 object-contain drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(147,51,234,0.7)] transition-all duration-300"
               />
-              <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">Next Level</span>
+              <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)] group-hover:drop-shadow-[0_0_15px_rgba(147,51,234,0.7)] transition-all">Next Level</span>
             </a>
             <p className="text-muted-foreground text-sm mb-6">
               Transformando negócios através de landing pages e sites que realmente convertem.

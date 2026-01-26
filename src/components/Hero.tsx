@@ -22,8 +22,8 @@ const Hero = () => {
       {/* Subtle overlay for text area */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
 
-      {/* Main content - centered in left area */}
-      <div className="relative z-10 text-left px-8 md:px-16 lg:px-24 w-full md:w-[50%] flex flex-col justify-center">
+      {/* Main content - aligned to far left */}
+      <div className="relative z-10 text-left pl-4 md:pl-6 lg:pl-8 w-full md:w-[55%] flex flex-col justify-center">
         {/* NEXT text */}
         <div 
           className={`transition-all duration-1000 ease-out ${

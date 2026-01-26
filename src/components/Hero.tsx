@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Check, Briefcase, Clock, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Play, Briefcase, Clock, TrendingUp, Users } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
@@ -10,11 +10,6 @@ const Hero = () => {
     { value: "100%", label: "Clientes satisfeitos", icon: Users, color: "text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,1)] drop-shadow-[0_0_20px_rgba(249,115,22,0.8)] drop-shadow-[0_0_40px_rgba(249,115,22,0.5)] group-hover:text-orange-300" },
   ];
 
-  const features = [
-    "Entrega em até 2 dias",
-    "100% personalizada",
-    "+50 projetos entregues",
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-[#0a0a12] contain-layout contain-paint">
@@ -58,18 +53,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Features row - Neon border effect */}
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm mb-16">
-            {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.3),inset_0_0_10px_rgba(168,85,247,0.1)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(168,85,247,0.5),0_0_40px_rgba(236,72,153,0.3)]"
-              >
-                <Check className="text-purple-400 drop-shadow-[0_0_6px_rgba(168,85,247,0.8)]" size={16} />
-                <span className="text-white/90 font-medium">{feature}</span>
-              </div>
-            ))}
-          </div>
 
           {/* Stats Grid - Professional cards with icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

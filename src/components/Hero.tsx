@@ -154,22 +154,25 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* AGÊNCIA label - Refined serif style */}
-        <p 
-          className={`text-base md:text-lg tracking-[0.5em] mb-10 transition-all duration-700 ${
+        {/* AGÊNCIA label - Clean minimalist */}
+        <div 
+          className={`mb-6 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
-          style={{ 
-            fontFamily: "'Georgia', 'Times New Roman', serif",
-            fontWeight: 400,
-            fontStyle: 'normal',
-            color: 'hsl(175 85% 60%)',
-            textShadow: '0 0 50px hsl(175 85% 60% / 0.8), 0 0 100px hsl(175 85% 60% / 0.4)',
-            textTransform: 'uppercase',
-          }}
         >
-          Agência
-        </p>
+          <span 
+            className="inline-block text-sm md:text-base tracking-[0.4em] font-normal"
+            style={{ 
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 400,
+              color: 'hsl(175 90% 55%)',
+              textShadow: '0 0 40px hsl(175 90% 55% / 0.6)',
+              textTransform: 'uppercase',
+            }}
+          >
+            Agência
+          </span>
+        </div>
 
         {/* Logo section */}
         <div 
@@ -264,51 +267,54 @@ const Hero = () => {
           />
         </div>
 
-        {/* Tagline - Elegant Serif Italic */}
-        <p 
-          className={`text-lg md:text-xl lg:text-2xl mb-8 transition-all duration-700 delay-350 ${
+        {/* Tagline - Clean Sans-Serif */}
+        <div 
+          className={`mb-10 transition-all duration-700 delay-350 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
-          style={{
-            fontFamily: "'Georgia', 'Times New Roman', serif",
-            fontWeight: 400,
-            fontStyle: 'italic',
-            letterSpacing: '0.05em',
-          }}
         >
-          <span style={{ 
-            color: 'hsl(175 85% 65%)', 
-            textShadow: '0 0 35px hsl(175 85% 65% / 0.7), 0 0 70px hsl(175 85% 65% / 0.3)' 
-          }}>Sistemas</span>
-          <span className="text-white/25 mx-3 md:mx-4" style={{ fontStyle: 'normal' }}>•</span>
-          <span style={{ 
-            color: 'hsl(320 85% 68%)', 
-            textShadow: '0 0 35px hsl(320 85% 68% / 0.7), 0 0 70px hsl(320 85% 68% / 0.3)' 
-          }}>Marketing</span>
-          <span className="text-white/25 mx-2 md:mx-3" style={{ fontStyle: 'normal' }}>&</span>
-          <span style={{ 
-            color: 'hsl(0 0% 98%)', 
-            textShadow: '0 0 25px hsl(0 0% 100% / 0.5), 0 0 50px hsl(0 0% 100% / 0.2)' 
-          }}>Performance</span>
-        </p>
+          <p 
+            className="text-base md:text-lg lg:text-xl tracking-wide"
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 400,
+            }}
+          >
+            <span style={{ 
+              color: 'hsl(175 85% 55%)', 
+              textShadow: '0 0 30px hsl(175 85% 55% / 0.5)' 
+            }}>Sistemas</span>
+            <span className="text-white/30 mx-2 md:mx-3">•</span>
+            <span style={{ 
+              color: 'hsl(320 80% 60%)', 
+              textShadow: '0 0 30px hsl(320 80% 60% / 0.5)' 
+            }}>Marketing</span>
+            <span className="text-white/30 mx-2 md:mx-3">&</span>
+            <span style={{ 
+              color: 'hsl(0 0% 90%)', 
+              textShadow: '0 0 20px hsl(0 0% 100% / 0.3)' 
+            }}>Performance</span>
+          </p>
+        </div>
 
-        {/* Slogan - Luxury Serif Typography */}
-        <p 
-          className={`text-xl md:text-2xl lg:text-3xl mb-14 transition-all duration-700 delay-400 ${
+        {/* Slogan - Clean Modern Typography */}
+        <div 
+          className={`mb-12 transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
-          style={{ 
-            fontFamily: "'Georgia', 'Times New Roman', serif",
-            fontWeight: 400,
-            fontStyle: 'italic',
-            letterSpacing: '0.12em',
-            color: 'hsl(30 20% 55%)',
-            textTransform: 'uppercase',
-            textShadow: '0 0 30px hsl(30 30% 50% / 0.3)',
-          }}
         >
-          O próximo passo para o seu sucesso.
-        </p>
+          <p 
+            className="text-base md:text-lg lg:text-xl tracking-[0.25em] uppercase"
+            style={{ 
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 300,
+              color: 'hsl(0 0% 45%)',
+              letterSpacing: '0.25em',
+            }}
+          >
+            O próximo passo para o seu sucesso.
+          </p>
+        </div>
 
         {/* CTA Buttons */}
         <div 

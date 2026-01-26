@@ -23,7 +23,7 @@ const Hero = () => {
         <img 
           src={heroBackground} 
           alt="" 
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-left"
           loading="eager"
           decoding="async"
           fetchPriority="high"

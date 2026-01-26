@@ -23,14 +23,11 @@ const HookMethod = () => {
   ];
 
   return (
-    <section id="metodo" className="py-24 relative overflow-hidden cosmic-section cosmic-section-1">
-      {/* Background effects */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.2)_0%,hsl(260_50%_30%/0.1)_40%,transparent_70%)]" />
-        <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-gradient-to-l from-purple-600/25 to-transparent rounded-full blur-[100px] animate-flow-2" />
-        <div className="absolute left-0 bottom-1/4 w-[400px] h-[400px] bg-gradient-to-r from-pink-600/20 to-transparent rounded-full blur-[80px] animate-flow-3" />
-        {/* Lightning effect */}
-        <div className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+    <section id="metodo" className="py-24 relative overflow-hidden">
+      {/* Subtle local overlay for depth variation */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-purple-600/5 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-pink-600/5 to-transparent" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

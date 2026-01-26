@@ -1,12 +1,10 @@
 const AboutUs = () => {
   return (
-    <section className="py-24 relative overflow-hidden cosmic-section cosmic-section-2">
-      {/* Background effects */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(280_60%_40%/0.15)_0%,transparent_60%)]" />
-        <div className="absolute -left-1/4 top-1/3 w-[500px] h-[500px] bg-gradient-to-r from-purple-600/20 to-transparent rounded-full blur-[100px] animate-flow-1" />
-        <div className="absolute right-0 bottom-1/4 w-[400px] h-[400px] bg-gradient-to-l from-pink-600/15 to-transparent rounded-full blur-[80px] animate-flow-2" />
+    <section className="py-24 relative overflow-hidden">
+      {/* Subtle local overlay for depth variation */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-pink-600/5 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-purple-600/5 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

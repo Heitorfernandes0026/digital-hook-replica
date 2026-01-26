@@ -71,18 +71,33 @@ const Hero = () => {
             ))}
           </div>
 
-          {/* Stats Grid - Neon border effect */}
+          {/* Stats Grid - Neon filled cards like lion's mane */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-5 rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-purple-500/40 shadow-[0_0_20px_rgba(168,85,247,0.25),0_0_40px_rgba(236,72,153,0.15),inset_0_0_15px_rgba(168,85,247,0.1)] transition-all duration-300 hover:border-purple-400/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.4),0_0_60px_rgba(236,72,153,0.25)]"
+                className="relative p-5 rounded-xl overflow-hidden backdrop-blur-sm border border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.5),0_0_80px_rgba(236,72,153,0.3)]"
+                style={{
+                  background: index % 2 === 0 
+                    ? 'linear-gradient(135deg, rgba(168,85,247,0.4) 0%, rgba(236,72,153,0.3) 50%, rgba(139,92,246,0.35) 100%)'
+                    : 'linear-gradient(135deg, rgba(236,72,153,0.35) 0%, rgba(168,85,247,0.4) 50%, rgba(192,38,211,0.3) 100%)',
+                  boxShadow: '0 0 25px rgba(168,85,247,0.4), 0 0 50px rgba(236,72,153,0.25), inset 0 0 30px rgba(168,85,247,0.2)'
+                }}
               >
-                <div className={`text-3xl md:text-4xl font-bold mb-2 ${stat.color} drop-shadow-[0_0_10px_currentColor]`}>
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-300 whitespace-pre-line font-medium">
-                  {stat.label}
+                {/* Animated glow overlay */}
+                <div 
+                  className="absolute inset-0 opacity-50"
+                  style={{
+                    background: 'radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%)'
+                  }}
+                />
+                <div className="relative z-10">
+                  <div className="text-3xl md:text-4xl font-bold mb-2 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-white/90 whitespace-pre-line font-medium drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
+                    {stat.label}
+                  </div>
                 </div>
               </div>
             ))}

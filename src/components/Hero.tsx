@@ -10,9 +10,9 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Deep black base */}
-      <div className="absolute inset-0 bg-[#0a0a0a]" />
+      <div className="absolute inset-0 bg-[#080808]" />
 
-      {/* Main elegant flowing waves from bottom-left */}
+      {/* Elegant flowing waves from bottom-left */}
       <div className="absolute inset-0 overflow-hidden">
         <svg 
           className="absolute w-full h-full"
@@ -20,296 +20,191 @@ const Hero = () => {
           preserveAspectRatio="xMidYMid slice"
         >
           <defs>
-            {/* Primary wave gradient - rich golden orange */}
             <linearGradient id="waveGold1" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(25 90% 35%)" stopOpacity="0.9" />
-              <stop offset="30%" stopColor="hsl(28 95% 45%)" stopOpacity="0.7" />
-              <stop offset="60%" stopColor="hsl(30 90% 50%)" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="hsl(25 90% 35%)" stopOpacity="0.95" />
+              <stop offset="35%" stopColor="hsl(28 95% 45%)" stopOpacity="0.6" />
+              <stop offset="70%" stopColor="hsl(30 90% 50%)" stopOpacity="0.25" />
               <stop offset="100%" stopColor="hsl(35 85% 55%)" stopOpacity="0" />
             </linearGradient>
             
-            {/* Secondary wave - deeper amber */}
             <linearGradient id="waveGold2" x1="0%" y1="100%" x2="80%" y2="20%">
-              <stop offset="0%" stopColor="hsl(20 85% 30%)" stopOpacity="0.8" />
-              <stop offset="40%" stopColor="hsl(25 90% 40%)" stopOpacity="0.5" />
+              <stop offset="0%" stopColor="hsl(20 85% 28%)" stopOpacity="0.9" />
+              <stop offset="45%" stopColor="hsl(25 90% 38%)" stopOpacity="0.45" />
               <stop offset="100%" stopColor="hsl(30 85% 45%)" stopOpacity="0" />
             </linearGradient>
             
-            {/* Third wave - subtle accent */}
             <linearGradient id="waveGold3" x1="0%" y1="100%" x2="60%" y2="40%">
-              <stop offset="0%" stopColor="hsl(28 95% 50%)" stopOpacity="0.6" />
-              <stop offset="50%" stopColor="hsl(32 90% 48%)" stopOpacity="0.3" />
+              <stop offset="0%" stopColor="hsl(28 95% 48%)" stopOpacity="0.7" />
+              <stop offset="50%" stopColor="hsl(32 90% 45%)" stopOpacity="0.35" />
               <stop offset="100%" stopColor="hsl(35 85% 50%)" stopOpacity="0" />
             </linearGradient>
 
-            {/* Purple accent gradient */}
             <linearGradient id="purpleAccent" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="hsl(280 60% 25%)" stopOpacity="0.5" />
-              <stop offset="50%" stopColor="hsl(300 50% 20%)" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="hsl(280 55% 22%)" stopOpacity="0.45" />
+              <stop offset="50%" stopColor="hsl(295 45% 18%)" stopOpacity="0.2" />
               <stop offset="100%" stopColor="transparent" stopOpacity="0" />
             </linearGradient>
 
-            {/* Soft glow filter */}
             <filter id="waveBlur" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="20" result="blur" />
+              <feGaussianBlur stdDeviation="25" result="blur" />
               <feComposite in="SourceGraphic" in2="blur" operator="over" />
             </filter>
           </defs>
           
-          {/* Background purple accent - right side */}
-          <ellipse 
-            cx="1800" 
-            cy="200" 
-            rx="600" 
-            ry="400" 
-            fill="url(#purpleAccent)"
-            style={{ opacity: 0.6 }}
-          />
+          {/* Purple accent - right side */}
+          <ellipse cx="1850" cy="180" rx="550" ry="380" fill="url(#purpleAccent)" style={{ opacity: 0.5 }} />
           
-          {/* Primary wave - large flowing curve from bottom-left */}
+          {/* Primary wave */}
           <path
-            d="M-100,1200 
-               C100,1000 200,900 350,800
-               C600,650 800,700 1000,550
-               C1200,400 1400,500 1600,350
-               C1800,200 1900,250 2100,150
-               L2100,-100 L-100,-100 L-100,1200 Z"
+            d="M-100,1200 C100,980 220,880 380,780 C620,630 820,700 1020,540 C1220,380 1420,480 1620,330 C1820,180 1920,230 2100,120 L2100,-100 L-100,-100 Z"
             fill="url(#waveGold1)"
             filter="url(#waveBlur)"
           />
           
-          {/* Secondary wave - medium curve */}
+          {/* Secondary wave */}
           <path
-            d="M-100,1200 
-               C50,1050 150,950 300,870
-               C500,750 650,800 850,680
-               C1050,560 1200,620 1400,500
-               C1600,380 1750,420 1950,320
-               L1950,1200 L-100,1200 Z"
+            d="M-100,1200 C40,1030 160,930 320,850 C520,730 670,790 870,660 C1070,530 1220,600 1420,480 C1620,360 1770,400 1970,300 L1970,1200 Z"
             fill="url(#waveGold2)"
-            style={{ opacity: 0.7 }}
+            style={{ opacity: 0.75 }}
           />
           
-          {/* Tertiary wave - inner accent */}
+          {/* Tertiary wave */}
           <path
-            d="M-100,1200 
-               C0,1100 100,1020 220,950
-               C400,850 550,890 720,790
-               C900,680 1020,730 1200,640
-               C1400,540 1550,580 1750,500
-               L1750,1200 L-100,1200 Z"
+            d="M-100,1200 C-10,1080 110,1000 240,920 C420,820 570,870 740,770 C920,660 1040,710 1220,620 C1420,520 1570,560 1770,480 L1770,1200 Z"
             fill="url(#waveGold3)"
-            style={{ opacity: 0.5 }}
+            style={{ opacity: 0.55 }}
           />
 
-          {/* Highlight line on wave edge */}
+          {/* Accent line */}
           <path
-            d="M-50,1150 
-               C100,980 250,880 450,750
-               C700,580 900,650 1150,480
-               C1400,310 1600,380 1850,220"
+            d="M-60,1120 C90,960 240,860 460,720 C720,550 920,630 1170,450 C1420,280 1620,360 1870,190"
             fill="none"
-            stroke="hsl(32 95% 55%)"
-            strokeWidth="2"
-            strokeOpacity="0.4"
+            stroke="hsl(32 95% 52%)"
+            strokeWidth="1.5"
+            strokeOpacity="0.35"
             filter="url(#waveBlur)"
           />
         </svg>
       </div>
 
-      {/* Ambient glow spots */}
+      {/* Ambient glows */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Bottom-left warm glow */}
         <div 
-          className="absolute -bottom-20 -left-20 w-[600px] h-[600px]"
-          style={{
-            background: 'radial-gradient(ellipse 100% 100% at 30% 70%, hsl(25 80% 25% / 0.4) 0%, transparent 60%)',
-          }}
+          className="absolute -bottom-32 -left-32 w-[700px] h-[700px]"
+          style={{ background: 'radial-gradient(ellipse 100% 100% at 25% 75%, hsl(25 75% 22% / 0.35) 0%, transparent 55%)' }}
         />
-        
-        {/* Right side purple tint */}
         <div 
-          className="absolute top-0 right-0 w-[500px] h-[600px]"
-          style={{
-            background: 'radial-gradient(ellipse 100% 100% at 100% 0%, hsl(280 50% 15% / 0.3) 0%, transparent 70%)',
-          }}
-        />
-        
-        {/* Center subtle glow */}
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px]"
-          style={{
-            background: 'radial-gradient(ellipse 100% 100% at 50% 50%, hsl(30 50% 10% / 0.2) 0%, transparent 50%)',
-          }}
+          className="absolute top-0 right-0 w-[450px] h-[550px]"
+          style={{ background: 'radial-gradient(ellipse 100% 100% at 100% 0%, hsl(280 45% 14% / 0.25) 0%, transparent 65%)' }}
         />
       </div>
 
-      {/* Subtle vignette */}
+      {/* Vignette */}
       <div 
         className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 80% 70% at 50% 50%, transparent 0%, hsl(0 0% 0% / 0.5) 100%)',
-        }}
+        style={{ background: 'radial-gradient(ellipse 75% 65% at 50% 50%, transparent 0%, hsl(0 0% 0% / 0.55) 100%)' }}
       />
 
-      {/* Main content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* AGÊNCIA label - Clean minimalist */}
-        <div 
-          className={`mb-6 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
-          }`}
-        >
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        
+        {/* AGÊNCIA */}
+        <div className={`mb-5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
           <span 
-            className="inline-block text-sm md:text-base tracking-[0.4em] font-normal"
+            className="text-xs sm:text-sm tracking-[0.5em] uppercase"
             style={{ 
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 400,
-              color: 'hsl(175 90% 55%)',
-              textShadow: '0 0 40px hsl(175 90% 55% / 0.6)',
-              textTransform: 'uppercase',
+              fontFamily: "system-ui, -apple-system, sans-serif",
+              fontWeight: 500,
+              color: 'hsl(175 85% 50%)',
+              textShadow: '0 0 35px hsl(175 85% 50% / 0.7)',
             }}
           >
             Agência
           </span>
         </div>
 
-        {/* Logo section */}
-        <div 
-          className={`flex items-center justify-center gap-3 md:gap-5 mb-8 transition-all duration-700 delay-200 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
-          }`}
-        >
-          {/* Play icon with glow */}
+        {/* NEXT LEVEL Logo */}
+        <div className={`flex items-center justify-center gap-2.5 md:gap-4 mb-6 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+          {/* Play icon */}
           <div 
-            className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex items-center justify-center"
+            className="w-9 h-9 md:w-11 md:h-11 lg:w-14 lg:h-14 flex items-center justify-center"
             style={{
-              color: 'hsl(30 95% 55%)',
-              filter: 'drop-shadow(0 0 20px hsl(30 95% 55% / 0.7)) drop-shadow(0 0 40px hsl(30 95% 55% / 0.3))',
+              color: 'hsl(30 95% 52%)',
+              filter: 'drop-shadow(0 0 18px hsl(30 95% 52% / 0.75)) drop-shadow(0 0 35px hsl(30 95% 52% / 0.35))',
             }}
           >
-            <svg 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2"
-              className="w-full h-full"
-            >
-              <polygon points="5 3 19 12 5 21 5 3" fill="none" />
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+              <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
           </div>
 
-          {/* NEXT LEVEL logo */}
+          {/* NEXT LEVEL boxes */}
           <div className="flex items-center">
-            {/* NEXT box */}
             <div 
-              className="px-4 py-2 md:px-6 md:py-3 lg:px-7 lg:py-3.5"
+              className="px-3.5 py-1.5 md:px-5 md:py-2.5 lg:px-6 lg:py-3"
               style={{ 
-                background: 'linear-gradient(145deg, hsl(32 98% 55%) 0%, hsl(28 95% 50%) 50%, hsl(25 90% 45%) 100%)',
-                boxShadow: `
-                  0 0 50px hsl(30 95% 55% / 0.5),
-                  0 0 100px hsl(30 90% 50% / 0.2),
-                  0 10px 40px hsl(0 0% 0% / 0.5),
-                  inset 0 1px 0 hsl(35 100% 70% / 0.3)
-                `,
-                borderRadius: '8px 0 0 8px',
+                background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                boxShadow: '0 0 45px hsl(30 95% 52% / 0.55), 0 8px 30px hsl(0 0% 0% / 0.5), inset 0 1px 0 hsl(40 100% 70% / 0.25)',
+                borderRadius: '6px 0 0 6px',
               }}
             >
               <span 
-                className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight"
-                style={{ 
-                  color: '#000',
-                  textShadow: '0 1px 0 hsl(35 100% 70% / 0.3)',
-                }}
+                className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight"
+                style={{ color: '#000', fontFamily: "system-ui, -apple-system, sans-serif" }}
               >
                 NEXT
               </span>
             </div>
-            {/* LEVEL box */}
             <div 
-              className="px-4 py-2 md:px-6 md:py-3 lg:px-7 lg:py-3.5 border-2"
+              className="px-3.5 py-1.5 md:px-5 md:py-2.5 lg:px-6 lg:py-3 border-2"
               style={{ 
-                background: 'linear-gradient(145deg, hsl(0 0% 8%) 0%, hsl(0 0% 3%) 100%)',
-                borderColor: 'hsl(0 0% 85%)',
-                boxShadow: `
-                  0 10px 40px hsl(0 0% 0% / 0.6),
-                  inset 0 1px 0 hsl(0 0% 20%)
-                `,
-                borderRadius: '0 8px 8px 0',
+                background: 'linear-gradient(135deg, hsl(0 0% 7%) 0%, hsl(0 0% 2%) 100%)',
+                borderColor: 'hsl(0 0% 80%)',
+                boxShadow: '0 8px 30px hsl(0 0% 0% / 0.55), inset 0 1px 0 hsl(0 0% 18%)',
+                borderRadius: '0 6px 6px 0',
               }}
             >
-              <span className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight">
+              <span 
+                className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white tracking-tight"
+                style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
+              >
                 LEVEL
               </span>
             </div>
           </div>
         </div>
 
-        {/* Gradient accent line */}
-        <div 
-          className={`relative w-48 md:w-64 lg:w-72 h-0.5 mx-auto mb-8 transition-all duration-700 delay-300 ${
-            isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-          }`}
-        >
+        {/* Gradient line */}
+        <div className={`relative w-40 md:w-56 lg:w-64 h-[3px] mx-auto mb-7 transition-all duration-700 delay-250 ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}>
           <div
             className="absolute inset-0 rounded-full"
-            style={{
-              background: 'linear-gradient(90deg, hsl(175 80% 50%) 0%, hsl(280 65% 55%) 30%, hsl(320 75% 55%) 60%, hsl(30 95% 55%) 100%)',
-            }}
+            style={{ background: 'linear-gradient(90deg, hsl(175 80% 48%) 0%, hsl(270 60% 55%) 40%, hsl(320 70% 55%) 70%, hsl(30 95% 52%) 100%)' }}
           />
           <div 
             className="absolute inset-0 rounded-full"
-            style={{
-              background: 'linear-gradient(90deg, hsl(175 80% 50%) 0%, hsl(280 65% 55%) 30%, hsl(320 75% 55%) 60%, hsl(30 95% 55%) 100%)',
-              filter: 'blur(10px)',
-              opacity: 0.8,
-            }}
+            style={{ background: 'linear-gradient(90deg, hsl(175 80% 48%) 0%, hsl(270 60% 55%) 40%, hsl(320 70% 55%) 70%, hsl(30 95% 52%) 100%)', filter: 'blur(8px)', opacity: 0.7 }}
           />
         </div>
 
-        {/* Tagline - Clean Sans-Serif */}
-        <div 
-          className={`mb-10 transition-all duration-700 delay-350 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}
-        >
-          <p 
-            className="text-base md:text-lg lg:text-xl tracking-wide"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 400,
-            }}
-          >
-            <span style={{ 
-              color: 'hsl(175 85% 55%)', 
-              textShadow: '0 0 30px hsl(175 85% 55% / 0.5)' 
-            }}>Sistemas</span>
-            <span className="text-white/30 mx-2 md:mx-3">•</span>
-            <span style={{ 
-              color: 'hsl(320 80% 60%)', 
-              textShadow: '0 0 30px hsl(320 80% 60% / 0.5)' 
-            }}>Marketing</span>
-            <span className="text-white/30 mx-2 md:mx-3">&</span>
-            <span style={{ 
-              color: 'hsl(0 0% 90%)', 
-              textShadow: '0 0 20px hsl(0 0% 100% / 0.3)' 
-            }}>Performance</span>
+        {/* Tagline */}
+        <div className={`mb-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className="text-sm md:text-base lg:text-lg" style={{ fontFamily: "system-ui, -apple-system, sans-serif", fontWeight: 400 }}>
+            <span style={{ color: 'hsl(175 80% 50%)', textShadow: '0 0 25px hsl(175 80% 50% / 0.55)' }}>Sistemas</span>
+            <span className="text-white/25 mx-2.5">•</span>
+            <span style={{ color: 'hsl(320 75% 58%)', textShadow: '0 0 25px hsl(320 75% 58% / 0.55)' }}>Marketing</span>
+            <span className="text-white/25 mx-2">&</span>
+            <span className="text-white/85">Performance</span>
           </p>
         </div>
 
-        {/* Slogan - Clean Modern Typography */}
-        <div 
-          className={`mb-12 transition-all duration-700 delay-400 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}
-        >
+        {/* Slogan */}
+        <div className={`mb-10 transition-all duration-700 delay-350 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <p 
-            className="text-base md:text-lg lg:text-xl tracking-[0.25em] uppercase"
+            className="text-sm md:text-base tracking-[0.22em] uppercase"
             style={{ 
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "system-ui, -apple-system, sans-serif",
               fontWeight: 300,
-              color: 'hsl(0 0% 45%)',
-              letterSpacing: '0.25em',
+              color: 'hsl(30 15% 50%)',
             }}
           >
             O próximo passo para o seu sucesso.
@@ -317,45 +212,34 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div 
-          className={`flex flex-col sm:flex-row items-center justify-center gap-5 transition-all duration-700 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}
-        >
-          {/* Primary button */}
+        <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-450 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <a
             href="https://wa.me/5531975911116?text=Olá!%20Gostaria%20de%20contratar%20os%20serviços%20da%20NEXT%20LEVEL."
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest transition-all duration-300 hover:scale-105 overflow-hidden"
+            className="group relative px-8 py-3.5 rounded-md font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:scale-[1.03] overflow-hidden"
             style={{
-              background: 'linear-gradient(145deg, hsl(32 98% 55%) 0%, hsl(28 95% 48%) 100%)',
+              background: 'linear-gradient(135deg, hsl(32 98% 52%) 0%, hsl(28 95% 46%) 100%)',
               color: '#000',
-              boxShadow: `
-                0 0 40px hsl(30 95% 55% / 0.5),
-                0 0 80px hsl(30 90% 50% / 0.2),
-                0 8px 25px hsl(0 0% 0% / 0.4)
-              `,
+              boxShadow: '0 0 35px hsl(30 95% 52% / 0.5), 0 6px 20px hsl(0 0% 0% / 0.4)',
+              fontFamily: "system-ui, -apple-system, sans-serif",
             }}
           >
             <span className="relative z-10">Começar Agora</span>
             <div 
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                background: 'linear-gradient(145deg, hsl(35 100% 58%) 0%, hsl(30 95% 52%) 100%)',
-              }}
+              style={{ background: 'linear-gradient(135deg, hsl(35 100% 56%) 0%, hsl(30 95% 50%) 100%)' }}
             />
           </a>
 
-          {/* Secondary button */}
           <a
-            href="#services"
-            className="group px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest border transition-all duration-300 hover:scale-105"
+            href="#servicos"
+            className="px-8 py-3.5 rounded-md font-semibold text-sm uppercase tracking-wider border-2 transition-all duration-300 hover:scale-[1.03] hover:bg-white/5"
             style={{
-              borderColor: 'hsl(30 90% 55% / 0.6)',
-              color: 'hsl(30 90% 55%)',
-              background: 'hsl(30 90% 55% / 0.05)',
-              boxShadow: '0 0 30px hsl(30 90% 55% / 0.1)',
+              borderColor: 'hsl(30 85% 52% / 0.5)',
+              color: 'hsl(30 85% 55%)',
+              background: 'transparent',
+              fontFamily: "system-ui, -apple-system, sans-serif",
             }}
           >
             Saiba Mais
@@ -364,18 +248,14 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div 
-        className={`absolute bottom-10 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${
-          isVisible ? 'opacity-40 hover:opacity-70' : 'opacity-0'
-        }`}
-      >
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-35 hover:opacity-60' : 'opacity-0'}`}>
         <div 
-          className="w-5 h-8 rounded-full border flex items-start justify-center p-1 transition-colors duration-300"
-          style={{ borderColor: 'hsl(175 65% 50% / 0.6)' }}
+          className="w-5 h-8 rounded-full border-2 flex items-start justify-center p-1.5"
+          style={{ borderColor: 'hsl(175 60% 45% / 0.5)' }}
         >
           <div 
-            className="w-1 h-1.5 rounded-full animate-bounce"
-            style={{ background: 'hsl(175 65% 50%)' }}
+            className="w-1 h-2 rounded-full animate-bounce"
+            style={{ background: 'hsl(175 60% 50%)' }}
           />
         </div>
       </div>

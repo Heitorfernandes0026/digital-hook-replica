@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroBg from "@/assets/hero-lion-bg-new.jpeg";
+import heroBg from "@/assets/hero-neon-lion.jpeg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,9 +15,8 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: 'right 35%',
-          imageRendering: 'crisp-edges',
-          filter: 'contrast(1.05) saturate(1.1)',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
         }}
       />
       

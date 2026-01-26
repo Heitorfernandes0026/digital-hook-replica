@@ -49,17 +49,6 @@ const Hero = () => {
             de alta conversão
           </h1>
 
-          {/* Subheadline - Enhanced visibility */}
-          <div className="relative mb-8 p-6 rounded-xl bg-gradient-to-r from-white/10 to-white/5 border border-white/15 backdrop-blur-sm shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
-            <p className="text-lg md:text-xl text-white/90 max-w-xl leading-relaxed font-medium">
-              Cada seção tem um motivo. Cada botão tem um objetivo.{" "}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
-                Estratégia, copy e design
-              </span>{" "}
-              pensados para conversão desde o primeiro scroll.
-            </p>
-          </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
             <Button 

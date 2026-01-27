@@ -326,7 +326,14 @@ const Hero = () => {
                   
                   {/* Tagline */}
                   <p 
-                    className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/40 font-medium"
+                    className="text-sm sm:text-base tracking-[0.25em] uppercase font-medium"
+                    style={{
+                      background: 'linear-gradient(90deg, hsl(30 80% 60%) 0%, hsl(35 90% 70%) 50%, hsl(30 80% 60%) 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      textShadow: '0 0 30px hsl(30 90% 50% / 0.3)',
+                    }}
                   >
                     O próximo passo do seu sucesso
                   </p>

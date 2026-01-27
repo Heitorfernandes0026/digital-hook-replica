@@ -1,5 +1,4 @@
 import { Instagram, Linkedin, Facebook } from "lucide-react";
-import lionLogo from "@/assets/lion-logo.png";
 
 const Footer = () => {
   const links = {
@@ -45,28 +44,57 @@ const Footer = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
+          {/* Brand - Styled like Header Logo */}
           <div className="md:col-span-1">
-            <a href="#" className="flex items-center gap-3 mb-4 group">
-              <img 
-                src={lionLogo} 
-                alt="Next Level Logo" 
-                className="w-12 h-12 object-contain transition-all duration-300"
-                style={{
-                  filter: 'drop-shadow(0 0 12px hsl(30 90% 50% / 0.5))',
-                }}
-              />
-              <span 
-                className="font-bold text-xl uppercase"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+            <a href="#" className="flex items-center gap-0 mb-4 group">
+              {/* Left chevrons */}
+              <div 
+                className="flex items-center gap-0.5"
+                style={{ color: 'hsl(30 95% 55%)' }}
+              >
+                <svg className="w-3 h-5" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 8 8 20 16 32" />
+                </svg>
+                <svg className="w-3 h-5 -ml-1.5" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 8 8 20 16 32" />
+                </svg>
+              </div>
+
+              {/* NEXT */}
+              <div 
+                className="px-2 py-0.5 rounded-l-md border"
+                style={{ 
+                  background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                  borderColor: 'hsl(0 0% 100%)',
+                  boxShadow: '0 4px 16px hsl(30 90% 50% / 0.3)',
                 }}
               >
-                Next Level
-              </span>
+                <span className="text-xs font-black text-black tracking-tight">NEXT</span>
+              </div>
+
+              {/* LEVEL */}
+              <div 
+                className="px-2 py-0.5 rounded-r-md border -ml-px"
+                style={{ 
+                  background: 'hsl(0 0% 5%)',
+                  borderColor: 'hsl(0 0% 70%)',
+                }}
+              >
+                <span className="text-xs font-black text-white tracking-tight">LEVEL</span>
+              </div>
+
+              {/* Right chevrons */}
+              <div 
+                className="flex items-center gap-0.5"
+                style={{ color: 'hsl(30 95% 55%)' }}
+              >
+                <svg className="w-3 h-5" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="8 8 16 20 8 32" />
+                </svg>
+                <svg className="w-3 h-5 -ml-1.5" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="8 8 16 20 8 32" />
+                </svg>
+              </div>
             </a>
             <p className="text-white/50 text-sm mb-6">
               Transformando negócios através de landing pages e sites que realmente convertem.

@@ -280,7 +280,7 @@ const Hero = () => {
                   className="relative flex flex-col items-center gap-6"
                 >
                   {/* NEXT LEVEL Text with inline chevrons */}
-                  <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="flex items-center gap-0">
                     {/* Left chevrons */}
                     <div 
                       className="flex items-center gap-0.5 animate-chevron-pulse"
@@ -298,7 +298,7 @@ const Hero = () => {
 
                     {/* NEXT */}
                     <div 
-                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-xl"
+                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-l-xl"
                       style={{ 
                         background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
                         boxShadow: '0 8px 32px hsl(30 90% 50% / 0.4), 0 0 0 1px hsl(30 90% 50% / 0.2)',
@@ -309,7 +309,7 @@ const Hero = () => {
 
                     {/* LEVEL */}
                     <div 
-                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-xl border-2"
+                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-r-xl border-2 -ml-px"
                       style={{ 
                         background: 'hsl(0 0% 5%)',
                         borderColor: 'hsl(0 0% 70%)',
@@ -337,7 +337,7 @@ const Hero = () => {
                   
                   {/* Tagline */}
                   <p 
-                    className="text-sm sm:text-base tracking-[0.25em] uppercase font-medium"
+                    className="text-sm sm:text-base tracking-[0.25em] uppercase font-bold"
                     style={{
                       background: 'linear-gradient(90deg, hsl(30 80% 60%) 0%, hsl(35 90% 70%) 50%, hsl(30 80% 60%) 100%)',
                       WebkitBackgroundClip: 'text',

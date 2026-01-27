@@ -33,39 +33,61 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img 
-              src={playLogo} 
-              alt="Next Level Play Logo" 
-              className={`w-11 h-11 object-contain transition-all duration-700 ${
-                isLoaded 
-                  ? 'opacity-100 scale-100' 
-                  : 'opacity-0 scale-75'
-              }`}
-              style={{
-                filter: isLoaded ? 'drop-shadow(0 0 15px hsl(30 90% 50% / 0.7))' : 'none',
+          {/* Logo - Styled like Hero */}
+          <a 
+            href="#" 
+            className={`flex items-center gap-0 transition-all duration-700 ${
+              isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
+          >
+            {/* Left chevrons */}
+            <div 
+              className="flex items-center gap-0.5"
+              style={{ color: 'hsl(30 95% 55%)' }}
+            >
+              <svg className="w-4 h-6" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="16 8 8 20 16 32" />
+              </svg>
+              <svg className="w-4 h-6 -ml-2" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="16 8 8 20 16 32" />
+              </svg>
+            </div>
+
+            {/* NEXT */}
+            <div 
+              className="px-2.5 py-1 rounded-l-md border"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                borderColor: 'hsl(0 0% 100%)',
+                boxShadow: '0 4px 16px hsl(30 90% 50% / 0.3)',
               }}
-            />
-            <span className="font-semibold text-lg tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
-              {brandName.split('').map((letter, index) => (
-                <span
-                  key={index}
-                  className={`inline-block transition-all duration-500 ${
-                    isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 50 + 400}ms`,
-                    background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >
-                  {letter === ' ' ? '\u00A0' : letter}
-                </span>
-              ))}
-            </span>
+            >
+              <span className="text-sm font-black text-black tracking-tight">NEXT</span>
+            </div>
+
+            {/* LEVEL */}
+            <div 
+              className="px-2.5 py-1 rounded-r-md border -ml-px"
+              style={{ 
+                background: 'hsl(0 0% 5%)',
+                borderColor: 'hsl(0 0% 70%)',
+              }}
+            >
+              <span className="text-sm font-black text-white tracking-tight">LEVEL</span>
+            </div>
+
+            {/* Right chevrons */}
+            <div 
+              className="flex items-center gap-0.5"
+              style={{ color: 'hsl(30 95% 55%)' }}
+            >
+              <svg className="w-4 h-6" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="8 8 16 20 8 32" />
+              </svg>
+              <svg className="w-4 h-6 -ml-2" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="8 8 16 20 8 32" />
+              </svg>
+            </div>
           </a>
 
           {/* Desktop Navigation */}

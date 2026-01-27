@@ -109,8 +109,8 @@ const Hero = () => {
                   >
                     sites e landing pages
                   </span>
+                  <span className="text-white"> de alta</span>
                   <br />
-                  <span className="text-white">de alta </span>
                   <span 
                     className="inline"
                     style={{

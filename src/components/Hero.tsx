@@ -269,15 +269,22 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div 
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-500 ${
-          isVisible ? 'opacity-40' : 'opacity-0'
+      {/* Scroll Button */}
+      <a 
+        href="#servicos"
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-500 group cursor-pointer ${
+          isVisible ? 'opacity-60 hover:opacity-100' : 'opacity-0'
         }`}
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent" />
-      </div>
+        <div 
+          className="w-10 h-14 rounded-full border-2 border-white/30 flex items-start justify-center pt-2 group-hover:border-primary/60 transition-colors duration-300"
+        >
+          <div 
+            className="w-1.5 h-3 rounded-full bg-white/50 group-hover:bg-primary animate-bounce"
+            style={{ animationDuration: '1.5s' }}
+          />
+        </div>
+      </a>
     </section>
   );
 };

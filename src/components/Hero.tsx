@@ -95,10 +95,9 @@ const Hero = () => {
                       backgroundClip: 'text',
                     }}
                   >
-                    sites e landing pages
+                    sites e landing pages de alta
                   </span>
                   <br />
-                  <span className="text-white">de </span>
                   <span 
                     className="inline"
                     style={{
@@ -108,7 +107,7 @@ const Hero = () => {
                       backgroundClip: 'text',
                     }}
                   >
-                    alta conversão.
+                    conversão.
                   </span>
                 </h1>
               </div>

@@ -9,38 +9,26 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: '#000000' }}>
+    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: '#0B0B0B' }}>
       
-      {/* Background Elements */}
+      {/* Background Elements - Premium Dark UI */}
       <div className="absolute inset-0">
-        {/* Tech Grid Texture */}
+        {/* Soft orange ambient glow - asymmetric positioning */}
         <div 
-          className="absolute inset-0"
+          className="absolute top-[20%] right-[10%] w-[800px] h-[800px]"
           style={{
-            backgroundImage: `
-              linear-gradient(#111111 1px, transparent 1px),
-              linear-gradient(90deg, #111111 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',
+            background: 'radial-gradient(circle, #FF8A00 0%, transparent 60%)',
+            opacity: 0.08,
+            filter: 'blur(200px)',
           }}
         />
-
-        {/* Cyan neon light - positioned behind logo area */}
+        
+        {/* Secondary subtle orange glow - lower left for depth */}
         <div 
-          className="absolute top-1/2 right-[25%] w-[600px] h-[600px] -translate-y-1/2"
+          className="absolute bottom-[10%] left-[5%] w-[600px] h-[600px]"
           style={{
-            background: 'radial-gradient(circle, #00f2ff 0%, transparent 70%)',
-            opacity: 0.1,
-            filter: 'blur(250px)',
-          }}
-        />
-
-        {/* Orange neon light - positioned behind logo area */}
-        <div 
-          className="absolute top-1/2 right-[35%] w-[500px] h-[500px] -translate-y-1/2"
-          style={{
-            background: 'radial-gradient(circle, #ff8c00 0%, transparent 70%)',
-            opacity: 0.1,
+            background: 'radial-gradient(circle, #FF8A00 0%, transparent 70%)',
+            opacity: 0.04,
             filter: 'blur(250px)',
           }}
         />
@@ -80,30 +68,42 @@ const Hero = () => {
                 }`}
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
-                  <span className="text-white">Experiências </span>
+                  <span className="text-white">Conquiste seu mercado com </span>
                   <span 
                     className="inline"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      background: 'linear-gradient(135deg, #FF8A00 0%, #FFA033 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
                     }}
                   >
-                    digitais construídas
+                    sites
+                  </span>
+                  <span className="text-white"> e </span>
+                  <span 
+                    className="inline"
+                    style={{
+                      background: 'linear-gradient(135deg, #FF8A00 0%, #FFA033 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    landing pages
                   </span>
                   <br />
-                  <span className="text-white">para gerar </span>
+                  <span className="text-white">de </span>
                   <span 
                     className="inline"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      background: 'linear-gradient(135deg, #FF8A00 0%, #FFA033 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
                     }}
                   >
-                    resultados reais.
+                    alta conversão.
                   </span>
                 </h1>
               </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import playLogo from "@/assets/play-logo.png";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -171,71 +171,22 @@ const Hero = () => {
                 <div 
                   className="absolute inset-0 blur-3xl"
                   style={{
-                    background: 'radial-gradient(ellipse at center, hsl(30 90% 50% / 0.25) 0%, transparent 70%)',
-                    transform: 'scale(1.5)',
+                    background: 'radial-gradient(ellipse at center, hsl(30 90% 50% / 0.35) 0%, transparent 70%)',
+                    transform: 'scale(2)',
                   }}
                 />
                 
-                {/* Logo Container */}
-                <div 
-                  className="relative flex flex-col items-center gap-6"
-                >
-                  {/* NEXT LEVEL Text with inline chevrons */}
-                  <div className="flex items-center gap-0">
-                    {/* Left chevrons */}
-                    <div 
-                      className="flex items-center gap-0.5 animate-chevron-pulse"
-                      style={{
-                        color: 'hsl(30 95% 55%)',
-                      }}
-                    >
-                      <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="16 8 8 20 16 32" />
-                      </svg>
-                      <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16 -ml-3 sm:-ml-4 lg:-ml-5" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="16 8 8 20 16 32" />
-                      </svg>
-                    </div>
-
-                    {/* NEXT */}
-                    <div 
-                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-l-xl border-2"
-                      style={{ 
-                        background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
-                        borderColor: 'hsl(0 0% 100%)',
-                        boxShadow: '0 8px 32px hsl(30 90% 50% / 0.4)',
-                      }}
-                    >
-                      <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-black tracking-tight">NEXT</span>
-                    </div>
-
-                    {/* LEVEL */}
-                    <div 
-                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-r-xl border-2 -ml-px"
-                      style={{ 
-                        background: 'hsl(0 0% 5%)',
-                        borderColor: 'hsl(0 0% 70%)',
-                      }}
-                    >
-                      <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight">LEVEL</span>
-                    </div>
-
-                    {/* Right chevrons */}
-                    <div 
-                      className="flex items-center gap-0.5 animate-chevron-pulse"
-                      style={{
-                        color: 'hsl(30 95% 55%)',
-                        animationDelay: '0.15s',
-                      }}
-                    >
-                      <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="8 8 16 20 8 32" />
-                      </svg>
-                      <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16 -ml-3 sm:-ml-4 lg:-ml-5" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="8 8 16 20 8 32" />
-                      </svg>
-                    </div>
-                  </div>
+                {/* Play Logo Container */}
+                <div className="relative flex flex-col items-center gap-8">
+                  {/* Play Logo Image */}
+                  <img 
+                    src={playLogo} 
+                    alt="Next Level Play Logo" 
+                    className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-contain"
+                    style={{
+                      filter: 'drop-shadow(0 0 40px hsl(30 90% 50% / 0.6)) drop-shadow(0 0 80px hsl(30 90% 50% / 0.3))',
+                    }}
+                  />
                   
                   {/* Tagline */}
                   <p 

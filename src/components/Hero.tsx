@@ -277,10 +277,13 @@ const Hero = () => {
         }`}
       >
         <div 
-          className="w-10 h-14 rounded-full border-2 border-white/30 flex items-start justify-center pt-2 group-hover:border-primary/60 transition-colors duration-300"
+          className="w-10 h-14 rounded-full border-2 border-white/30 flex items-start justify-center pt-2 transition-colors duration-300"
+          style={{ '--hover-border': 'hsl(30 95% 55% / 0.6)' } as React.CSSProperties}
+          onMouseEnter={(e) => e.currentTarget.style.borderColor = 'hsl(30 95% 55% / 0.6)'}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = 'hsl(0 0% 100% / 0.3)'}
         >
           <div 
-            className="w-1.5 h-3 rounded-full bg-white/50 group-hover:bg-primary animate-bounce"
+            className="w-1.5 h-3 rounded-full bg-white/50 animate-bounce group-hover:bg-[hsl(30_95%_55%)]"
             style={{ animationDuration: '1.5s' }}
           />
         </div>

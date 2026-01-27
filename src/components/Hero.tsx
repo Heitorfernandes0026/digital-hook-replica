@@ -272,10 +272,9 @@ const Hero = () => {
                   <div className="flex items-center gap-2 sm:gap-3">
                     {/* Left chevrons */}
                     <div 
-                      className="flex items-center gap-0.5"
+                      className="flex items-center gap-0.5 animate-chevron-pulse"
                       style={{
                         color: 'hsl(30 95% 55%)',
-                        filter: 'drop-shadow(0 0 10px hsl(30 95% 55% / 0.5))',
                       }}
                     >
                       <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -310,10 +309,10 @@ const Hero = () => {
 
                     {/* Right chevrons */}
                     <div 
-                      className="flex items-center gap-0.5"
+                      className="flex items-center gap-0.5 animate-chevron-pulse"
                       style={{
                         color: 'hsl(30 95% 55%)',
-                        filter: 'drop-shadow(0 0 10px hsl(30 95% 55% / 0.5))',
+                        animationDelay: '0.15s',
                       }}
                     >
                       <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

@@ -298,10 +298,11 @@ const Hero = () => {
 
                     {/* NEXT */}
                     <div 
-                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-l-xl"
+                      className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-l-xl border-2"
                       style={{ 
                         background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
-                        boxShadow: '0 8px 32px hsl(30 90% 50% / 0.4), 0 0 0 1px hsl(30 90% 50% / 0.2)',
+                        borderColor: 'hsl(0 0% 100%)',
+                        boxShadow: '0 8px 32px hsl(30 90% 50% / 0.4)',
                       }}
                     >
                       <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-black tracking-tight">NEXT</span>

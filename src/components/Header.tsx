@@ -90,16 +90,37 @@ const Header = () => {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+          {/* Desktop Navigation - Styled like Logo */}
+          <nav className="hidden md:flex items-center gap-1">
+            {navLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/50 hover:text-orange-400 transition-colors text-sm font-light tracking-wider"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                className="relative group px-3 py-1.5 text-xs font-semibold tracking-wide transition-all duration-300"
+                style={{
+                  color: 'hsl(0 0% 60%)',
+                }}
               >
-                {link.label}
+                {/* Hover background effect */}
+                <span 
+                  className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(30 90% 50% / 0.15) 0%, hsl(25 85% 45% / 0.1) 100%)',
+                    border: '1px solid hsl(30 80% 50% / 0.3)',
+                  }}
+                />
+                {/* Chevron accent on hover */}
+                <span 
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                  style={{ color: 'hsl(30 95% 55%)' }}
+                >
+                  <svg className="w-2 h-3" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="8 8 16 20 8 32" />
+                  </svg>
+                </span>
+                <span className="relative group-hover:text-white group-hover:pl-2 transition-all duration-300">
+                  {link.label}
+                </span>
               </a>
             ))}
           </nav>
@@ -138,15 +159,28 @@ const Header = () => {
               borderTop: '1px solid hsl(0 0% 15% / 0.5)',
             }}
           >
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/50 hover:text-orange-400 transition-colors text-sm font-light tracking-wider"
+                  className="relative group flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300 rounded-md"
+                  style={{
+                    color: 'hsl(0 0% 60%)',
+                    background: 'hsl(0 0% 8%)',
+                    border: '1px solid hsl(0 0% 15%)',
+                  }}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.label}
+                  {/* Chevron accent */}
+                  <span style={{ color: 'hsl(30 95% 55%)' }}>
+                    <svg className="w-2.5 h-4" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="8 8 16 20 8 32" />
+                    </svg>
+                  </span>
+                  <span className="group-hover:text-white transition-colors duration-300">
+                    {link.label}
+                  </span>
                 </a>
               ))}
               <Button 

@@ -184,9 +184,9 @@ const Hero = () => {
                 }`}
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
-                  <span className="text-white">Leve seu negócio</span>
+                  <span className="text-white">Experiências digitais</span>
                   <br />
-                  <span className="text-white">ao </span>
+                  <span className="text-white">construídas para gerar </span>
                   <span 
                     className="inline-block"
                     style={{
@@ -196,7 +196,7 @@ const Hero = () => {
                       backgroundClip: 'text',
                     }}
                   >
-                    próximo nível
+                    resultado real.
                   </span>
                 </h1>
               </div>

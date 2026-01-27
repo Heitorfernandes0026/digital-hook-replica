@@ -34,67 +34,121 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 relative overflow-hidden">
-      {/* Subtle local overlay for depth variation */}
+    <section id="portfolio" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
+      {/* Subtle orange glow accents */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-purple-600/5 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-pink-600/5 to-transparent" />
+        <div 
+          className="absolute top-[30%] right-[5%] w-[400px] h-[400px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.05) 0%, transparent 60%)',
+            filter: 'blur(60px)',
+          }}
+        />
+        <div 
+          className="absolute bottom-[20%] left-[10%] w-[350px] h-[350px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.04) 0%, transparent 60%)',
+            filter: 'blur(50px)',
+          }}
+        />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-semibold tracking-wider uppercase mb-4">
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
+            style={{
+              background: 'hsl(30 70% 50% / 0.1)',
+              color: 'hsl(30 80% 60%)',
+              border: '1px solid hsl(30 60% 50% / 0.2)',
+            }}
+          >
             Nosso Portfólio
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Cases de <span className="gradient-text">sucesso</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            Cases de{' '}
+            <span 
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              sucesso
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/50 max-w-2xl mx-auto text-lg">
             Resultados reais de clientes que confiaram em nossa metodologia.
           </p>
         </div>
 
-        {/* Cases Grid with Neon Border Cards */}
+        {/* Cases Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {cases.map((item, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl neon-card cursor-pointer transition-all duration-500"
+              className="group relative p-8 rounded-2xl cursor-pointer transition-all duration-500"
+              style={{
+                background: 'hsl(0 0% 6%)',
+                border: '1px solid hsl(0 0% 15%)',
+              }}
             >
+              {/* Hover glow */}
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  boxShadow: '0 0 40px hsl(30 90% 50% / 0.1)',
+                }}
+              />
+              
               {/* Card content */}
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-medium text-primary uppercase tracking-wider mb-3">
+                    <span 
+                      className="inline-block px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider mb-3"
+                      style={{
+                        background: 'hsl(30 70% 50% / 0.1)',
+                        color: 'hsl(30 80% 60%)',
+                        border: '1px solid hsl(30 60% 50% / 0.2)',
+                      }}
+                    >
                       {item.category}
                     </span>
-                    <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors">
                       {item.title}
                     </h3>
                   </div>
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_16px_hsl(var(--primary)/0.4)] group-hover:shadow-[0_0_24px_hsl(var(--primary)/0.6)] transition-shadow duration-300">
-                    <ArrowUpRight className="text-primary-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
+                  <div 
+                    className="w-10 h-10 rounded-lg flex items-center justify-center transition-shadow duration-300"
+                    style={{
+                      background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
+                      boxShadow: '0 4px 16px hsl(30 90% 50% / 0.3)',
+                    }}
+                  >
+                    <ArrowUpRight className="text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground text-sm mb-6">
+                <p className="text-white/50 text-sm mb-6">
                   {item.description}
                 </p>
                 
-                <div className="pt-6 border-t border-border/30">
+                <div className="pt-6 border-t border-white/10">
                   <div 
                     className="text-4xl font-bold group-hover:scale-105 transition-transform origin-left"
                     style={{
-                      background: 'linear-gradient(90deg, hsl(217 91% 60%), hsl(280 80% 60%), hsl(320 80% 55%))',
+                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      filter: 'drop-shadow(0 0 8px hsl(217 91% 60% / 0.4))'
+                      backgroundClip: 'text',
                     }}
                   >
                     {item.result}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">
+                  <div className="text-sm text-white/50 mt-1">
                     {item.metric}
                   </div>
                 </div>
@@ -103,12 +157,15 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* CTA with neon glow */}
+        {/* CTA */}
         <div className="text-center">
           <Button 
-            variant="heroOutline" 
-            size="lg" 
-            className="group relative overflow-hidden"
+            className="group relative overflow-hidden px-6 py-4 rounded-xl font-medium text-sm transition-all duration-300"
+            style={{
+              background: 'transparent',
+              color: 'hsl(30 80% 60%)',
+              border: '1px solid hsl(30 80% 50% / 0.4)',
+            }}
             asChild
           >
             <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20ver%20todos%20os%20cases" target="_blank" rel="noopener noreferrer">

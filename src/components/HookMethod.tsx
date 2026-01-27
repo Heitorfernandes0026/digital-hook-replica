@@ -23,34 +23,58 @@ const HookMethod = () => {
   ];
 
   return (
-    <section id="metodo" className="py-24 relative overflow-hidden">
-      {/* Subtle local overlay for depth variation */}
+    <section id="metodo" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
+      {/* Subtle orange glow accents */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-purple-600/5 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-pink-600/5 to-transparent" />
+        <div 
+          className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px]"
+          style={{
+            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.05) 0%, transparent 60%)',
+            filter: 'blur(60px)',
+          }}
+        />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-semibold tracking-wider uppercase mb-4">
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
+            style={{
+              background: 'hsl(30 70% 50% / 0.1)',
+              color: 'hsl(30 80% 60%)',
+              border: '1px solid hsl(30 60% 50% / 0.2)',
+            }}
+          >
             Método Proprietário
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Método <span className="gradient-text">HOOK™</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            Método{' '}
+            <span 
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              HOOK™
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/50 max-w-2xl mx-auto text-lg">
             Nossa metodologia exclusiva para criar páginas que capturam a atenção e convertem visitantes em clientes.
           </p>
         </div>
 
-        {/* Horizontal Timeline with Neon Nodes */}
+        {/* Horizontal Timeline */}
         <div className="relative">
           {/* Connection line for desktop */}
-          <div className="hidden lg:block absolute top-16 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5">
-            <div className="w-full h-full bg-gradient-to-r from-primary via-secondary to-accent opacity-40" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent blur-sm opacity-60" />
-          </div>
+          <div 
+            className="hidden lg:block absolute top-16 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5"
+            style={{
+              background: 'linear-gradient(90deg, hsl(30 90% 50% / 0.3) 0%, hsl(30 90% 50% / 0.5) 50%, hsl(30 90% 50% / 0.3) 100%)',
+            }}
+          />
 
           {/* Steps Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
@@ -59,20 +83,32 @@ const HookMethod = () => {
                 key={index}
                 className="group flex flex-col items-center text-center"
               >
-                {/* Neon Node Circle */}
+                {/* Node Circle */}
                 <div className="relative mb-8">
-                  {/* Energy glow behind node */}
-                  <div className="absolute inset-0 w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary opacity-30 blur-xl group-hover:opacity-60 group-hover:blur-2xl transition-all duration-500" />
+                  {/* Glow behind node */}
+                  <div 
+                    className="absolute inset-0 w-20 h-20 rounded-full opacity-30 group-hover:opacity-60 transition-all duration-500"
+                    style={{
+                      background: 'radial-gradient(circle, hsl(30 90% 50% / 0.5) 0%, transparent 70%)',
+                      filter: 'blur(15px)',
+                    }}
+                  />
                   
-                  {/* Node circle with neon border */}
-                  <div className="relative w-20 h-20 rounded-full neon-node flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {/* Node circle */}
+                  <div 
+                    className="relative w-20 h-20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                    style={{
+                      background: '#0B0B0B',
+                      border: '2px solid hsl(30 90% 50%)',
+                      boxShadow: '0 0 20px hsl(30 90% 50% / 0.3)',
+                    }}
+                  >
                     <span 
                       className="text-3xl font-bold"
                       style={{
-                        background: 'linear-gradient(135deg, hsl(217 91% 60%), hsl(280 80% 60%))',
+                        background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(25 90% 50%) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                        filter: 'drop-shadow(0 0 8px hsl(217 91% 60%))'
                       }}
                     >
                       {step.letter}
@@ -80,23 +116,22 @@ const HookMethod = () => {
                   </div>
 
                   {/* Step number badge */}
-                  <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_12px_hsl(var(--primary)/0.6)]">
-                    <span className="text-xs font-bold text-primary-foreground">{index + 1}</span>
+                  <div 
+                    className="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
+                      boxShadow: '0 0 12px hsl(30 90% 50% / 0.5)',
+                    }}
+                  >
+                    <span className="text-xs font-bold text-black">{index + 1}</span>
                   </div>
-
-                  {/* Neon connector to next node (desktop only) */}
-                  {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 left-full -translate-y-1/2 w-[calc(100%-2rem)] h-0.5 ml-4">
-                      <div className="neon-connector w-full" />
-                    </div>
-                  )}
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+                <p className="text-white/50 text-sm leading-relaxed max-w-xs">
                   {step.description}
                 </p>
               </div>

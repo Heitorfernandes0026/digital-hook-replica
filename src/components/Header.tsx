@@ -24,7 +24,13 @@ const Header = () => {
   const brandName = "NEXT LEVEL";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/5">
+    <header 
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
+      style={{
+        background: 'rgba(11, 11, 11, 0.8)',
+        borderBottom: '1px solid hsl(0 0% 15% / 0.5)',
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -34,22 +40,26 @@ const Header = () => {
               alt="Next Level Logo" 
               className={`w-10 h-10 object-contain transition-all duration-700 ${
                 isLoaded 
-                  ? 'opacity-100 scale-100 drop-shadow-[0_0_15px_rgba(147,51,234,0.7)]' 
+                  ? 'opacity-100 scale-100' 
                   : 'opacity-0 scale-75'
               }`}
               style={{
-                animation: isLoaded ? 'pulseGlow 2s ease-in-out infinite' : 'none'
+                filter: isLoaded ? 'drop-shadow(0 0 12px hsl(30 90% 50% / 0.6))' : 'none',
               }}
             />
             <span className="font-semibold text-lg tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
               {brandName.split('').map((letter, index) => (
                 <span
                   key={index}
-                  className={`inline-block bg-gradient-to-r from-cyan-400/80 via-purple-400/80 to-orange-400/80 bg-clip-text text-transparent transition-all duration-500 ${
+                  className={`inline-block transition-all duration-500 ${
                     isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                   }`}
                   style={{
                     transitionDelay: `${index * 50 + 400}ms`,
+                    background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
                   }}
                 >
                   {letter === ' ' ? '\u00A0' : letter}
@@ -73,8 +83,18 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white font-semibold px-6 shadow-[0_0_20px_hsl(30_90%_50%/0.3)]" size="default" asChild>
-              <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer">Contratar Agora</a>
+            <Button 
+              className="font-semibold px-6 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                color: '#000',
+                boxShadow: '0 4px 20px hsl(30 90% 50% / 0.3)',
+              }}
+              asChild
+            >
+              <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer">
+                Contratar Agora
+              </a>
             </Button>
           </div>
 
@@ -89,7 +109,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/5 bg-black/80 backdrop-blur-xl">
+          <div 
+            className="md:hidden py-4 backdrop-blur-xl"
+            style={{
+              background: 'rgba(11, 11, 11, 0.95)',
+              borderTop: '1px solid hsl(0 0% 15% / 0.5)',
+            }}
+          >
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
@@ -101,8 +127,17 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white font-semibold mt-4" size="default" asChild>
-                <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Contratar Agora</a>
+              <Button 
+                className="font-semibold mt-4 transition-all duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                  color: '#000',
+                }}
+                asChild
+              >
+                <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+                  Contratar Agora
+                </a>
               </Button>
             </nav>
           </div>

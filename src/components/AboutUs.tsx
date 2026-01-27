@@ -1,33 +1,84 @@
 const AboutUs = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Subtle local overlay for depth variation */}
+    <section className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
+      {/* Subtle orange glow accents */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-pink-600/5 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-purple-600/5 to-transparent" />
+        <div 
+          className="absolute top-[40%] right-[15%] w-[350px] h-[350px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.04) 0%, transparent 60%)',
+            filter: 'blur(50px)',
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold tracking-wider uppercase mb-4">
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
+            style={{
+              background: 'hsl(30 70% 50% / 0.1)',
+              color: 'hsl(30 80% 60%)',
+              border: '1px solid hsl(30 60% 50% / 0.2)',
+            }}
+          >
             Sobre Nós
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Especialistas em <span className="gradient-text">conversão digital</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            Especialistas em{' '}
+            <span 
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              conversão digital
+            </span>
           </h2>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-            <p className="glass p-6 rounded-xl border border-border/30 hover:border-primary/30 transition-all duration-500">
+          <div className="space-y-6 text-white/60 text-lg leading-relaxed">
+            <p 
+              className="p-6 rounded-xl transition-all duration-500 hover:border-orange-500/30"
+              style={{
+                background: 'hsl(0 0% 6%)',
+                border: '1px solid hsl(0 0% 15%)',
+              }}
+            >
               A DigitalPro nasceu da necessidade de criar landing pages e sites que realmente funcionam. Depois de anos trabalhando com marketing digital, percebemos que a maioria das páginas não converte porque falta estratégia por trás do design.
             </p>
-            <p className="glass p-6 rounded-xl border border-border/30 hover:border-secondary/30 transition-all duration-500">
+            <p 
+              className="p-6 rounded-xl transition-all duration-500 hover:border-orange-500/30"
+              style={{
+                background: 'hsl(0 0% 6%)',
+                border: '1px solid hsl(0 0% 15%)',
+              }}
+            >
               Desenvolvemos uma metodologia própria que une copy persuasiva, design focado em conversão e tecnologia de ponta. O resultado? Páginas e sites que transformam visitantes em clientes de forma consistente.
             </p>
-            <p className="glass p-6 rounded-xl border border-border/30 hover:border-accent/30 transition-all duration-500">
-              Cada projeto é tratado de forma única, com análise profunda do seu negócio, público-alvo e objetivos. Não fazemos páginas genéricas — criamos <span className="text-foreground font-semibold gradient-text">máquinas de conversão personalizadas</span>.
+            <p 
+              className="p-6 rounded-xl transition-all duration-500 hover:border-orange-500/30"
+              style={{
+                background: 'hsl(0 0% 6%)',
+                border: '1px solid hsl(0 0% 15%)',
+              }}
+            >
+              Cada projeto é tratado de forma única, com análise profunda do seu negócio, público-alvo e objetivos. Não fazemos páginas genéricas — criamos{' '}
+              <span 
+                className="font-semibold"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                máquinas de conversão personalizadas
+              </span>.
             </p>
           </div>
         </div>

@@ -35,46 +35,79 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden">
-      {/* Subtle local overlay for depth variation */}
+    <section id="faq" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
+      {/* Subtle orange glow accents */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-purple-600/5 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-pink-600/5 to-transparent" />
+        <div 
+          className="absolute top-[30%] right-[10%] w-[350px] h-[350px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.04) 0%, transparent 60%)',
+            filter: 'blur(50px)',
+          }}
+        />
+        <div 
+          className="absolute bottom-[20%] left-[5%] w-[300px] h-[300px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.05) 0%, transparent 60%)',
+            filter: 'blur(60px)',
+          }}
+        />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold tracking-wider uppercase mb-4">
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
+            style={{
+              background: 'hsl(30 70% 50% / 0.1)',
+              color: 'hsl(30 80% 60%)',
+              border: '1px solid hsl(30 60% 50% / 0.2)',
+            }}
+          >
             FAQ
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Perguntas <span className="gradient-text">frequentes</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            Perguntas{' '}
+            <span 
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              frequentes
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/50 max-w-2xl mx-auto text-lg">
             Tire suas dúvidas sobre nossos serviços e processo de trabalho.
           </p>
         </div>
 
-        {/* Accordion with Neon Effects */}
+        {/* Accordion */}
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="px-6 rounded-xl neon-accordion overflow-hidden"
+                className="px-6 rounded-xl overflow-hidden"
+                style={{
+                  background: 'hsl(0 0% 6%)',
+                  border: '1px solid hsl(0 0% 15%)',
+                }}
               >
-                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-6 text-lg group">
+                <AccordionTrigger className="text-left text-white hover:text-orange-400 hover:no-underline py-6 text-lg group">
                   <span className="flex-1">{faq.question}</span>
                   <ChevronDown 
-                    className="h-5 w-5 shrink-0 text-primary neon-chevron transition-transform duration-200 group-data-[state=open]:rotate-180" 
+                    className="h-5 w-5 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" 
                     style={{
-                      filter: 'drop-shadow(0 0 4px hsl(217 91% 60% / 0.6))'
+                      color: 'hsl(30 80% 55%)',
                     }}
                   />
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="text-white/60 pb-6 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

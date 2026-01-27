@@ -184,11 +184,22 @@ const Hero = () => {
                 }`}
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
-                  <span className="text-white">Experiências digitais</span>
-                  <br />
-                  <span className="text-white">construídas para gerar </span>
+                  <span className="text-white">Experiências </span>
                   <span 
-                    className="inline-block"
+                    className="inline"
+                    style={{
+                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    digitais construídas
+                  </span>
+                  <br />
+                  <span className="text-white">para gerar </span>
+                  <span 
+                    className="inline"
                     style={{
                       background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
                       WebkitBackgroundClip: 'text',

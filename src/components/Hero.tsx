@@ -196,7 +196,7 @@ const Hero = () => {
                       backgroundClip: 'text',
                     }}
                   >
-                    resultado real.
+                    resultados reais.
                   </span>
                 </h1>
               </div>

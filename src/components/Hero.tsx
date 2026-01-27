@@ -13,36 +13,139 @@ const Hero = () => {
       
       {/* Background Elements */}
       <div className="absolute inset-0">
-        {/* Gradient mesh background */}
+        {/* Base gradient mesh background */}
         <div 
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse 80% 60% at 20% 80%, hsl(25 70% 12% / 0.5) 0%, transparent 50%),
-              radial-gradient(ellipse 60% 50% at 80% 20%, hsl(280 30% 10% / 0.3) 0%, transparent 50%),
-              radial-gradient(ellipse 100% 100% at 50% 50%, hsl(0 0% 4%) 0%, hsl(0 0% 2%) 100%)
+              radial-gradient(ellipse 80% 60% at 15% 85%, hsl(25 80% 15% / 0.6) 0%, transparent 45%),
+              radial-gradient(ellipse 70% 55% at 85% 15%, hsl(280 50% 12% / 0.5) 0%, transparent 50%),
+              radial-gradient(ellipse 50% 40% at 60% 50%, hsl(220 60% 10% / 0.3) 0%, transparent 50%),
+              radial-gradient(ellipse 100% 100% at 50% 50%, hsl(0 0% 3%) 0%, hsl(0 0% 1%) 100%)
             `,
-          }}
-        />
-        
-        {/* Subtle ambient glow on right side */}
-        <div 
-          className="absolute top-1/2 right-0 w-[60%] h-[80%] -translate-y-1/2"
-          style={{
-            background: 'radial-gradient(ellipse at center, hsl(30 80% 50% / 0.08) 0%, transparent 70%)',
-            filter: 'blur(60px)',
           }}
         />
 
-        {/* Subtle grid overlay */}
+        {/* Animated floating orbs */}
         <div 
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute top-[20%] left-[15%] w-[300px] h-[300px] rounded-full animate-pulse"
+          style={{
+            background: 'radial-gradient(circle, hsl(30 90% 50% / 0.08) 0%, transparent 70%)',
+            filter: 'blur(40px)',
+            animation: 'float 8s ease-in-out infinite',
+          }}
+        />
+        <div 
+          className="absolute bottom-[25%] right-[10%] w-[400px] h-[400px] rounded-full"
+          style={{
+            background: 'radial-gradient(circle, hsl(280 70% 40% / 0.1) 0%, transparent 70%)',
+            filter: 'blur(50px)',
+            animation: 'float 10s ease-in-out infinite reverse',
+          }}
+        />
+        <div 
+          className="absolute top-[60%] left-[40%] w-[250px] h-[250px] rounded-full"
+          style={{
+            background: 'radial-gradient(circle, hsl(200 80% 50% / 0.06) 0%, transparent 70%)',
+            filter: 'blur(35px)',
+            animation: 'float 12s ease-in-out infinite',
+          }}
+        />
+        
+        {/* Ambient glow on right side for logo */}
+        <div 
+          className="absolute top-1/2 right-0 w-[60%] h-[90%] -translate-y-1/2"
+          style={{
+            background: 'radial-gradient(ellipse at center, hsl(30 85% 50% / 0.12) 0%, transparent 60%)',
+            filter: 'blur(80px)',
+          }}
+        />
+
+        {/* Tech grid overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              linear-gradient(hsl(30 80% 50% / 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, hsl(30 80% 50% / 0.3) 1px, transparent 1px)
             `,
-            backgroundSize: '80px 80px',
+            backgroundSize: '60px 60px',
+          }}
+        />
+
+        {/* Diagonal scan lines */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              -45deg,
+              transparent,
+              transparent 2px,
+              hsl(200 80% 60% / 0.1) 2px,
+              hsl(200 80% 60% / 0.1) 4px
+            )`,
+            backgroundSize: '20px 20px',
+          }}
+        />
+
+        {/* Flowing SVG waves */}
+        <svg 
+          className="absolute inset-0 w-full h-full opacity-20" 
+          viewBox="0 0 1920 1080" 
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(30 90% 55%)" stopOpacity="0" />
+              <stop offset="30%" stopColor="hsl(30 90% 55%)" stopOpacity="0.4" />
+              <stop offset="70%" stopColor="hsl(280 70% 55%)" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="hsl(280 70% 55%)" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="heroWave2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(200 80% 50%)" stopOpacity="0" />
+              <stop offset="50%" stopColor="hsl(200 80% 50%)" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="hsl(30 80% 55%)" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          
+          <path 
+            d="M-100,300 Q300,150 600,280 T1200,220 T1900,350" 
+            fill="none" 
+            stroke="url(#heroWave1)" 
+            strokeWidth="1.5"
+            className="animate-dash-1"
+          />
+          <path 
+            d="M-100,700 Q400,850 800,720 T1400,800 T2000,650" 
+            fill="none" 
+            stroke="url(#heroWave2)" 
+            strokeWidth="1"
+            className="animate-dash-2"
+          />
+          <path 
+            d="M2020,500 Q1600,400 1200,520 T600,450 T-100,550" 
+            fill="none" 
+            stroke="url(#heroWave1)" 
+            strokeWidth="1"
+            className="animate-dash-2"
+            style={{ animationDelay: '1.5s' }}
+          />
+        </svg>
+
+        {/* Floating particles */}
+        <div className="absolute top-[15%] left-[8%] w-2 h-2 bg-orange-500/40 rounded-full blur-sm animate-pulse" />
+        <div className="absolute top-[25%] right-[12%] w-1.5 h-1.5 bg-purple-400/30 rounded-full blur-sm animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute top-[70%] left-[25%] w-1.5 h-1.5 bg-cyan-400/25 rounded-full blur-sm animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-[45%] right-[30%] w-2 h-2 bg-orange-400/30 rounded-full blur-sm animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute bottom-[20%] left-[50%] w-1 h-1 bg-white/20 rounded-full blur-sm animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-[80%] right-[8%] w-1.5 h-1.5 bg-purple-500/25 rounded-full blur-sm animate-pulse" style={{ animationDelay: '0.8s' }} />
+
+        {/* Vignette overlay */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, hsl(0 0% 2% / 0.4) 100%)',
           }}
         />
       </div>

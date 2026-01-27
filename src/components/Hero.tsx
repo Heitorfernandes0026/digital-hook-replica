@@ -85,7 +85,7 @@ const Hero = () => {
                 }`}
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
-                  <span className="text-white">Conquiste seu mercado com </span>
+                  <span className="text-white">Conquiste </span>
                   <span 
                     className="inline"
                     style={{
@@ -95,9 +95,22 @@ const Hero = () => {
                       backgroundClip: 'text',
                     }}
                   >
-                    sites e landing pages de alta
+                    seu
+                  </span>
+                  <span className="text-white"> mercado com </span>
+                  <span 
+                    className="inline"
+                    style={{
+                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    sites e landing pages
                   </span>
                   <br />
+                  <span className="text-white">de alta </span>
                   <span 
                     className="inline"
                     style={{

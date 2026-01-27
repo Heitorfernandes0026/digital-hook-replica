@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import lionLogo from "@/assets/new-lion-logo.png";
+import playLogo from "@/assets/play-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,15 +36,15 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
             <img 
-              src={lionLogo} 
-              alt="Next Level Logo" 
-              className={`w-10 h-10 object-contain transition-all duration-700 ${
+              src={playLogo} 
+              alt="Next Level Play Logo" 
+              className={`w-11 h-11 object-contain transition-all duration-700 ${
                 isLoaded 
                   ? 'opacity-100 scale-100' 
                   : 'opacity-0 scale-75'
               }`}
               style={{
-                filter: isLoaded ? 'drop-shadow(0 0 12px hsl(30 90% 50% / 0.6))' : 'none',
+                filter: isLoaded ? 'drop-shadow(0 0 15px hsl(30 90% 50% / 0.7))' : 'none',
               }}
             />
             <span className="font-semibold text-lg tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>

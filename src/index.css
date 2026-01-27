@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
@@ -557,19 +557,6 @@
 
 .animate-chevron-pulse {
   animation: chevron-pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes logo-glow {
-  0%, 100% {
-    filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.3)) drop-shadow(0 0 40px rgba(0, 242, 255, 0.2));
-  }
-  50% {
-    filter: drop-shadow(0 0 30px rgba(255, 140, 0, 0.5)) drop-shadow(0 0 60px rgba(0, 242, 255, 0.3));
-  }
-}
-
-.animate-logo-glow {
-  animation: logo-glow 3s ease-in-out infinite;
 }
 
 @keyframes pulse-glow {

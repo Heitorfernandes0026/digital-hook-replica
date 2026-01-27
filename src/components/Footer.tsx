@@ -23,14 +23,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 overflow-hidden bg-gradient-to-b from-[#0a0a12] via-[#0d0915] to-[#050208]">
-      {/* Top border glow to separate from content */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+    <footer className="relative py-16 overflow-hidden" style={{ background: '#080808' }}>
+      {/* Top border glow */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{
+          background: 'linear-gradient(90deg, transparent, hsl(30 80% 50% / 0.3), transparent)',
+        }}
+      />
       
-      {/* Subtle diagonal gradient overlay */}
+      {/* Subtle orange glow accent */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-pink-900/5" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent" />
+        <div 
+          className="absolute top-[30%] right-[20%] w-[300px] h-[300px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.03) 0%, transparent 60%)',
+            filter: 'blur(50px)',
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -41,11 +51,24 @@ const Footer = () => {
               <img 
                 src={lionLogo} 
                 alt="Next Level Logo" 
-                className="w-12 h-12 object-contain drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(147,51,234,0.7)] transition-all duration-300"
+                className="w-12 h-12 object-contain transition-all duration-300"
+                style={{
+                  filter: 'drop-shadow(0 0 12px hsl(30 90% 50% / 0.5))',
+                }}
               />
-              <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-orange-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)] group-hover:drop-shadow-[0_0_15px_rgba(147,51,234,0.7)] transition-all uppercase">Next Level</span>
+              <span 
+                className="font-bold text-xl uppercase"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Next Level
+              </span>
             </a>
-            <p className="text-muted-foreground text-sm mb-6">
+            <p className="text-white/50 text-sm mb-6">
               Transformando negócios através de landing pages e sites que realmente convertem.
             </p>
             <div className="flex gap-3">
@@ -55,7 +78,11 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg glass border border-border/50 flex items-center justify-center hover:border-primary/50 hover:text-primary hover:shadow-[0_0_15px_hsl(var(--primary)/0.2)] transition-all duration-300"
+                  className="w-10 h-10 rounded-lg flex items-center justify-center text-white/50 hover:text-orange-400 transition-all duration-300"
+                  style={{
+                    background: 'hsl(0 0% 10%)',
+                    border: '1px solid hsl(0 0% 20%)',
+                  }}
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -66,13 +93,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Serviços</h4>
+            <h4 className="font-semibold text-white mb-4">Serviços</h4>
             <ul className="space-y-3">
               {links.services.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-white/50 hover:text-orange-400 transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -83,13 +110,13 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Empresa</h4>
+            <h4 className="font-semibold text-white mb-4">Empresa</h4>
             <ul className="space-y-3">
               {links.company.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-white/50 hover:text-orange-400 transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -100,15 +127,15 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Contato</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="hover:text-primary transition-colors cursor-pointer">contato@digitalpro.com.br</li>
+            <h4 className="font-semibold text-white mb-4">Contato</h4>
+            <ul className="space-y-3 text-sm text-white/50">
+              <li className="hover:text-orange-400 transition-colors cursor-pointer">contato@digitalpro.com.br</li>
               <li>
                 <a 
                   href="https://wa.me/5531975911116" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   (31) 9 7591-1116
                 </a>
@@ -119,15 +146,20 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div 
+          className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
+          style={{
+            borderTop: '1px solid hsl(0 0% 15%)',
+          }}
+        >
+          <p className="text-sm text-white/40">
             © {new Date().getFullYear()} Next Level. Todos os direitos reservados.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">
+          <div className="flex gap-6 text-sm text-white/40">
+            <a href="#" className="hover:text-orange-400 transition-colors">
               Política de Privacidade
             </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            <a href="#" className="hover:text-orange-400 transition-colors">
               Termos de Uso
             </a>
           </div>

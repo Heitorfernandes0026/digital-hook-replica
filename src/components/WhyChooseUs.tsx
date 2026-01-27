@@ -35,81 +35,125 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* SVG Gradient Definition for icons */}
-      <svg className="absolute w-0 h-0">
-        <defs>
-          <linearGradient id="neon-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(217 91% 60%)" />
-            <stop offset="100%" stopColor="hsl(280 80% 60%)" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      {/* Subtle local overlay for depth variation */}
+    <section className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
+      {/* Subtle orange glow accents */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-pink-600/5 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent via-purple-600/5 to-transparent" />
+        <div 
+          className="absolute top-[30%] left-[5%] w-[350px] h-[350px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.04) 0%, transparent 60%)',
+            filter: 'blur(50px)',
+          }}
+        />
+        <div 
+          className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px]"
+          style={{
+            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.05) 0%, transparent 60%)',
+            filter: 'blur(60px)',
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-semibold tracking-wider uppercase mb-4">
+          <span 
+            className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
+            style={{
+              background: 'hsl(30 70% 50% / 0.1)',
+              color: 'hsl(30 80% 60%)',
+              border: '1px solid hsl(30 60% 50% / 0.2)',
+            }}
+          >
             Por que nos escolher
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Resultados que <span className="gradient-text">falam por si</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            Resultados que{' '}
+            <span 
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              falam por si
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/50 max-w-2xl mx-auto text-lg">
             Combinamos estratégia, design e tecnologia para criar landing pages que realmente convertem visitantes em clientes.
           </p>
         </div>
 
-        {/* Stats Row with neon glow */}
+        {/* Stats Row */}
         <div className="flex flex-wrap justify-center gap-12 mb-16">
           <div className="text-center group">
-            <div className="text-5xl md:text-6xl font-bold gradient-text mb-2 group-hover:scale-105 transition-transform">+300%</div>
-            <div className="text-muted-foreground">Aumento médio em conversões</div>
+            <div 
+              className="text-5xl md:text-6xl font-bold mb-2 group-hover:scale-105 transition-transform"
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              +300%
+            </div>
+            <div className="text-white/50">Aumento médio em conversões</div>
           </div>
-          <div className="w-px bg-gradient-to-b from-transparent via-border to-transparent hidden md:block" />
+          <div className="w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block" />
           <div className="text-center group">
-            <div className="text-5xl md:text-6xl font-bold gradient-text mb-2 group-hover:scale-105 transition-transform">98%</div>
-            <div className="text-muted-foreground">Taxa de satisfação</div>
+            <div 
+              className="text-5xl md:text-6xl font-bold mb-2 group-hover:scale-105 transition-transform"
+              style={{
+                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              98%
+            </div>
+            <div className="text-white/50">Taxa de satisfação</div>
           </div>
         </div>
 
-        {/* Features Grid - 3 columns with neon outline icons */}
+        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center text-center p-8 rounded-xl glass border border-border/30 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)]"
+              className="group flex flex-col items-center text-center p-8 rounded-xl transition-all duration-500"
+              style={{
+                background: 'hsl(0 0% 6%)',
+                border: '1px solid hsl(0 0% 15%)',
+              }}
             >
-              {/* Large neon outline icon */}
+              {/* Icon */}
               <div className="relative mb-6">
-                <div className="w-20 h-20 rounded-2xl flex items-center justify-center relative">
-                  {/* Outer glow */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-                  {/* Icon with neon outline effect */}
+                <div 
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center"
+                  style={{
+                    background: 'hsl(0 0% 8%)',
+                    border: '1px solid hsl(30 80% 50% / 0.2)',
+                  }}
+                >
                   <feature.icon 
-                    className="relative z-10 w-12 h-12 stroke-[1.5]"
+                    className="w-10 h-10"
                     style={{
-                      stroke: 'url(#neon-icon-gradient)',
-                      fill: 'none',
-                      filter: 'drop-shadow(0 0 8px hsl(217 91% 60%)) drop-shadow(0 0 16px hsl(280 80% 60% / 0.6))'
+                      color: 'hsl(30 90% 55%)',
                     }}
                   />
                 </div>
               </div>
               
               {/* Title */}
-              <h3 className="font-semibold text-lg mb-3 text-foreground group-hover:text-primary transition-colors">
+              <h3 className="font-semibold text-lg mb-3 text-white group-hover:text-orange-400 transition-colors">
                 {feature.title}
               </h3>
               
               {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm text-white/50 leading-relaxed">
                 {feature.description}
               </p>
             </div>

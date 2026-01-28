@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Minimize CSS
-    cssMinify: 'lightningcss',
+    cssMinify: true,
     // Minify JS with terser for better compression
     minify: 'terser',
     terserOptions: {

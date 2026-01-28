@@ -192,6 +192,20 @@ const Hero = () => {
                 <div 
                   className="relative flex flex-col items-center gap-6"
                 >
+                  {/* Tagline - Above logo */}
+                  <p 
+                    className="text-sm sm:text-base tracking-[0.25em] uppercase font-bold mb-6"
+                    style={{
+                      background: 'linear-gradient(90deg, hsl(30 80% 60%) 0%, hsl(35 90% 70%) 50%, hsl(30 80% 60%) 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      textShadow: '0 0 30px hsl(30 90% 50% / 0.3)',
+                    }}
+                  >
+                    O próximo passo do seu sucesso começa agora
+                  </p>
+
                   {/* NEXT LEVEL Text with inline chevrons */}
                   <div className="flex items-center gap-0">
                     {/* Left chevrons */}
@@ -248,20 +262,6 @@ const Hero = () => {
                       </svg>
                     </div>
                   </div>
-                  
-                  {/* Tagline */}
-                  <p 
-                    className="text-sm sm:text-base tracking-[0.25em] uppercase font-bold"
-                    style={{
-                      background: 'linear-gradient(90deg, hsl(30 80% 60%) 0%, hsl(35 90% 70%) 50%, hsl(30 80% 60%) 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      textShadow: '0 0 30px hsl(30 90% 50% / 0.3)',
-                    }}
-                  >
-                    O próximo passo do seu sucesso
-                  </p>
                 </div>
               </div>
             </div>

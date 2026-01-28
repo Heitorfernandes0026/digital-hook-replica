@@ -28,7 +28,7 @@ const Pricing = () => {
     },
     {
       name: "PROFISSIONAL",
-      price: "R$ 99,90",
+      price: "R$ 87,90",
       period: "/mês",
       highlight: true,
       badge: "Mais contratado — Melhor custo-benefício",

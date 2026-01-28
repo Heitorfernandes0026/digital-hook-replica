@@ -28,18 +28,18 @@ const IdealFor = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="ideal-for-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur */}
+      {/* Subtle green glow accents - no filter:blur */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[20%] left-[10%] w-[300px] h-[300px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.06) 0%, hsl(30 100% 50% / 0.01) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(142 90% 50% / 0.06) 0%, hsl(142 90% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[30%] right-[5%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.08) 0%, hsl(25 90% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(145 85% 45% / 0.08) 0%, hsl(145 85% 45% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -50,9 +50,9 @@ const IdealFor = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             Clareza
@@ -64,7 +64,7 @@ const IdealFor = () => {
             É{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -144,9 +144,9 @@ const IdealFor = () => {
           <Button 
             className="group px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-[1.02]"
             style={{
-              background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+              background: 'linear-gradient(135deg, hsl(142 95% 52%) 0%, hsl(145 90% 46%) 100%)',
               color: '#000',
-              boxShadow: '0 4px 24px hsl(30 90% 50% / 0.3)',
+              boxShadow: '0 4px 24px hsl(142 90% 50% / 0.3)',
             }}
             asChild
           >
@@ -181,12 +181,12 @@ const IdealFor = () => {
                   <div 
                     className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
                     style={{
-                      background: 'hsl(30 80% 50% / 0.1)',
-                      border: '1px solid hsl(30 70% 50% / 0.3)',
+                      background: 'hsl(142 80% 50% / 0.1)',
+                      border: '1px solid hsl(142 70% 50% / 0.3)',
                     }}
                     aria-hidden="true"
                   >
-                    <point.icon className="text-orange-400" size={20} aria-hidden="true" />
+                    <point.icon className="text-green-400" size={20} aria-hidden="true" />
                   </div>
                   <span style={{ color: 'hsl(0 0% 75%)' }} className="group-hover:text-white transition-colors">{point.text}</span>
                 </li>

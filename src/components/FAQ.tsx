@@ -35,39 +35,45 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
-      {/* Subtle orange glow accents */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+    <section 
+      id="faq" 
+      className="py-24 relative overflow-hidden" 
+      style={{ background: '#0B0B0B' }}
+      aria-labelledby="faq-heading"
+    >
+      {/* Subtle orange glow accents - no filter:blur for performance */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[30%] right-[10%] w-[350px] h-[350px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.04) 0%, transparent 60%)',
-            filter: 'blur(50px)',
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.06) 0%, hsl(30 100% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[20%] left-[5%] w-[300px] h-[300px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.05) 0%, transparent 60%)',
-            filter: 'blur(60px)',
+            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.08) 0%, hsl(25 90% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
               background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 80% 60%)',
+              color: 'hsl(30 85% 65%)', /* Improved contrast */
               border: '1px solid hsl(30 60% 50% / 0.2)',
             }}
           >
             FAQ
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+          <h2 
+            id="faq-heading"
+            className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white"
+          >
             Perguntas{' '}
             <span 
               style={{
@@ -80,10 +86,10 @@ const FAQ = () => {
               frequentes
             </span>
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto text-lg">
+          <p style={{ color: 'hsl(0 0% 70%)' }} className="max-w-2xl mx-auto text-lg">
             Tire suas dúvidas sobre nossos serviços e processo de trabalho.
           </p>
-        </div>
+        </header>
 
         {/* Accordion */}
         <div className="max-w-3xl mx-auto">
@@ -95,19 +101,21 @@ const FAQ = () => {
                 className="px-6 rounded-xl overflow-hidden"
                 style={{
                   background: 'hsl(0 0% 6%)',
-                  border: '1px solid hsl(0 0% 15%)',
+                  border: '1px solid hsl(0 0% 18%)', /* Improved border contrast */
                 }}
               >
                 <AccordionTrigger className="text-left text-white hover:text-orange-400 hover:no-underline py-6 text-lg group">
                   <span className="flex-1">{faq.question}</span>
                   <ChevronDown 
                     className="h-5 w-5 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" 
-                    style={{
-                      color: 'hsl(30 80% 55%)',
-                    }}
+                    style={{ color: 'hsl(30 80% 55%)' }}
+                    aria-hidden="true"
                   />
                 </AccordionTrigger>
-                <AccordionContent className="text-white/60 pb-6 leading-relaxed">
+                <AccordionContent 
+                  className="pb-6 leading-relaxed"
+                  style={{ color: 'hsl(0 0% 75%)' }} /* Improved contrast from 60% */
+                >
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -44,13 +44,13 @@ const Index = () => {
             <HookMethod />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
-            <Pricing />
+            <Testimonials />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Portfolio />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
-            <Testimonials />
+            <Pricing />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <FAQ />

@@ -158,7 +158,23 @@ const Portfolio = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button 
+            className="group relative overflow-hidden px-6 py-4 rounded-xl font-medium text-sm transition-all duration-300"
+            style={{
+              background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
+              color: '#000',
+              boxShadow: '0 4px 20px hsl(30 90% 50% / 0.4)',
+            }}
+            asChild
+          >
+            <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20ver%20modelos%20de%20landing%20pages" target="_blank" rel="noopener noreferrer">
+              <span className="relative z-10 flex items-center font-bold">
+                Ver modelos
+                <ArrowUpRight className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" size={20} />
+              </span>
+            </a>
+          </Button>
           <Button 
             className="group relative overflow-hidden px-6 py-4 rounded-xl font-medium text-sm transition-all duration-300"
             style={{

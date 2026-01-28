@@ -40,18 +40,18 @@ const WhyChooseUs = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="why-choose-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur for performance */}
+      {/* Subtle green glow accents - no filter:blur for performance */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[30%] left-[5%] w-[350px] h-[350px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.06) 0%, hsl(30 100% 50% / 0.01) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(142 90% 50% / 0.06) 0%, hsl(142 90% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.08) 0%, hsl(25 90% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(145 85% 45% / 0.08) 0%, hsl(145 85% 45% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -62,9 +62,9 @@ const WhyChooseUs = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             Por que nos escolher
@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
             Resultados que{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
             <div 
               className="text-5xl md:text-6xl font-bold mb-2 group-hover:scale-105 transition-transform"
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -112,7 +112,7 @@ const WhyChooseUs = () => {
             <div 
               className="text-5xl md:text-6xl font-bold mb-2 group-hover:scale-105 transition-transform"
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -143,20 +143,20 @@ const WhyChooseUs = () => {
                   className="w-20 h-20 rounded-2xl flex items-center justify-center"
                   style={{
                     background: 'hsl(0 0% 8%)',
-                    border: '1px solid hsl(30 80% 50% / 0.3)',
+                    border: '1px solid hsl(142 80% 50% / 0.3)',
                   }}
                   aria-hidden="true"
                 >
                   <feature.icon 
                     className="w-10 h-10"
-                    style={{ color: 'hsl(30 90% 55%)' }}
+                    style={{ color: 'hsl(142 90% 55%)' }}
                     aria-hidden="true"
                   />
                 </div>
               </div>
               
               {/* Title */}
-              <h3 className="font-semibold text-lg mb-3 text-white group-hover:text-orange-400 transition-colors">
+              <h3 className="font-semibold text-lg mb-3 text-white group-hover:text-green-400 transition-colors">
                 {feature.title}
               </h3>
               

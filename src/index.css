@@ -646,7 +646,11 @@
   color: hsl(var(--foreground));
 }
 
-/* Performance optimizations */
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* CSS Containment for layout performance */
 .contain-layout {
   contain: layout;
 }
@@ -659,19 +663,108 @@
   contain: strict;
 }
 
+.contain-content {
+  contain: content;
+}
+
 /* GPU acceleration for animations */
 .animate-flow-1,
 .animate-flow-2,
-.animate-flow-3 {
+.animate-flow-3,
+.animate-chevron-pulse {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hardware acceleration utility */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 /* Smooth scrolling with performance */
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeSpeed;
+}
+
+/* Optimize images by default */
+img {
+  content-visibility: auto;
+}
+
+/* Font display optimization */
+@font-face {
+  font-display: swap;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS & MOBILE OPTIMIZATION
+   ============================================ */
+
+/* Touch-friendly tap targets */
+@media (pointer: coarse) {
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile-first optimizations */
+@media (max-width: 640px) {
+  /* Reduce animations on mobile for better performance */
+  .animate-flow-1,
+  .animate-flow-2,
+  .animate-flow-3 {
+    animation: none;
+    opacity: 0.5;
+  }
+  
+  /* Disable backdrop blur on mobile (heavy on GPU) */
+  .glass,
+  .glass-strong {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: hsl(var(--card) / 0.95);
+  }
+  
+  /* Simpler shadows on mobile */
+  .glow,
+  .glow-primary,
+  .glow-secondary {
+    box-shadow: none;
+  }
+  
+  /* Disable complex pseudo-element animations */
+  .neon-card::before,
+  .neon-card::after {
+    display: none;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .animate-flow-1,
+  .animate-flow-2,
+  .animate-flow-3 {
+    animation-duration: 30s;
+  }
+}
+
+/* High-DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
 
 /* Reduce motion for users who prefer it */
@@ -682,9 +775,139 @@ html {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
   
   html {
     scroll-behavior: auto;
+  }
+  
+  .animate-bounce,
+  .animate-pulse,
+  .animate-spin,
+  .animate-chevron-pulse,
+  .animate-flow-1,
+  .animate-flow-2,
+  .animate-flow-3 {
+    animation: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+
+/* Safe area padding for mobile notches */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Full-bleed sections */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* Aspect ratio utilities */
+.aspect-hero {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-card {
+  aspect-ratio: 4 / 3;
+}
+
+/* ============================================
+   LOADING & SKELETON STATES
+   ============================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted) / 0.3) 0%,
+    hsl(var(--muted) / 0.5) 50%,
+    hsl(var(--muted) / 0.3) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ============================================
+   VISIBILITY & INTERSECTION UTILITIES
+   ============================================ */
+
+/* Content visibility for off-screen optimization */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Lazy section rendering */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
+/* ============================================
+   CRITICAL CSS INLINED
+   ============================================ */
+
+/* Prevent layout shift for common elements */
+.no-cls {
+  min-height: 1px;
+}
+
+/* Image placeholder to prevent CLS */
+img[loading="lazy"] {
+  background: hsl(var(--muted) / 0.2);
+}
+
+/* Button height stabilization */
+button,
+.btn {
+  min-height: 40px;
+}
+
+/* Header height stabilization */
+header {
+  min-height: 64px;
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 80px;
   }
 }

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
-const Hero = () => {
+const Hero = memo(() => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -320,6 +320,8 @@ const Hero = () => {
       </a>
     </section>
   );
-};
+});
+
+Hero.displayName = "Hero";
 
 export default Hero;

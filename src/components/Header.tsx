@@ -1,8 +1,8 @@
+import { memo, useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
 
-const Header = () => {
+const Header = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -153,11 +153,12 @@ const Header = () => {
 
           {/* Mobile Menu Button - Accessible */}
           <button
-            className="md:hidden text-white p-2 rounded-md"
+            className="md:hidden text-white p-2 rounded-md touch-manipulation"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+            style={{ minHeight: '44px', minWidth: '44px' }}
           >
             {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
@@ -223,6 +224,8 @@ const Header = () => {
       </div>
     </header>
   );
-};
+});
+
+Header.displayName = "Header";
 
 export default Header;

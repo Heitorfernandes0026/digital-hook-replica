@@ -35,39 +35,44 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
-      {/* Subtle orange glow accents */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+    <section 
+      className="py-24 relative overflow-hidden" 
+      style={{ background: '#0B0B0B' }}
+      aria-labelledby="why-choose-heading"
+    >
+      {/* Subtle orange glow accents - no filter:blur for performance */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[30%] left-[5%] w-[350px] h-[350px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.04) 0%, transparent 60%)',
-            filter: 'blur(50px)',
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.06) 0%, hsl(30 100% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.05) 0%, transparent 60%)',
-            filter: 'blur(60px)',
+            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.08) 0%, hsl(25 90% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
               background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 80% 60%)',
+              color: 'hsl(30 85% 65%)', /* Improved contrast */
               border: '1px solid hsl(30 60% 50% / 0.2)',
             }}
           >
             Por que nos escolher
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+          <h2 
+            id="why-choose-heading"
+            className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white"
+          >
             Resultados que{' '}
             <span 
               style={{
@@ -80,14 +85,14 @@ const WhyChooseUs = () => {
               falam por si
             </span>
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto text-lg">
+          <p style={{ color: 'hsl(0 0% 70%)' }} className="max-w-2xl mx-auto text-lg">
             Combinamos estratégia, design e tecnologia para criar landing pages que realmente convertem visitantes em clientes.
           </p>
-        </div>
+        </header>
 
         {/* Stats Row */}
-        <div className="flex flex-wrap justify-center gap-12 mb-16">
-          <div className="text-center group">
+        <div className="flex flex-wrap justify-center gap-12 mb-16" role="list" aria-label="Estatísticas de resultados">
+          <div className="text-center group" role="listitem">
             <div 
               className="text-5xl md:text-6xl font-bold mb-2 group-hover:scale-105 transition-transform"
               style={{
@@ -96,13 +101,14 @@ const WhyChooseUs = () => {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}
+              aria-label="Mais de 300 porcento"
             >
               +300%
             </div>
-            <div className="text-white/50">Aumento médio em conversões</div>
+            <div style={{ color: 'hsl(0 0% 70%)' }}>Aumento médio em conversões</div>
           </div>
-          <div className="w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block" />
-          <div className="text-center group">
+          <div className="w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block" aria-hidden="true" />
+          <div className="text-center group" role="listitem">
             <div 
               className="text-5xl md:text-6xl font-bold mb-2 group-hover:scale-105 transition-transform"
               style={{
@@ -111,23 +117,25 @@ const WhyChooseUs = () => {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}
+              aria-label="98 porcento"
             >
               98%
             </div>
-            <div className="text-white/50">Taxa de satisfação</div>
+            <div style={{ color: 'hsl(0 0% 70%)' }}>Taxa de satisfação</div>
           </div>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
           {features.map((feature, index) => (
-            <div
+            <article
               key={index}
               className="group flex flex-col items-center text-center p-8 rounded-xl transition-all duration-500"
               style={{
                 background: 'hsl(0 0% 6%)',
-                border: '1px solid hsl(0 0% 15%)',
+                border: '1px solid hsl(0 0% 18%)', /* Improved border contrast */
               }}
+              role="listitem"
             >
               {/* Icon */}
               <div className="relative mb-6">
@@ -135,14 +143,14 @@ const WhyChooseUs = () => {
                   className="w-20 h-20 rounded-2xl flex items-center justify-center"
                   style={{
                     background: 'hsl(0 0% 8%)',
-                    border: '1px solid hsl(30 80% 50% / 0.2)',
+                    border: '1px solid hsl(30 80% 50% / 0.3)',
                   }}
+                  aria-hidden="true"
                 >
                   <feature.icon 
                     className="w-10 h-10"
-                    style={{
-                      color: 'hsl(30 90% 55%)',
-                    }}
+                    style={{ color: 'hsl(30 90% 55%)' }}
+                    aria-hidden="true"
                   />
                 </div>
               </div>
@@ -153,10 +161,10 @@ const WhyChooseUs = () => {
               </h3>
               
               {/* Description */}
-              <p className="text-sm text-white/50 leading-relaxed">
+              <p className="text-sm leading-relaxed" style={{ color: 'hsl(0 0% 70%)' }}>
                 {feature.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

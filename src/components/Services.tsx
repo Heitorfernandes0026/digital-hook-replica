@@ -35,39 +35,45 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
-      {/* Subtle orange glow accents */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+    <section 
+      id="servicos" 
+      className="py-24 relative overflow-hidden" 
+      style={{ background: '#0B0B0B' }}
+      aria-labelledby="services-heading"
+    >
+      {/* Subtle orange glow accents - no filter:blur for performance */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[20%] right-[10%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.05) 0%, transparent 60%)',
-            filter: 'blur(60px)',
+            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[10%] left-[5%] w-[300px] h-[300px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.04) 0%, transparent 60%)',
-            filter: 'blur(50px)',
+            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.06) 0%, hsl(25 90% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
               background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 80% 60%)',
+              color: 'hsl(30 85% 65%)', /* Improved contrast */
               border: '1px solid hsl(30 60% 50% / 0.2)',
             }}
           >
             Nossos Serviços
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+          <h2 
+            id="services-heading"
+            className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white"
+          >
             Tudo que você precisa para{' '}
             <span 
               style={{
@@ -80,46 +86,49 @@ const Services = () => {
               converter mais
             </span>
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto text-lg">
+          <p style={{ color: 'hsl(0 0% 70%)' }} className="max-w-2xl mx-auto text-lg">
             Soluções completas em landing pages e sites, do planejamento à entrega final.
           </p>
-        </div>
+        </header>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
           {services.map((service, index) => (
-            <div
+            <article
               key={index}
               className="group relative p-8 rounded-2xl transition-all duration-500"
               style={{
                 background: 'hsl(0 0% 6%)',
-                border: '1px solid hsl(0 0% 15%)',
+                border: '1px solid hsl(0 0% 18%)', /* Slightly higher contrast border */
               }}
+              role="listitem"
             >
-              {/* Hover glow effect */}
+              {/* Hover glow effect - using opacity transition instead of box-shadow animation */}
               <div 
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
-                  boxShadow: '0 0 40px hsl(30 90% 50% / 0.1)',
+                  background: 'linear-gradient(135deg, hsl(30 90% 50% / 0.05) 0%, transparent 50%)',
                 }}
+                aria-hidden="true"
               />
               
               <div 
-                className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300"
+                className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
                 style={{
                   background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
                   boxShadow: '0 8px 24px hsl(30 90% 50% / 0.3)',
                 }}
+                aria-hidden="true"
               >
-                <service.icon className="text-black" size={28} />
+                <service.icon className="text-black" size={28} aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-colors">
                 {service.title}
               </h3>
-              <p className="text-white/50 leading-relaxed">
+              <p style={{ color: 'hsl(0 0% 70%)' }} className="leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

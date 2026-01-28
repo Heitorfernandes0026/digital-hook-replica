@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import playLogo from "@/assets/play-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +20,6 @@ const Header = () => {
     { href: "#faq", label: "FAQ" },
   ];
 
-  const brandName = "NEXT LEVEL";
-
   return (
     <header 
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
@@ -30,6 +27,7 @@ const Header = () => {
         background: 'rgba(11, 11, 11, 0.8)',
         borderBottom: '1px solid hsl(0 0% 15% / 0.5)',
       }}
+      role="banner"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -39,11 +37,13 @@ const Header = () => {
             className={`flex items-center gap-0 transition-all duration-700 ${
               isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
+            aria-label="Next Level - Ir para o início"
           >
             {/* Left chevrons */}
             <div 
               className="flex items-center gap-0.5"
               style={{ color: 'hsl(30 95% 55%)' }}
+              aria-hidden="true"
             >
               <svg className="w-4 h-6" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="16 8 8 20 16 32" />
@@ -80,6 +80,7 @@ const Header = () => {
             <div 
               className="flex items-center gap-0.5"
               style={{ color: 'hsl(30 95% 55%)' }}
+              aria-hidden="true"
             >
               <svg className="w-4 h-6" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="8 8 16 20 8 32" />
@@ -91,16 +92,16 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation - Styled like Logo */}
-          <nav className="hidden md:flex items-center gap-2">
-            {navLinks.map((link, index) => (
+          <nav className="hidden md:flex items-center gap-2" role="navigation" aria-label="Menu principal">
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 className="relative group px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-md"
                 style={{
-                  color: 'hsl(0 0% 75%)',
+                  color: 'hsl(0 0% 80%)', /* Improved contrast from 75% */
                   background: 'hsl(0 0% 10% / 0.5)',
-                  border: '1px solid hsl(0 0% 20% / 0.5)',
+                  border: '1px solid hsl(0 0% 25% / 0.5)', /* Improved border contrast */
                 }}
               >
                 {/* Hover background effect */}
@@ -110,11 +111,13 @@ const Header = () => {
                     background: 'linear-gradient(135deg, hsl(30 90% 50% / 0.2) 0%, hsl(25 85% 45% / 0.15) 100%)',
                     border: '1px solid hsl(30 80% 50% / 0.4)',
                   }}
+                  aria-hidden="true"
                 />
                 {/* Chevron accent on hover */}
                 <span 
                   className="absolute left-1.5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300"
                   style={{ color: 'hsl(30 95% 55%)' }}
+                  aria-hidden="true"
                 >
                   <svg className="w-2 h-3" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="8 8 16 20 8 32" />
@@ -137,45 +140,56 @@ const Header = () => {
               }}
               asChild
             >
-              <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Contratar agora via WhatsApp"
+              >
                 Contratar Agora
               </a>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Accessible */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white p-2 rounded-md"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div 
+          <nav 
+            id="mobile-menu"
             className="md:hidden py-4 backdrop-blur-xl"
             style={{
               background: 'rgba(11, 11, 11, 0.95)',
               borderTop: '1px solid hsl(0 0% 15% / 0.5)',
             }}
+            role="navigation"
+            aria-label="Menu mobile"
           >
-            <nav className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   className="relative group flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300 rounded-md"
                   style={{
-                    color: 'hsl(0 0% 60%)',
+                    color: 'hsl(0 0% 70%)', /* Improved contrast from 60% */
                     background: 'hsl(0 0% 8%)',
-                    border: '1px solid hsl(0 0% 15%)',
+                    border: '1px solid hsl(0 0% 20%)', /* Improved border contrast */
                   }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {/* Chevron accent */}
-                  <span style={{ color: 'hsl(30 95% 55%)' }}>
+                  <span style={{ color: 'hsl(30 95% 55%)' }} aria-hidden="true">
                     <svg className="w-2.5 h-4" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="8 8 16 20 8 32" />
                     </svg>
@@ -193,12 +207,18 @@ const Header = () => {
                 }}
                 asChild
               >
-                <a href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+                <a 
+                  href="https://wa.me/5531975911116?text=Olá,%20gostaria%20de%20contratar%20a%20agência%20" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Contratar agora via WhatsApp"
+                >
                   Contratar Agora
                 </a>
               </Button>
-            </nav>
-          </div>
+            </div>
+          </nav>
         )}
       </div>
     </header>

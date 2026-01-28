@@ -97,12 +97,19 @@ const Pricing = () => {
         <div 
           className="w-6 h-6 rounded-full flex items-center justify-center"
           style={{ background: isHighlighted ? 'hsl(30 80% 50% / 0.2)' : 'hsl(142 71% 45% / 0.2)' }}
+          role="img"
+          aria-label="Incluído"
         >
-          <Check className="w-4 h-4" style={{ color: isHighlighted ? 'hsl(30 80% 55%)' : 'hsl(142 71% 45%)' }} />
+          <Check className="w-4 h-4" style={{ color: isHighlighted ? 'hsl(30 80% 55%)' : 'hsl(142 71% 45%)' }} aria-hidden="true" />
         </div>
       ) : (
-        <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: 'hsl(0 0% 20%)' }}>
-          <X className="w-4 h-4 text-white/30" />
+        <div 
+          className="w-6 h-6 rounded-full flex items-center justify-center" 
+          style={{ background: 'hsl(0 0% 20%)' }}
+          role="img"
+          aria-label="Não incluído"
+        >
+          <X className="w-4 h-4" style={{ color: 'hsl(0 0% 45%)' }} aria-hidden="true" />
         </div>
       );
     }
@@ -114,32 +121,39 @@ const Pricing = () => {
   };
 
   return (
-    <section id="planos" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
-      {/* Subtle orange glow accents */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+    <section 
+      id="planos" 
+      className="py-24 relative overflow-hidden" 
+      style={{ background: '#0B0B0B' }}
+      aria-labelledby="pricing-heading"
+    >
+      {/* Subtle orange glow accents - no filter:blur for performance */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[700px] h-[500px]"
           style={{
-            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.06) 0%, transparent 60%)',
-            filter: 'blur(80px)',
+            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
               background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 80% 60%)',
+              color: 'hsl(30 85% 65%)', /* Improved contrast */
               border: '1px solid hsl(30 60% 50% / 0.2)',
             }}
           >
             Nossos Planos
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+          <h2 
+            id="pricing-heading"
+            className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white"
+          >
             Compare os planos e escolha a{' '}
             <span 
               style={{
@@ -152,10 +166,10 @@ const Pricing = () => {
               melhor solução digital
             </span>
           </h2>
-          <p className="text-white/50 max-w-3xl mx-auto text-lg">
+          <p style={{ color: 'hsl(0 0% 70%)' }} className="max-w-3xl mx-auto text-lg">
             Todos os planos incluem hospedagem, site profissional, design moderno e suporte técnico para que você não precise se preocupar com tecnologia.
           </p>
-        </div>
+        </header>
 
         {/* Pricing Table - Desktop */}
         <div className="hidden lg:block max-w-5xl mx-auto">
@@ -163,13 +177,15 @@ const Pricing = () => {
             className="rounded-3xl overflow-hidden"
             style={{
               background: 'hsl(0 0% 5%)',
-              border: '1px solid hsl(0 0% 15%)',
+              border: '1px solid hsl(0 0% 18%)',
             }}
+            role="table"
+            aria-label="Tabela de comparação de planos"
           >
             {/* Header Row */}
-            <div className="grid grid-cols-4">
-              <div className="p-8 flex items-end">
-                <span className="text-sm font-bold text-white/40 uppercase tracking-widest">
+            <div className="grid grid-cols-4" role="row">
+              <div className="p-8 flex items-end" role="columnheader">
+                <span className="text-sm font-bold uppercase tracking-widest" style={{ color: 'hsl(0 0% 55%)' }}>
                   Recursos
                 </span>
               </div>
@@ -180,6 +196,7 @@ const Pricing = () => {
                   style={{
                     background: plan.highlight ? 'linear-gradient(180deg, hsl(30 80% 50% / 0.1) 0%, hsl(30 80% 50% / 0.02) 100%)' : 'transparent',
                   }}
+                  role="columnheader"
                 >
                   {plan.highlight && (
                     <div 
@@ -187,11 +204,12 @@ const Pricing = () => {
                       style={{
                         background: 'linear-gradient(90deg, hsl(30 90% 50%) 0%, hsl(35 100% 55%) 100%)',
                       }}
+                      aria-hidden="true"
                     />
                   )}
                   <h3 className={`text-lg font-bold tracking-wide ${plan.highlight ? "mb-1" : "mb-3"}`} style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'white' }}>
                     {plan.name}
-                    {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(30 80% 55%)', fill: 'hsl(30 80% 55%)' }} />}
+                    {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(30 80% 55%)', fill: 'hsl(30 80% 55%)' }} aria-hidden="true" />}
                   </h3>
                   {plan.highlight && (
                     <span 
@@ -216,14 +234,14 @@ const Pricing = () => {
                     >
                       {plan.price}
                     </span>
-                    <span className="text-white/50 text-sm font-medium">{plan.period}</span>
+                    <span style={{ color: 'hsl(0 0% 65%)' }} className="text-sm font-medium">{plan.period}</span>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Divider */}
-            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, hsl(0 0% 20%), transparent)' }} />
+            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, hsl(0 0% 25%), transparent)' }} aria-hidden="true" />
 
             {/* Feature Rows */}
             {featureLabels.map((feature, featureIndex) => (
@@ -231,9 +249,10 @@ const Pricing = () => {
                 key={feature.key}
                 className="grid grid-cols-4"
                 style={{ background: featureIndex % 2 === 0 ? 'hsl(0 0% 4%)' : 'transparent' }}
+                role="row"
               >
-                <div className="px-8 py-4 flex items-center">
-                  <span className="text-sm text-white/50">{feature.label}</span>
+                <div className="px-8 py-4 flex items-center" role="rowheader">
+                  <span className="text-sm" style={{ color: 'hsl(0 0% 70%)' }}>{feature.label}</span>
                 </div>
                 {plans.map((plan, planIndex) => (
                   <div
@@ -242,6 +261,7 @@ const Pricing = () => {
                     style={{
                       background: plan.highlight ? 'hsl(30 80% 50% / 0.03)' : 'transparent',
                     }}
+                    role="cell"
                   >
                     {renderFeatureValue(
                       plan.features[feature.key as keyof typeof plan.features],
@@ -253,11 +273,11 @@ const Pricing = () => {
             ))}
 
             {/* Divider */}
-            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, hsl(0 0% 20%), transparent)' }} />
+            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, hsl(0 0% 25%), transparent)' }} aria-hidden="true" />
 
             {/* CTA Row */}
-            <div className="grid grid-cols-4">
-              <div className="p-8" />
+            <div className="grid grid-cols-4" role="row">
+              <div className="p-8" role="cell" />
               {plans.map((plan, index) => (
                 <div
                   key={index}
@@ -265,6 +285,7 @@ const Pricing = () => {
                   style={{
                     background: plan.highlight ? 'hsl(30 80% 50% / 0.03)' : 'transparent',
                   }}
+                  role="cell"
                 >
                   <Button
                     className="w-full py-3 rounded-xl font-semibold transition-all duration-300"
@@ -274,12 +295,17 @@ const Pricing = () => {
                       boxShadow: '0 4px 20px hsl(30 90% 50% / 0.3)',
                     } : {
                       background: 'transparent',
-                      color: 'hsl(30 80% 60%)',
-                      border: '1px solid hsl(30 80% 50% / 0.4)',
+                      color: 'hsl(30 85% 65%)', /* Improved contrast */
+                      border: '1px solid hsl(30 80% 50% / 0.5)',
                     }}
                     asChild
                   >
-                    <a href={plan.ctaLink} target="_blank" rel="noopener noreferrer">
+                    <a 
+                      href={plan.ctaLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      aria-label={`Contratar plano ${plan.name} via WhatsApp`}
+                    >
                       {plan.cta}
                     </a>
                   </Button>
@@ -290,19 +316,20 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards - Mobile */}
-        <div className="lg:hidden space-y-6">
+        <div className="lg:hidden space-y-6" role="list" aria-label="Lista de planos">
           {plans.map((plan, index) => (
-            <div
+            <article
               key={index}
               className="rounded-2xl overflow-hidden"
               style={{
                 background: 'hsl(0 0% 6%)',
-                border: plan.highlight ? '2px solid hsl(30 80% 50%)' : '1px solid hsl(0 0% 15%)',
+                border: plan.highlight ? '2px solid hsl(30 80% 50%)' : '1px solid hsl(0 0% 18%)',
                 boxShadow: plan.highlight ? '0 0 40px hsl(30 90% 50% / 0.15)' : 'none',
               }}
+              role="listitem"
             >
               {/* Card Header */}
-              <div 
+              <header 
                 className="p-6 text-center relative"
                 style={{
                   background: plan.highlight ? 'hsl(30 80% 50% / 0.08)' : 'transparent',
@@ -310,7 +337,7 @@ const Pricing = () => {
               >
                 <h3 className={`text-xl font-bold tracking-wide ${plan.highlight ? "mb-1" : "mb-2"}`} style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'white' }}>
                   {plan.name}
-                  {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(30 80% 55%)', fill: 'hsl(30 80% 55%)' }} />}
+                  {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(30 80% 55%)', fill: 'hsl(30 80% 55%)' }} aria-hidden="true" />}
                 </h3>
                 {plan.highlight && (
                   <span 
@@ -335,19 +362,19 @@ const Pricing = () => {
                   >
                     {plan.price}
                   </span>
-                  <span className="text-white/50 font-medium">{plan.period}</span>
+                  <span style={{ color: 'hsl(0 0% 65%)' }} className="font-medium">{plan.period}</span>
                 </div>
-              </div>
+              </header>
 
               {/* Features List */}
-              <div className="p-6 space-y-3">
+              <ul className="p-6 space-y-3">
                 {featureLabels.map((feature) => {
                   const value = plan.features[feature.key as keyof typeof plan.features];
                   const isIncluded = value === true || (typeof value === "string" && value !== "—");
                   
                   return (
-                    <div key={feature.key} className="flex items-center justify-between gap-4">
-                      <span className={`text-sm ${isIncluded ? "text-white" : "text-white/40"}`}>
+                    <li key={feature.key} className="flex items-center justify-between gap-4">
+                      <span className={`text-sm ${isIncluded ? "text-white" : ""}`} style={{ color: isIncluded ? 'white' : 'hsl(0 0% 55%)' }}>
                         {feature.label}
                       </span>
                       <div className="flex-shrink-0">
@@ -356,12 +383,19 @@ const Pricing = () => {
                             <div 
                               className="w-6 h-6 rounded-full flex items-center justify-center"
                               style={{ background: plan.highlight ? 'hsl(30 80% 50% / 0.2)' : 'hsl(142 71% 45% / 0.2)' }}
+                              role="img"
+                              aria-label="Incluído"
                             >
-                              <Check className="w-4 h-4" style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'hsl(142 71% 45%)' }} />
+                              <Check className="w-4 h-4" style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'hsl(142 71% 45%)' }} aria-hidden="true" />
                             </div>
                           ) : (
-                            <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: 'hsl(0 0% 20%)' }}>
-                              <X className="w-4 h-4 text-white/30" />
+                            <div 
+                              className="w-6 h-6 rounded-full flex items-center justify-center" 
+                              style={{ background: 'hsl(0 0% 20%)' }}
+                              role="img"
+                              aria-label="Não incluído"
+                            >
+                              <X className="w-4 h-4" style={{ color: 'hsl(0 0% 45%)' }} aria-hidden="true" />
                             </div>
                           )
                         ) : (
@@ -370,10 +404,10 @@ const Pricing = () => {
                           </span>
                         )}
                       </div>
-                    </div>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
 
               {/* CTA */}
               <div className="p-6 pt-0">
@@ -385,17 +419,22 @@ const Pricing = () => {
                     boxShadow: '0 4px 20px hsl(30 90% 50% / 0.3)',
                   } : {
                     background: 'transparent',
-                    color: 'hsl(30 80% 60%)',
-                    border: '1px solid hsl(30 80% 50% / 0.4)',
+                    color: 'hsl(30 85% 65%)',
+                    border: '1px solid hsl(30 80% 50% / 0.5)',
                   }}
                   asChild
                 >
-                  <a href={plan.ctaLink} target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href={plan.ctaLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label={`Contratar plano ${plan.name} via WhatsApp`}
+                  >
                     {plan.cta}
                   </a>
                 </Button>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -405,18 +444,17 @@ const Pricing = () => {
             className="inline-flex items-start gap-4 p-6 rounded-2xl max-w-3xl"
             style={{
               background: 'hsl(0 0% 6%)',
-              border: '1px solid hsl(0 0% 15%)',
+              border: '1px solid hsl(0 0% 18%)',
             }}
           >
             <div 
               className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-              style={{
-                background: 'hsl(30 80% 50% / 0.1)',
-              }}
+              style={{ background: 'hsl(30 80% 50% / 0.1)' }}
+              aria-hidden="true"
             >
-              <Check className="w-6 h-6" style={{ color: 'hsl(30 80% 55%)' }} />
+              <Check className="w-6 h-6" style={{ color: 'hsl(30 80% 55%)' }} aria-hidden="true" />
             </div>
-            <p className="text-white/50 text-left">
+            <p style={{ color: 'hsl(0 0% 70%)' }} className="text-left">
               <span className="text-white font-semibold">Você não precisa entender de tecnologia.</span>{" "}
               Nós cuidamos do seu site, design, conteúdo e manutenção para que tudo funcione com segurança e desempenho.
             </p>

@@ -23,32 +23,39 @@ const HookMethod = () => {
   ];
 
   return (
-    <section id="metodo" className="py-24 relative overflow-hidden" style={{ background: '#0B0B0B' }}>
-      {/* Subtle orange glow accents */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+    <section 
+      id="metodo" 
+      className="py-24 relative overflow-hidden" 
+      style={{ background: '#0B0B0B' }}
+      aria-labelledby="method-heading"
+    >
+      {/* Subtle orange glow accents - no filter:blur */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px]"
           style={{
-            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.05) 0%, transparent 60%)',
-            filter: 'blur(60px)',
+            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
               background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 80% 60%)',
+              color: 'hsl(30 85% 65%)', /* Improved contrast */
               border: '1px solid hsl(30 60% 50% / 0.2)',
             }}
           >
             Método Proprietário
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white">
+          <h2 
+            id="method-heading"
+            className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-white"
+          >
             Método{' '}
             <span 
               style={{
@@ -61,10 +68,10 @@ const HookMethod = () => {
               HOOK™
             </span>
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto text-lg">
+          <p style={{ color: 'hsl(0 0% 70%)' }} className="max-w-2xl mx-auto text-lg">
             Nossa metodologia exclusiva para criar páginas que capturam a atenção e convertem visitantes em clientes.
           </p>
-        </div>
+        </header>
 
         {/* Horizontal Timeline */}
         <div className="relative">
@@ -74,24 +81,25 @@ const HookMethod = () => {
             style={{
               background: 'linear-gradient(90deg, hsl(30 90% 50% / 0.3) 0%, hsl(30 90% 50% / 0.5) 50%, hsl(30 90% 50% / 0.3) 100%)',
             }}
+            aria-hidden="true"
           />
 
           {/* Steps Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 list-none">
             {steps.map((step, index) => (
-              <div
+              <li
                 key={index}
                 className="group flex flex-col items-center text-center"
               >
                 {/* Node Circle */}
                 <div className="relative mb-8">
-                  {/* Glow behind node */}
+                  {/* Glow behind node - using opacity gradient instead of blur */}
                   <div 
-                    className="absolute inset-0 w-20 h-20 rounded-full opacity-30 group-hover:opacity-60 transition-all duration-500"
+                    className="absolute inset-0 w-20 h-20 rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500"
                     style={{
-                      background: 'radial-gradient(circle, hsl(30 90% 50% / 0.5) 0%, transparent 70%)',
-                      filter: 'blur(15px)',
+                      background: 'radial-gradient(circle, hsl(30 90% 50% / 0.6) 0%, hsl(30 90% 50% / 0.2) 40%, transparent 70%)',
                     }}
+                    aria-hidden="true"
                   />
                   
                   {/* Node circle */}
@@ -102,6 +110,7 @@ const HookMethod = () => {
                       border: '2px solid hsl(30 90% 50%)',
                       boxShadow: '0 0 20px hsl(30 90% 50% / 0.3)',
                     }}
+                    aria-hidden="true"
                   >
                     <span 
                       className="text-3xl font-bold"
@@ -122,6 +131,7 @@ const HookMethod = () => {
                       background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
                       boxShadow: '0 0 12px hsl(30 90% 50% / 0.5)',
                     }}
+                    aria-hidden="true"
                   >
                     <span className="text-xs font-bold text-black">{index + 1}</span>
                   </div>
@@ -131,12 +141,12 @@ const HookMethod = () => {
                 <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+                <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'hsl(0 0% 70%)' }}>
                   {step.description}
                 </p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </div>
     </section>

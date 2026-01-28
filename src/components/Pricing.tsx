@@ -5,7 +5,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "ESSENCIAL",
-      price: "R$ 59,90",
+      price: "R$ 57,90",
       period: "/mês",
       highlight: false,
       cta: "Contratar Agora",
@@ -52,7 +52,7 @@ const Pricing = () => {
     },
     {
       name: "PREMIUM",
-      price: "R$ 129,90",
+      price: "R$ 127,90",
       period: "/mês",
       highlight: false,
       cta: "Contratar Agora",

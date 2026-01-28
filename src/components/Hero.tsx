@@ -24,15 +24,15 @@ const Hero = () => {
         <div 
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[100%]"
           style={{
-            background: 'radial-gradient(ellipse 60% 50% at 50% 50%, hsl(30 100% 50% / 0.06) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 60% 50% at 50% 50%, hsl(142 90% 50% / 0.06) 0%, transparent 70%)',
           }}
         />
 
-        {/* Secondary orange accent - no blur filter */}
+        {/* Secondary green accent - no blur filter */}
         <div 
           className="absolute top-[30%] right-[5%] w-[500px] h-[500px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(142 90% 50% / 0.08) 0%, hsl(142 90% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
 
@@ -40,7 +40,7 @@ const Hero = () => {
         <div 
           className="absolute bottom-[20%] left-[10%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.06) 0%, hsl(25 90% 50% / 0.01) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(145 85% 45% / 0.06) 0%, hsl(145 85% 45% / 0.01) 40%, transparent 70%)',
           }}
         />
 
@@ -70,9 +70,9 @@ const Hero = () => {
                 <span 
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase"
                   style={{
-                    background: 'hsl(30 70% 50% / 0.1)',
-                    color: 'hsl(30 85% 65%)', /* Improved contrast: 65% lightness */
-                    border: '1px solid hsl(30 60% 50% / 0.2)',
+                    background: 'hsl(142 70% 50% / 0.1)',
+                    color: 'hsl(142 85% 65%)',
+                    border: '1px solid hsl(142 60% 50% / 0.2)',
                   }}
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" aria-hidden="true" />
@@ -94,7 +94,7 @@ const Hero = () => {
                   <span 
                     className="inline"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -106,7 +106,7 @@ const Hero = () => {
                   <span 
                     className="inline"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -119,7 +119,7 @@ const Hero = () => {
                   <span 
                     className="inline"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -135,7 +135,7 @@ const Hero = () => {
                 className={`text-base sm:text-lg lg:text-xl max-w-lg mb-10 leading-relaxed transition-all duration-700 delay-200 ease-out ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}
-                style={{ color: 'hsl(0 0% 70%)' }} /* Improved contrast: 70% vs 55% */
+                style={{ color: 'hsl(0 0% 70%)' }}
               >
                 Desenvolvemos <strong className="text-white font-medium">sistemas</strong>, 
                 estratégias de <strong className="text-white font-medium">marketing</strong> e 
@@ -155,9 +155,9 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
                   style={{
-                    background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                    background: 'linear-gradient(135deg, hsl(142 95% 52%) 0%, hsl(145 90% 46%) 100%)',
                     color: '#000',
-                    boxShadow: '0 4px 24px hsl(30 90% 50% / 0.3), 0 0 0 1px hsl(30 90% 50% / 0.1)',
+                    boxShadow: '0 4px 24px hsl(142 90% 50% / 0.3), 0 0 0 1px hsl(142 90% 50% / 0.1)',
                   }}
                   aria-label="Falar com especialista via WhatsApp"
                 >
@@ -177,7 +177,7 @@ const Hero = () => {
                 <a
                   href="#servicos"
                   className="inline-flex items-center gap-2 px-6 py-4 rounded-xl font-medium text-sm transition-all duration-300 hover:bg-white/5 border border-white/20 hover:border-white/30"
-                  style={{ color: 'hsl(0 0% 80%)' }} /* Improved contrast */
+                  style={{ color: 'hsl(0 0% 80%)' }}
                   aria-label="Ver nossos serviços"
                 >
                   Ver serviços
@@ -207,7 +207,7 @@ const Hero = () => {
                 <div 
                   className="absolute inset-0"
                   style={{
-                    background: 'radial-gradient(ellipse at center, hsl(30 90% 50% / 0.3) 0%, hsl(30 90% 50% / 0.1) 30%, transparent 60%)',
+                    background: 'radial-gradient(ellipse at center, hsl(142 90% 50% / 0.3) 0%, hsl(142 90% 50% / 0.1) 30%, transparent 60%)',
                     transform: 'scale(1.8)',
                   }}
                 />
@@ -218,7 +218,7 @@ const Hero = () => {
                   <p 
                     className="text-sm sm:text-base tracking-[0.25em] uppercase font-bold mb-6"
                     style={{
-                      background: 'linear-gradient(90deg, hsl(30 85% 65%) 0%, hsl(35 90% 70%) 50%, hsl(30 85% 65%) 100%)',
+                      background: 'linear-gradient(90deg, hsl(142 85% 65%) 0%, hsl(145 90% 70%) 50%, hsl(142 85% 65%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -232,7 +232,7 @@ const Hero = () => {
                     {/* Left chevrons */}
                     <div 
                       className="flex items-center gap-0.5 animate-chevron-pulse"
-                      style={{ color: 'hsl(30 95% 55%)' }}
+                      style={{ color: 'hsl(142 95% 55%)' }}
                     >
                       <svg className="w-6 h-10 sm:w-8 sm:h-14 lg:w-10 lg:h-16" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <polyline points="16 8 8 20 16 32" />
@@ -246,9 +246,9 @@ const Hero = () => {
                     <div 
                       className="px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 rounded-l-xl border-2"
                       style={{ 
-                        background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                        background: 'linear-gradient(135deg, hsl(142 98% 54%) 0%, hsl(145 95% 48%) 100%)',
                         borderColor: 'hsl(0 0% 100%)',
-                        boxShadow: '0 8px 32px hsl(30 90% 50% / 0.4)',
+                        boxShadow: '0 8px 32px hsl(142 90% 50% / 0.4)',
                       }}
                     >
                       <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-black tracking-tight">NEXT</span>
@@ -269,7 +269,7 @@ const Hero = () => {
                     <div 
                       className="flex items-center gap-0.5 animate-chevron-pulse"
                       style={{
-                        color: 'hsl(30 95% 55%)',
+                        color: 'hsl(142 95% 55%)',
                         animationDelay: '0.15s',
                       }}
                     >
@@ -285,7 +285,7 @@ const Hero = () => {
                   {/* Tagline below logo - Improved contrast */}
                   <p 
                     className="text-sm sm:text-base lg:text-lg tracking-[0.15em] uppercase font-medium mt-4"
-                    style={{ color: 'hsl(0 0% 70%)' }} /* Improved from 60% */
+                    style={{ color: 'hsl(0 0% 70%)' }}
                   >
                     Sistemas, Marketing & Performance
                   </p>
@@ -306,12 +306,12 @@ const Hero = () => {
       >
         <div 
           className="w-10 h-14 rounded-full border-2 flex items-start justify-center pt-2 transition-colors duration-300"
-          style={{ borderColor: 'hsl(0 0% 40%)' }} /* Improved contrast */
+          style={{ borderColor: 'hsl(0 0% 40%)' }}
         >
           <div 
             className="w-1.5 h-3 rounded-full animate-bounce"
             style={{ 
-              background: 'hsl(30 95% 55%)',
+              background: 'hsl(142 95% 55%)',
               animationDuration: '1.5s' 
             }}
             aria-hidden="true"

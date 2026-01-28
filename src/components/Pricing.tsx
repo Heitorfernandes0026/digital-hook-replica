@@ -96,11 +96,11 @@ const Pricing = () => {
       return value ? (
         <div 
           className="w-6 h-6 rounded-full flex items-center justify-center"
-          style={{ background: isHighlighted ? 'hsl(30 80% 50% / 0.2)' : 'hsl(142 71% 45% / 0.2)' }}
+          style={{ background: isHighlighted ? 'hsl(142 80% 50% / 0.2)' : 'hsl(142 71% 45% / 0.2)' }}
           role="img"
           aria-label="Incluído"
         >
-          <Check className="w-4 h-4" style={{ color: isHighlighted ? 'hsl(30 80% 55%)' : 'hsl(142 71% 45%)' }} aria-hidden="true" />
+          <Check className="w-4 h-4" style={{ color: isHighlighted ? 'hsl(142 80% 55%)' : 'hsl(142 71% 45%)' }} aria-hidden="true" />
         </div>
       ) : (
         <div 
@@ -114,7 +114,7 @@ const Pricing = () => {
       );
     }
     return (
-      <span className="text-sm font-semibold" style={{ color: isHighlighted ? 'hsl(30 80% 55%)' : 'white' }}>
+      <span className="text-sm font-semibold" style={{ color: isHighlighted ? 'hsl(142 80% 55%)' : 'white' }}>
         {value}
       </span>
     );
@@ -127,12 +127,12 @@ const Pricing = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="pricing-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur for performance */}
+      {/* Subtle green glow accents - no filter:blur for performance */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[700px] h-[500px]"
           style={{
-            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse, hsl(142 90% 50% / 0.08) 0%, hsl(142 90% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -143,9 +143,9 @@ const Pricing = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             Nossos Planos
@@ -157,7 +157,7 @@ const Pricing = () => {
             Compare os planos e escolha a{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -194,7 +194,7 @@ const Pricing = () => {
                   key={index}
                   className="p-8 text-center relative"
                   style={{
-                    background: plan.highlight ? 'linear-gradient(180deg, hsl(30 80% 50% / 0.1) 0%, hsl(30 80% 50% / 0.02) 100%)' : 'transparent',
+                    background: plan.highlight ? 'linear-gradient(180deg, hsl(142 80% 50% / 0.1) 0%, hsl(142 80% 50% / 0.02) 100%)' : 'transparent',
                   }}
                   role="columnheader"
                 >
@@ -202,20 +202,20 @@ const Pricing = () => {
                     <div 
                       className="absolute inset-x-0 top-0 h-1"
                       style={{
-                        background: 'linear-gradient(90deg, hsl(30 90% 50%) 0%, hsl(35 100% 55%) 100%)',
+                        background: 'linear-gradient(90deg, hsl(142 90% 50%) 0%, hsl(145 100% 55%) 100%)',
                       }}
                       aria-hidden="true"
                     />
                   )}
-                  <h3 className={`text-lg font-bold tracking-wide ${plan.highlight ? "mb-1" : "mb-3"}`} style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'white' }}>
+                  <h3 className={`text-lg font-bold tracking-wide ${plan.highlight ? "mb-1" : "mb-3"}`} style={{ color: plan.highlight ? 'hsl(142 80% 55%)' : 'white' }}>
                     {plan.name}
-                    {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(30 80% 55%)', fill: 'hsl(30 80% 55%)' }} aria-hidden="true" />}
+                    {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(142 80% 55%)', fill: 'hsl(142 80% 55%)' }} aria-hidden="true" />}
                   </h3>
                   {plan.highlight && (
                     <span 
                       className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3"
                       style={{
-                        background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
+                        background: 'linear-gradient(135deg, hsl(142 90% 50%) 0%, hsl(145 85% 45%) 100%)',
                         color: '#000',
                       }}
                     >
@@ -226,7 +226,7 @@ const Pricing = () => {
                     <span 
                       className="text-2xl font-extrabold"
                       style={plan.highlight ? {
-                        background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                        background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
@@ -259,7 +259,7 @@ const Pricing = () => {
                     key={planIndex}
                     className="px-8 py-4 flex items-center justify-center"
                     style={{
-                      background: plan.highlight ? 'hsl(30 80% 50% / 0.03)' : 'transparent',
+                      background: plan.highlight ? 'hsl(142 80% 50% / 0.03)' : 'transparent',
                     }}
                     role="cell"
                   >
@@ -283,20 +283,20 @@ const Pricing = () => {
                   key={index}
                   className="p-8"
                   style={{
-                    background: plan.highlight ? 'hsl(30 80% 50% / 0.03)' : 'transparent',
+                    background: plan.highlight ? 'hsl(142 80% 50% / 0.03)' : 'transparent',
                   }}
                   role="cell"
                 >
                   <Button
                     className="w-full py-3 rounded-xl font-semibold transition-all duration-300"
                     style={plan.highlight ? {
-                      background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 95% 52%) 0%, hsl(145 90% 46%) 100%)',
                       color: '#000',
-                      boxShadow: '0 4px 20px hsl(30 90% 50% / 0.3)',
+                      boxShadow: '0 4px 20px hsl(142 90% 50% / 0.3)',
                     } : {
                       background: 'transparent',
-                      color: 'hsl(30 85% 65%)', /* Improved contrast */
-                      border: '1px solid hsl(30 80% 50% / 0.5)',
+                      color: 'hsl(142 85% 65%)',
+                      border: '1px solid hsl(142 80% 50% / 0.5)',
                     }}
                     asChild
                   >
@@ -323,8 +323,8 @@ const Pricing = () => {
               className="rounded-2xl overflow-hidden"
               style={{
                 background: 'hsl(0 0% 6%)',
-                border: plan.highlight ? '2px solid hsl(30 80% 50%)' : '1px solid hsl(0 0% 18%)',
-                boxShadow: plan.highlight ? '0 0 40px hsl(30 90% 50% / 0.15)' : 'none',
+                border: plan.highlight ? '2px solid hsl(142 80% 50%)' : '1px solid hsl(0 0% 18%)',
+                boxShadow: plan.highlight ? '0 0 40px hsl(142 90% 50% / 0.15)' : 'none',
               }}
               role="listitem"
             >
@@ -332,18 +332,18 @@ const Pricing = () => {
               <header 
                 className="p-6 text-center relative"
                 style={{
-                  background: plan.highlight ? 'hsl(30 80% 50% / 0.08)' : 'transparent',
+                  background: plan.highlight ? 'hsl(142 80% 50% / 0.08)' : 'transparent',
                 }}
               >
-                <h3 className={`text-xl font-bold tracking-wide ${plan.highlight ? "mb-1" : "mb-2"}`} style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'white' }}>
+                <h3 className={`text-xl font-bold tracking-wide ${plan.highlight ? "mb-1" : "mb-2"}`} style={{ color: plan.highlight ? 'hsl(142 80% 55%)' : 'white' }}>
                   {plan.name}
-                  {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(30 80% 55%)', fill: 'hsl(30 80% 55%)' }} aria-hidden="true" />}
+                  {plan.highlight && <Star className="w-4 h-4 inline-block ml-2" style={{ color: 'hsl(142 80% 55%)', fill: 'hsl(142 80% 55%)' }} aria-hidden="true" />}
                 </h3>
                 {plan.highlight && (
                   <span 
                     className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 90% 50%) 0%, hsl(145 85% 45%) 100%)',
                       color: '#000',
                     }}
                   >
@@ -354,7 +354,7 @@ const Pricing = () => {
                   <span 
                     className="text-3xl font-extrabold"
                     style={plan.highlight ? {
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -382,11 +382,11 @@ const Pricing = () => {
                           value ? (
                             <div 
                               className="w-6 h-6 rounded-full flex items-center justify-center"
-                              style={{ background: plan.highlight ? 'hsl(30 80% 50% / 0.2)' : 'hsl(142 71% 45% / 0.2)' }}
+                              style={{ background: plan.highlight ? 'hsl(142 80% 50% / 0.2)' : 'hsl(142 71% 45% / 0.2)' }}
                               role="img"
                               aria-label="Incluído"
                             >
-                              <Check className="w-4 h-4" style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'hsl(142 71% 45%)' }} aria-hidden="true" />
+                              <Check className="w-4 h-4" style={{ color: plan.highlight ? 'hsl(142 80% 55%)' : 'hsl(142 71% 45%)' }} aria-hidden="true" />
                             </div>
                           ) : (
                             <div 
@@ -399,7 +399,7 @@ const Pricing = () => {
                             </div>
                           )
                         ) : (
-                          <span className="text-sm font-semibold" style={{ color: plan.highlight ? 'hsl(30 80% 55%)' : 'white' }}>
+                          <span className="text-sm font-semibold" style={{ color: plan.highlight ? 'hsl(142 80% 55%)' : 'white' }}>
                             {value}
                           </span>
                         )}
@@ -414,13 +414,13 @@ const Pricing = () => {
                 <Button
                   className="w-full py-3 rounded-xl font-semibold transition-all duration-300"
                   style={plan.highlight ? {
-                    background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                    background: 'linear-gradient(135deg, hsl(142 95% 52%) 0%, hsl(145 90% 46%) 100%)',
                     color: '#000',
-                    boxShadow: '0 4px 20px hsl(30 90% 50% / 0.3)',
+                    boxShadow: '0 4px 20px hsl(142 90% 50% / 0.3)',
                   } : {
                     background: 'transparent',
-                    color: 'hsl(30 85% 65%)',
-                    border: '1px solid hsl(30 80% 50% / 0.5)',
+                    color: 'hsl(142 85% 65%)',
+                    border: '1px solid hsl(142 80% 50% / 0.5)',
                   }}
                   asChild
                 >
@@ -438,27 +438,23 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Trust Microcopy */}
-        <div className="mt-12 text-center">
-          <div 
-            className="inline-flex items-start gap-4 p-6 rounded-2xl max-w-3xl"
-            style={{
-              background: 'hsl(0 0% 6%)',
-              border: '1px solid hsl(0 0% 18%)',
-            }}
-          >
-            <div 
-              className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-              style={{ background: 'hsl(30 80% 50% / 0.1)' }}
-              aria-hidden="true"
+        {/* Additional Info */}
+        <div className="mt-16 text-center">
+          <p style={{ color: 'hsl(0 0% 60%)' }} className="text-sm">
+            Todos os planos incluem suporte técnico e atualizações de segurança.
+          </p>
+          <p style={{ color: 'hsl(0 0% 60%)' }} className="text-sm mt-2">
+            Dúvidas?{' '}
+            <a 
+              href="https://wa.me/5531975911116?text=Olá,%20tenho%20dúvidas%20sobre%20os%20planos" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:underline transition-colors"
+              style={{ color: 'hsl(142 85% 65%)' }}
             >
-              <Check className="w-6 h-6" style={{ color: 'hsl(30 80% 55%)' }} aria-hidden="true" />
-            </div>
-            <p style={{ color: 'hsl(0 0% 70%)' }} className="text-left">
-              <span className="text-white font-semibold">Você não precisa entender de tecnologia.</span>{" "}
-              Nós cuidamos do seu site, design, conteúdo e manutenção para que tudo funcione com segurança e desempenho.
-            </p>
-          </div>
+              Fale conosco pelo WhatsApp
+            </a>
+          </p>
         </div>
       </div>
     </section>

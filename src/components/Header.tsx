@@ -42,7 +42,7 @@ const Header = () => {
             {/* Left chevrons */}
             <div 
               className="flex items-center gap-0.5"
-              style={{ color: 'hsl(30 95% 55%)' }}
+              style={{ color: 'hsl(142 95% 55%)' }}
               aria-hidden="true"
             >
               <svg className="w-4 h-6" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -57,9 +57,9 @@ const Header = () => {
             <div 
               className="px-2.5 py-1 rounded-l-md border"
               style={{ 
-                background: 'linear-gradient(135deg, hsl(32 98% 54%) 0%, hsl(28 95% 48%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 98% 54%) 0%, hsl(145 95% 48%) 100%)',
                 borderColor: 'hsl(0 0% 100%)',
-                boxShadow: '0 4px 16px hsl(30 90% 50% / 0.3)',
+                boxShadow: '0 4px 16px hsl(142 90% 50% / 0.3)',
               }}
             >
               <span className="text-sm font-black text-black tracking-tight">NEXT</span>
@@ -79,7 +79,7 @@ const Header = () => {
             {/* Right chevrons */}
             <div 
               className="flex items-center gap-0.5"
-              style={{ color: 'hsl(30 95% 55%)' }}
+              style={{ color: 'hsl(142 95% 55%)' }}
               aria-hidden="true"
             >
               <svg className="w-4 h-6" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -99,24 +99,24 @@ const Header = () => {
                 href={link.href}
                 className="relative group px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-md"
                 style={{
-                  color: 'hsl(0 0% 80%)', /* Improved contrast from 75% */
+                  color: 'hsl(0 0% 80%)',
                   background: 'hsl(0 0% 10% / 0.5)',
-                  border: '1px solid hsl(0 0% 25% / 0.5)', /* Improved border contrast */
+                  border: '1px solid hsl(0 0% 25% / 0.5)',
                 }}
               >
                 {/* Hover background effect */}
                 <span 
                   className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
-                    background: 'linear-gradient(135deg, hsl(30 90% 50% / 0.2) 0%, hsl(25 85% 45% / 0.15) 100%)',
-                    border: '1px solid hsl(30 80% 50% / 0.4)',
+                    background: 'linear-gradient(135deg, hsl(142 90% 50% / 0.2) 0%, hsl(145 85% 45% / 0.15) 100%)',
+                    border: '1px solid hsl(142 80% 50% / 0.4)',
                   }}
                   aria-hidden="true"
                 />
                 {/* Chevron accent on hover */}
                 <span 
                   className="absolute left-1.5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                  style={{ color: 'hsl(30 95% 55%)' }}
+                  style={{ color: 'hsl(142 95% 55%)' }}
                   aria-hidden="true"
                 >
                   <svg className="w-2 h-3" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
@@ -134,9 +134,9 @@ const Header = () => {
             <Button 
               className="font-semibold px-6 transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 52%) 0%, hsl(145 90% 46%) 100%)',
                 color: '#000',
-                boxShadow: '0 4px 20px hsl(30 90% 50% / 0.3)',
+                boxShadow: '0 4px 20px hsl(142 90% 50% / 0.3)',
               }}
               asChild
             >
@@ -182,14 +182,14 @@ const Header = () => {
                   href={link.href}
                   className="relative group flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300 rounded-md"
                   style={{
-                    color: 'hsl(0 0% 70%)', /* Improved contrast from 60% */
+                    color: 'hsl(0 0% 70%)',
                     background: 'hsl(0 0% 8%)',
-                    border: '1px solid hsl(0 0% 20%)', /* Improved border contrast */
+                    border: '1px solid hsl(0 0% 20%)',
                   }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {/* Chevron accent */}
-                  <span style={{ color: 'hsl(30 95% 55%)' }} aria-hidden="true">
+                  <span style={{ color: 'hsl(142 95% 55%)' }} aria-hidden="true">
                     <svg className="w-2.5 h-4" viewBox="0 0 24 40" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="8 8 16 20 8 32" />
                     </svg>
@@ -202,7 +202,7 @@ const Header = () => {
               <Button 
                 className="font-semibold mt-4 transition-all duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, hsl(30 95% 52%) 0%, hsl(25 90% 46%) 100%)',
+                  background: 'linear-gradient(135deg, hsl(142 95% 52%) 0%, hsl(145 90% 46%) 100%)',
                   color: '#000',
                 }}
                 asChild

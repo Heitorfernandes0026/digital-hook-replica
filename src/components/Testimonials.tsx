@@ -35,18 +35,18 @@ const Testimonials = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="testimonials-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur */}
+      {/* Subtle green glow accents - no filter:blur */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[20%] left-[5%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.06) 0%, hsl(30 100% 50% / 0.01) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(142 90% 50% / 0.06) 0%, hsl(142 90% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[30%] right-[10%] w-[350px] h-[350px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.08) 0%, hsl(25 90% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(145 85% 45% / 0.08) 0%, hsl(145 85% 45% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -57,9 +57,9 @@ const Testimonials = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             Depoimentos
@@ -71,7 +71,7 @@ const Testimonials = () => {
             O que nossos clientes{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -100,10 +100,10 @@ const Testimonials = () => {
               {/* Quote icon */}
               <div 
                 className="absolute top-6 right-6 w-10 h-10 rounded-full flex items-center justify-center opacity-30 group-hover:opacity-60 transition-opacity"
-                style={{ background: 'hsl(30 70% 50% / 0.1)' }}
+                style={{ background: 'hsl(142 70% 50% / 0.1)' }}
                 aria-hidden="true"
               >
-                <Quote style={{ color: 'hsl(30 80% 55%)' }} size={18} aria-hidden="true" />
+                <Quote style={{ color: 'hsl(142 80% 55%)' }} size={18} aria-hidden="true" />
               </div>
               
               {/* Stars */}
@@ -123,8 +123,8 @@ const Testimonials = () => {
                 <div 
                   className="w-12 h-12 rounded-full flex items-center justify-center"
                   style={{
-                    background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
-                    boxShadow: '0 4px 16px hsl(30 90% 50% / 0.3)',
+                    background: 'linear-gradient(135deg, hsl(142 90% 50%) 0%, hsl(145 85% 45%) 100%)',
+                    boxShadow: '0 4px 16px hsl(142 90% 50% / 0.3)',
                   }}
                   aria-hidden="true"
                 >

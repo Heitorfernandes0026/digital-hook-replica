@@ -40,18 +40,18 @@ const Portfolio = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="portfolio-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur */}
+      {/* Subtle green glow accents - no filter:blur */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[30%] right-[5%] w-[400px] h-[400px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(142 90% 50% / 0.08) 0%, hsl(142 90% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[20%] left-[10%] w-[350px] h-[350px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.06) 0%, hsl(25 90% 50% / 0.01) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(145 85% 45% / 0.06) 0%, hsl(145 85% 45% / 0.01) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -62,9 +62,9 @@ const Portfolio = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             Nosso Portfólio
@@ -76,7 +76,7 @@ const Portfolio = () => {
             Cases de{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -106,7 +106,7 @@ const Portfolio = () => {
               <div 
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
-                  background: 'linear-gradient(135deg, hsl(30 90% 50% / 0.05) 0%, transparent 50%)',
+                  background: 'linear-gradient(135deg, hsl(142 90% 50% / 0.05) 0%, transparent 50%)',
                 }}
                 aria-hidden="true"
               />
@@ -118,22 +118,22 @@ const Portfolio = () => {
                     <span 
                       className="inline-block px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider mb-3"
                       style={{
-                        background: 'hsl(30 70% 50% / 0.1)',
-                        color: 'hsl(30 85% 65%)', /* Improved contrast */
-                        border: '1px solid hsl(30 60% 50% / 0.2)',
+                        background: 'hsl(142 70% 50% / 0.1)',
+                        color: 'hsl(142 85% 65%)',
+                        border: '1px solid hsl(142 60% 50% / 0.2)',
                       }}
                     >
                       {item.category}
                     </span>
-                    <h3 className="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-green-400 transition-colors">
                       {item.title}
                     </h3>
                   </div>
                   <div 
                     className="w-10 h-10 rounded-lg flex items-center justify-center transition-shadow duration-300"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
-                      boxShadow: '0 4px 16px hsl(30 90% 50% / 0.3)',
+                      background: 'linear-gradient(135deg, hsl(142 90% 50%) 0%, hsl(145 85% 45%) 100%)',
+                      boxShadow: '0 4px 16px hsl(142 90% 50% / 0.3)',
                     }}
                     aria-hidden="true"
                   >
@@ -149,7 +149,7 @@ const Portfolio = () => {
                   <div 
                     className="text-4xl font-bold group-hover:scale-105 transition-transform origin-left"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 100%)',
+                      background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -172,9 +172,9 @@ const Portfolio = () => {
           <Button 
             className="group relative overflow-hidden px-6 py-4 rounded-xl font-medium text-sm transition-all duration-300"
             style={{
-              background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
+              background: 'linear-gradient(135deg, hsl(142 90% 50%) 0%, hsl(145 85% 45%) 100%)',
               color: '#000',
-              boxShadow: '0 4px 20px hsl(30 90% 50% / 0.4)',
+              boxShadow: '0 4px 20px hsl(142 90% 50% / 0.4)',
             }}
             asChild
           >
@@ -194,8 +194,8 @@ const Portfolio = () => {
             className="group relative overflow-hidden px-6 py-4 rounded-xl font-medium text-sm transition-all duration-300"
             style={{
               background: 'transparent',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 80% 50% / 0.5)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 80% 50% / 0.5)',
             }}
             asChild
           >

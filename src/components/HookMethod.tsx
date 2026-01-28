@@ -29,12 +29,12 @@ const HookMethod = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="method-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur */}
+      {/* Subtle green glow accents - no filter:blur */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px]"
           style={{
-            background: 'radial-gradient(ellipse, hsl(30 100% 50% / 0.08) 0%, hsl(30 100% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse, hsl(142 90% 50% / 0.08) 0%, hsl(142 90% 50% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -45,9 +45,9 @@ const HookMethod = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             Método Proprietário
@@ -59,7 +59,7 @@ const HookMethod = () => {
             Método{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -79,7 +79,7 @@ const HookMethod = () => {
           <div 
             className="hidden lg:block absolute top-16 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5"
             style={{
-              background: 'linear-gradient(90deg, hsl(30 90% 50% / 0.3) 0%, hsl(30 90% 50% / 0.5) 50%, hsl(30 90% 50% / 0.3) 100%)',
+              background: 'linear-gradient(90deg, hsl(142 90% 50% / 0.3) 0%, hsl(142 90% 50% / 0.5) 50%, hsl(142 90% 50% / 0.3) 100%)',
             }}
             aria-hidden="true"
           />
@@ -97,7 +97,7 @@ const HookMethod = () => {
                   <div 
                     className="absolute inset-0 w-20 h-20 rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500"
                     style={{
-                      background: 'radial-gradient(circle, hsl(30 90% 50% / 0.6) 0%, hsl(30 90% 50% / 0.2) 40%, transparent 70%)',
+                      background: 'radial-gradient(circle, hsl(142 90% 50% / 0.6) 0%, hsl(142 90% 50% / 0.2) 40%, transparent 70%)',
                     }}
                     aria-hidden="true"
                   />
@@ -107,15 +107,15 @@ const HookMethod = () => {
                     className="relative w-20 h-20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                     style={{
                       background: '#0B0B0B',
-                      border: '2px solid hsl(30 90% 50%)',
-                      boxShadow: '0 0 20px hsl(30 90% 50% / 0.3)',
+                      border: '2px solid hsl(142 90% 50%)',
+                      boxShadow: '0 0 20px hsl(142 90% 50% / 0.3)',
                     }}
                     aria-hidden="true"
                   >
                     <span 
                       className="text-3xl font-bold"
                       style={{
-                        background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(25 90% 50%) 100%)',
+                        background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 90% 50%) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                       }}
@@ -128,8 +128,8 @@ const HookMethod = () => {
                   <div 
                     className="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center"
                     style={{
-                      background: 'linear-gradient(135deg, hsl(30 90% 50%) 0%, hsl(25 85% 45%) 100%)',
-                      boxShadow: '0 0 12px hsl(30 90% 50% / 0.5)',
+                      background: 'linear-gradient(135deg, hsl(142 90% 50%) 0%, hsl(145 85% 45%) 100%)',
+                      boxShadow: '0 0 12px hsl(142 90% 50% / 0.5)',
                     }}
                     aria-hidden="true"
                   >
@@ -138,7 +138,7 @@ const HookMethod = () => {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-green-400 transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'hsl(0 0% 70%)' }}>

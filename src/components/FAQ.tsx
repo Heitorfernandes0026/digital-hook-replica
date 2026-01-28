@@ -41,18 +41,18 @@ const FAQ = () => {
       style={{ background: '#0B0B0B' }}
       aria-labelledby="faq-heading"
     >
-      {/* Subtle orange glow accents - no filter:blur for performance */}
+      {/* Subtle green glow accents - no filter:blur for performance */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div 
           className="absolute top-[30%] right-[10%] w-[350px] h-[350px]"
           style={{
-            background: 'radial-gradient(circle, hsl(30 100% 50% / 0.06) 0%, hsl(30 100% 50% / 0.01) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(142 90% 50% / 0.06) 0%, hsl(142 90% 50% / 0.01) 40%, transparent 70%)',
           }}
         />
         <div 
           className="absolute bottom-[20%] left-[5%] w-[300px] h-[300px]"
           style={{
-            background: 'radial-gradient(circle, hsl(25 90% 50% / 0.08) 0%, hsl(25 90% 50% / 0.02) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(145 85% 45% / 0.08) 0%, hsl(145 85% 45% / 0.02) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -63,9 +63,9 @@ const FAQ = () => {
           <span 
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-4"
             style={{
-              background: 'hsl(30 70% 50% / 0.1)',
-              color: 'hsl(30 85% 65%)', /* Improved contrast */
-              border: '1px solid hsl(30 60% 50% / 0.2)',
+              background: 'hsl(142 70% 50% / 0.1)',
+              color: 'hsl(142 85% 65%)',
+              border: '1px solid hsl(142 60% 50% / 0.2)',
             }}
           >
             FAQ
@@ -77,7 +77,7 @@ const FAQ = () => {
             Perguntas{' '}
             <span 
               style={{
-                background: 'linear-gradient(135deg, hsl(30 95% 55%) 0%, hsl(35 100% 60%) 50%, hsl(25 90% 50%) 100%)',
+                background: 'linear-gradient(135deg, hsl(142 95% 55%) 0%, hsl(145 100% 60%) 50%, hsl(140 90% 50%) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -101,20 +101,20 @@ const FAQ = () => {
                 className="px-6 rounded-xl overflow-hidden"
                 style={{
                   background: 'hsl(0 0% 6%)',
-                  border: '1px solid hsl(0 0% 18%)', /* Improved border contrast */
+                  border: '1px solid hsl(0 0% 18%)',
                 }}
               >
-                <AccordionTrigger className="text-left text-white hover:text-orange-400 hover:no-underline py-6 text-lg group">
+                <AccordionTrigger className="text-left text-white hover:text-green-400 hover:no-underline py-6 text-lg group">
                   <span className="flex-1">{faq.question}</span>
                   <ChevronDown 
                     className="h-5 w-5 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" 
-                    style={{ color: 'hsl(30 80% 55%)' }}
+                    style={{ color: 'hsl(142 80% 55%)' }}
                     aria-hidden="true"
                   />
                 </AccordionTrigger>
                 <AccordionContent 
                   className="pb-6 leading-relaxed"
-                  style={{ color: 'hsl(0 0% 75%)' }} /* Improved contrast from 60% */
+                  style={{ color: 'hsl(0 0% 75%)' }}
                 >
                   {faq.answer}
                 </AccordionContent>

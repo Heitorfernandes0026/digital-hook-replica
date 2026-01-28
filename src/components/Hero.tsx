@@ -262,6 +262,16 @@ const Hero = () => {
                       </svg>
                     </div>
                   </div>
+
+                  {/* Tagline below logo */}
+                  <p 
+                    className="text-sm sm:text-base lg:text-lg tracking-[0.15em] uppercase font-medium mt-4"
+                    style={{
+                      color: 'hsl(0 0% 60%)',
+                    }}
+                  >
+                    Sistemas, Marketing & Performance
+                  </p>
                 </div>
               </div>
             </div>

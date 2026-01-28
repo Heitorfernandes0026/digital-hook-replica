@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- DNS Prefetch for faster resolution -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    
     <title>NextLevel - Companhia de Sistemas, Marketing & Performance</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="description" content="Criamos landing pages e sites focados em conversão. Metodologia HOOK validada em +50 projetos. Entrega em até 7 dias." />
@@ -26,8 +19,26 @@
     <meta name="twitter:site" content="@NextLevel" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
-    <!-- Preload critical font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical font with display=swap for faster LCP -->
+    <link 
+      rel="preload" 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" 
+      as="style" 
+      onload="this.onload=null;this.rel='stylesheet'" 
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+    </noscript>
+    
+    <!-- Inline critical CSS for H1 to avoid FOUT -->
+    <style>
+      body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      h1 { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; }
+    </style>
   </head>
 
   <body>

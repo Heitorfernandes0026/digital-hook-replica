@@ -49,7 +49,7 @@ const AboutUs = () => {
                 border: '1px solid hsl(0 0% 15%)',
               }}
             >
-              A DigitalPro nasceu da necessidade de criar landing pages e sites que realmente funcionam. Depois de anos trabalhando com marketing digital, percebemos que a maioria das páginas não converte porque falta estratégia por trás do design.
+              A NextLevel nasceu da necessidade de criar landing pages e sites que realmente funcionam. Depois de anos trabalhando com marketing digital, percebemos que a maioria das páginas não converte porque falta estratégia por trás do design.
             </p>
             <p 
               className="p-6 rounded-xl transition-all duration-500 hover:border-orange-500/30"

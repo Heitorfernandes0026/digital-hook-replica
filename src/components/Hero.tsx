@@ -4,8 +4,8 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
+    // Faster initial render - reduced delay for better LCP
+    requestAnimationFrame(() => setIsVisible(true));
   }, []);
 
   return (
@@ -78,13 +78,13 @@ const Hero = () => {
                 </span>
               </div>
 
-              {/* Main Headline */}
+              {/* Main Headline - Priority LCP element */}
               <div 
-                className={`mb-6 transition-all duration-700 delay-100 ease-out ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                className={`mb-6 transition-all duration-500 ease-out ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight" style={{ contentVisibility: 'auto' }}>
                   <span className="text-white">Conquiste </span>
                   <span 
                     className="inline"

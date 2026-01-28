@@ -157,7 +157,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Contato</h4>
             <ul className="space-y-3 text-sm text-white/50">
-              <li className="hover:text-orange-400 transition-colors cursor-pointer">contato@digitalpro.com.br</li>
+              <li className="hover:text-orange-400 transition-colors cursor-pointer">contato@nextlevel.com.br</li>
               <li>
                 <a 
                   href="https://wa.me/5531975911116" 

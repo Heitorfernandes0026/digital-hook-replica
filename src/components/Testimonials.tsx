@@ -5,7 +5,7 @@ const Testimonials = () => {
     {
       name: "Dr. Fernando Almeida",
       role: "Advogado Trabalhista",
-      content: "A landing page da DigitalPro triplicou meus atendimentos em menos de 30 dias. O investimento se pagou na primeira semana.",
+      content: "A landing page da NextLevel triplicou meus atendimentos em menos de 30 dias. O investimento se pagou na primeira semana.",
       rating: 5,
     },
     {
@@ -23,7 +23,7 @@ const Testimonials = () => {
     {
       name: "Dra. Camila Rodrigues",
       role: "Médica Dermatologista",
-      content: "Já tinha tentado outras agências, mas só a DigitalPro entregou resultados reais. Meu consultório dobrou o número de pacientes com a nova página.",
+      content: "Já tinha tentado outras agências, mas só a NextLevel entregou resultados reais. Meu consultório dobrou o número de pacientes com a nova página.",
       rating: 5,
     },
   ];

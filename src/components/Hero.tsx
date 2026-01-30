@@ -53,6 +53,37 @@ const Hero = memo(() => {
         />
       </div>
 
+      {/* Marquee Banner */}
+      <div 
+        className="absolute top-[15%] left-0 right-0 overflow-hidden py-4 -rotate-2"
+        style={{
+          background: 'linear-gradient(90deg, hsl(142 98% 50% / 0.15), hsl(142 90% 50% / 0.25), hsl(142 98% 50% / 0.15))',
+          borderTop: '1px solid hsl(142 90% 50% / 0.3)',
+          borderBottom: '1px solid hsl(142 90% 50% / 0.3)',
+        }}
+        aria-hidden="true"
+      >
+        <div className="animate-marquee whitespace-nowrap flex">
+          {[...Array(12)].map((_, i) => (
+            <span key={i} className="mx-8 flex items-center gap-3">
+              <span 
+                className="text-lg font-black tracking-tight"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(142 98% 54%) 0%, hsl(145 95% 48%) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                NEXT
+              </span>
+              <span className="text-lg font-black text-white tracking-tight">LEVEL</span>
+              <span style={{ color: 'hsl(142 95% 55%)' }}>✦</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* Main Content Container */}
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-6 lg:px-16">

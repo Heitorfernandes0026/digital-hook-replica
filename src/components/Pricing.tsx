@@ -47,7 +47,7 @@ const Pricing = () => {
         monitoring: true,
         maintenance: "Intermediária",
         priority: true,
-        setupFee: "Isento",
+        setupFee: "—",
       },
     },
     {
